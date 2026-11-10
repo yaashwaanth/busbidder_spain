@@ -53,7 +53,7 @@ class Booking(Traveller,Offer):
 
 
 
- def getDetails(self):
+def getDetails(self):
           return {
               "name": self.name,
               "age":self.age,
