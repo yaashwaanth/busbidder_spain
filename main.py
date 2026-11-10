@@ -1,5 +1,5 @@
 import csv
-
+import streamlit as st
 
 class Traveller:
     def __init__(self, name, age, gender,phone, email,traveller_type):
@@ -9,6 +9,16 @@ class Traveller:
         self.phone = phone
         self.email = email
         self.traveller_type = traveller_type
+    def getDetails(self):
+        return {
+            "name": self.name,
+            "age":self.age,
+            "gender":self.gender,
+            "phone":self.phone,
+            "email":self.email,
+            "type": self.traveller_type
+
+        }
 
 
 
@@ -42,18 +52,19 @@ class Booking(Traveller,Offer):
         self.offer = offer
 
 
-class BusCompany:
-    name: str
-    bus_code: str
-    price_per_km: float          # EUR per km
-    speed_multiplier: float      # >1 = slower than average, <1 = faster
-    co2_g_per_km: float          # grams CO2 per passenger-km
-    departure_window: tuple      # ("HH:MM", "HH:MM"); may cross midnight
-    direct_only: bool = False
-    coastal_focus: bool = False
-    new_fleet: bool = False
-    rating: float = 4.0          # 1-5 scale
-    luggage_kg: int = 15         # basic luggage allowance
+
+ def getDetails(self):
+          return {
+              "name": self.name,
+              "age":self.age,
+              "gender":self.gender,
+              "phone":self.phone,
+              "email":self.email,
+              "type": self.traveller_type
+  
+          }
+
+
 
 def create_user(name, age, gender,phone, email,traveller_type) -> Traveller:
    return Traveller(name, age, gender,phone,email,traveller_type)
@@ -74,10 +85,11 @@ bus_companies = {
         price_per_km=0.050, 
         speed_multiplier=1.10, 
         co2_g_per_km=32,
-        departure_window=("07:30", "14:00"),
-        direct_only=False, 
-        coastal_focus=False, 
+        departure_window=("06:00", "14:00"),
+        direct_route=False, 
+        coastal_route=False, 
         new_fleet=False,
+        budget_company=True
     ),
     "CaminoExpress": BusCompany(
         name="CaminoExpress", 
@@ -85,10 +97,11 @@ bus_companies = {
         price_per_km=0.075, 
         speed_multiplier=0.90, 
         co2_g_per_km=26,
-        departure_window=("07:00", "16:00"),
+        departure_window=("11:00", "20:00"),
         direct_only=True, 
         coastal_focus=False, 
         new_fleet=True,
+        budget_company=False
     ),
     "CostaLink": BusCompany(
         name="CostaLink", 
@@ -96,20 +109,22 @@ bus_companies = {
         price_per_km=0.062, 
         speed_multiplier=1.05, 
         co2_g_per_km=28,
-        departure_window=("08:00", "15:00"),
+        departure_window=("16:00", "20:00"),
         direct_only=False, 
         coastal_focus=True, 
         new_fleet=False,
+        budget_company=False
     ),
     "VerdeBus": BusCompany(
         name="VerdeBus", bus_code="VDB",
         price_per_km=0.071, 
         speed_multiplier=1.00,
         co2_g_per_km=18,
-        departure_window=("06:30", "17:00"),
+        departure_window=("16:30", "23:00"),
         direct_only=False, 
         coastal_focus=False, 
         new_fleet=True,
+        budget_company=False
     ),
     "NocheVia": BusCompany(
         name="NocheVia", 
@@ -117,9 +132,65 @@ bus_companies = {
         price_per_km=0.059, 
         speed_multiplier=1.05, 
         co2_g_per_km=29,
-        departure_window=("21:30", "00:30"),
+        departure_window=("15:30", "23:59"),
         direct_only=False, 
         coastal_focus=False, 
         new_fleet=False,
+        budget_company=False
     ),
 }
+
+
+
+# Destinations profiles
+destinations = {
+    "Barcelona": Destination(
+        name="Barcelona", coastal=True, major_city=True,
+        distance_km=620, base_duration_min=420, base_price_eur=38),
+    "Valencia": Destination(
+        name="Valencia", coastal=True, major_city=True,
+        distance_km=355, base_duration_min=255, base_price_eur=22),
+    "Seville": Destination(
+        name="Seville", coastal=False, major_city=True,
+        distance_km=530, base_duration_min=360, base_price_eur=32),
+    "Malaga": Destination(
+        name="Malaga", coastal=True, major_city=True,
+        distance_km=530, base_duration_min=390, base_price_eur=33),
+    "Granada": Destination(
+        name="Granada", coastal=False, major_city=False,
+        distance_km=430, base_duration_min=330, base_price_eur=28),
+    "Cordoba": Destination(
+        name="Cordoba", coastal=False, major_city=True,
+        distance_km=400, base_duration_min=255, base_price_eur=24),
+    "Bilbao": Destination(
+        name="Bilbao", coastal=True, major_city=True,
+        distance_km=400, base_duration_min=300, base_price_eur=29),
+    "San Sebastian": Destination(
+        name="San Sebastian", coastal=True, major_city=False,
+        distance_km=470, base_duration_min=330, base_price_eur=32),
+    "Zaragoza": Destination(
+        name="Zaragoza", coastal=False, major_city=True,
+        distance_km=320, base_duration_min=225, base_price_eur=19),
+    "Alicante": Destination(
+        name="Alicante", coastal=True, major_city=True,
+        distance_km=420, base_duration_min=330, base_price_eur=27),
+    "Murcia": Destination(
+        name="Murcia", coastal=True, major_city=True,
+        distance_km=400, base_duration_min=330, base_price_eur=28),
+    "Salamanca": Destination(
+        name="Salamanca", coastal=False, major_city=False,
+        distance_km=210, base_duration_min=150, base_price_eur=14),
+    "Toledo": Destination(
+        name="Toledo", coastal=False, major_city=False,
+        distance_km=70, base_duration_min=60, base_price_eur=6),
+    "Santiago de Compostela": Destination(
+        name="Santiago de Compostela", coastal=False, major_city=False,
+        distance_km=600, base_duration_min=480, base_price_eur=42),
+    "Cadiz": Destination(
+        name="Cadiz", coastal=True, major_city=False,
+        distance_km=650, base_duration_min=480, base_price_eur=40),
+}
+
+
+def main():
+    print(bus_companies["SolRuta"])
