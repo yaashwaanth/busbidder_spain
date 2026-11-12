@@ -31,3 +31,25 @@ def calculate_env_score(company,destination):
      print(final_score)
     return int(max(0.0,min(100.0,final_score)))
 
+
+
+
+def get_field(obj, key, default=None):
+    """Helper to safely retrieve values whether the offer is an object or a dictionary."""
+    if isinstance(obj, dict):
+        return obj.get(key, default)
+    return getattr(obj, key, default)
+
+
+def normalize(value, min_val, max_val, lower_better=True):
+    """Normalizes any metric onto a 0-100 scale."""
+    if min_val == max_val:
+        return 100.0
+
+    if lower_better:
+        score = ((max_val - value) / (max_val - min_val)) * 100.0
+    else:
+        score = ((value - min_val) / (max_val - min_val)) * 100.0
+
+    return max(0.0, min(100.0, score))
+
