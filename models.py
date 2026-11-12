@@ -1,3 +1,26 @@
+
+class Traveller:
+    def __init__(self, name, age, gender,phone, email,traveller_type):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.phone = phone
+        self.email = email
+        self.traveller_type = traveller_type
+    def getDetails(self):
+        return {
+            "name": self.name,
+            "age":self.age,
+            "gender":self.gender,
+            "phone":self.phone,
+            "email":self.email,
+            "type": self.traveller_type
+
+        }
+
+
+
+
 class Destination:
     def __init__(self,name,costal,major_city,distance_km,base_duration_min,base_price_eur):
            self.name= name 
@@ -23,3 +46,39 @@ class BusCompany:
      # basic luggage allowance
 
     self.budget_company=budget_company
+
+
+
+class Offer:
+    def __init(self,company,origin,destination,travel_date,departure_time,arrival_time, duration, price, transfers,luggage_allowance, changeablity,refundablity, available_seats, customer_rating, environmental_measure,terms_and_conditions):
+        self.company = company
+        self.origin = origin
+        self.destination = destination
+        self.travel_date = travel_date
+        self.departure_time = departure_time
+        self.arrival_time = arrival_time
+        self.duration = duration
+        self.price = price
+        self.transfers = transfers
+        self.luggage = self.luggage
+        self.luggage_allowance = luggage_allowance
+        self.changeablity = changeablity
+        self.refundablity = refundablity
+        self.available_seats = available_seats
+        self.customer_rating = customer_rating
+        self.environmental_measure = environmental_measure
+        self.terms_and_conditions = terms_and_conditions
+
+
+class Trip_Request(Traveller):
+    def __init__(self,traveller,destination,travel_start_date,travel_end_date,budget,max_transfers,required_luggage,max_duration,flexiblity):
+        self.traveller = traveller
+        self.destination = destination
+        self.travel_start_date = travel_start_date
+        self.travel_end_date = travel_end_date
+        self.budget=budget
+        self.max_transfers = max_transfers
+        self.max_luggage = required_luggage
+        self.max_transfers = max_transfers
+        self.max_duration = max_duration
+        self.flexiblity = flexiblity

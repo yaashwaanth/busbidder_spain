@@ -1,25 +1,6 @@
 import csv
 import streamlit as st
 
-class Traveller:
-    def __init__(self, name, age, gender,phone, email,traveller_type):
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.phone = phone
-        self.email = email
-        self.traveller_type = traveller_type
-    def getDetails(self):
-        return {
-            "name": self.name,
-            "age":self.age,
-            "gender":self.gender,
-            "phone":self.phone,
-            "email":self.email,
-            "type": self.traveller_type
-
-        }
-
 
 
 

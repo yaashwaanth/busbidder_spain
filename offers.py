@@ -5,6 +5,8 @@ import random
 from datetime import datetime, timedelta
 import csv
 
+from helper_functions import calculate_env_score
+
 bus_companies = {
     "SolRuta": BusCompany(
         name="SolRuta", 
@@ -195,8 +197,6 @@ def create_automated_offers():
             arr_total_mins = dep_hour * 60 + dep_min + duration * 60
             arr_hour = (arr_total_mins // 60) % 24
             arr_min = arr_total_mins % 60
-            print(arr_hour)
-            print(arr_min)
             arr_time = f"{int(arr_hour):02d}:{int(arr_min):02d}"
 
             offers_data.append({
@@ -215,7 +215,7 @@ def create_automated_offers():
                 "refundable": random.choice([True, False]),
                 "available_seats": random.randint(2, 20),
                 "customer_rating": round(random.uniform(3.5, 5.0), 1),
-                "environmental_score": random.randint(50, 98)
+                "environmental_score": calculate_env_score(company=company,destination=dest)
             })
             offer_counter += 1
 
