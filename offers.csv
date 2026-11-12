@@ -1,271 +1,901 @@
 offer_id,company,destination,travel_date,departure_time,arrival_time,duration_minutes,price_eur,transfers,stops,luggage_allowance,changeable,refundable,available_seats,customer_rating,environmental_score
-SO-101,SolRuta,Barcelona,2026-11-12,09:00,19:20,620.0,31.0,3,5,1 piece,True,True,20,4.1,65
-SO-102,SolRuta,Valencia,2026-11-12,14:00,19:55,355.0,17.75,1,4,1 piece,False,True,16,4.4,65
-SO-103,SolRuta,Toledo,2026-11-12,12:30,13:40,70.0,3.5,1,12,2 pieces,True,True,12,3.7,65
-VE-104,VerdeBus,Valencia,2026-11-13,21:30,03:25,355.0,25.205,2,14,1 piece,False,True,14,3.6,100
-CO-105,CostaLink,San Sebastian,2026-11-13,16:00,23:50,470.0,29.14,3,4,1 piece,False,True,9,4.8,77
-VE-106,VerdeBus,Granada,2026-11-13,21:00,04:10,430.0,30.529999999999998,2,11,2 pieces,False,True,10,4.6,100
-SO-107,SolRuta,Alicante,2026-11-14,14:00,21:00,420.0,21.0,3,3,1 piece,False,False,10,5.0,65
-NO-108,NocheVia,Malaga,2026-11-14,15:00,23:50,530.0,31.27,3,6,1 piece,False,False,10,3.6,74
-NO-109,NocheVia,Cadiz,2026-11-14,18:30,05:20,650.0,38.35,3,6,2 pieces,False,True,10,3.7,74
-NO-110,NocheVia,Zaragoza,2026-11-15,21:30,02:50,320.0,18.88,2,12,2 pieces,True,True,18,4.2,74
-SO-111,SolRuta,Santiago de Compostela,2026-11-15,08:30,18:30,600.0,30.0,1,3,1 piece,False,False,16,4.3,65
-NO-112,NocheVia,Santiago de Compostela,2026-11-15,16:30,02:30,600.0,35.4,1,11,2 pieces,True,False,15,3.7,74
-SO-113,SolRuta,Salamanca,2026-11-16,14:00,17:30,210.0,10.5,3,5,1 piece,False,True,6,4.1,65
-CA-114,CaminoExpress,Zaragoza,2026-11-16,19:00,00:20,320.0,24.0,0,0,2 pieces,False,True,5,4.9,92
-CO-115,CostaLink,Malaga,2026-11-16,20:00,04:50,530.0,32.86,1,4,1 piece,False,True,19,4.6,77
-CA-116,CaminoExpress,Bilbao,2026-11-17,18:00,00:40,400.0,30.0,0,0,2 pieces,False,True,19,4.6,92
-CA-117,CaminoExpress,Bilbao,2026-11-17,15:30,22:10,400.0,30.0,0,0,2 pieces,False,False,5,3.9,92
-SO-118,SolRuta,Cordoba,2026-11-17,14:00,20:40,400.0,20.0,1,10,1 piece,True,True,3,3.8,65
-SO-119,SolRuta,Santiago de Compostela,2026-11-18,14:00,00:00,600.0,30.0,2,2,2 pieces,False,True,19,3.7,65
-NO-120,NocheVia,Alicante,2026-11-18,22:30,05:30,420.0,24.779999999999998,2,4,1 piece,True,True,15,4.0,74
-VE-121,VerdeBus,San Sebastian,2026-11-18,17:00,00:50,470.0,33.37,3,1,2 pieces,False,True,9,3.8,100
-NO-122,NocheVia,San Sebastian,2026-11-19,17:30,01:20,470.0,27.729999999999997,1,7,2 pieces,True,True,16,4.7,74
-NO-123,NocheVia,Valencia,2026-11-19,23:00,04:55,355.0,20.945,1,11,1 piece,True,True,15,4.2,74
-CA-124,CaminoExpress,Malaga,2026-11-19,11:00,19:50,530.0,39.75,0,0,2 pieces,True,False,10,4.9,92
-VE-125,VerdeBus,Granada,2026-11-20,23:00,06:10,430.0,30.529999999999998,2,12,1 piece,False,True,3,4.4,100
-NO-126,NocheVia,Barcelona,2026-11-20,15:00,01:20,620.0,36.58,3,6,2 pieces,True,True,18,3.6,74
-CA-127,CaminoExpress,Barcelona,2026-11-20,20:00,06:20,620.0,46.5,0,0,1 piece,False,True,20,3.9,92
-NO-128,NocheVia,Barcelona,2026-11-21,21:30,07:50,620.0,36.58,3,2,2 pieces,True,False,9,3.9,74
-CA-129,CaminoExpress,Bilbao,2026-11-21,15:30,22:10,400.0,30.0,0,0,2 pieces,True,True,16,4.4,92
-NO-130,NocheVia,Valencia,2026-11-21,18:30,00:25,355.0,20.945,1,9,1 piece,False,True,9,4.1,74
-CA-131,CaminoExpress,Malaga,2026-11-22,19:30,04:20,530.0,39.75,0,0,1 piece,False,True,6,3.9,92
-SO-132,SolRuta,Salamanca,2026-11-22,10:30,14:00,210.0,10.5,3,3,1 piece,False,True,10,4.3,65
-CO-133,CostaLink,Barcelona,2026-11-22,19:30,05:50,620.0,38.44,1,11,1 piece,True,False,6,4.5,77
-CO-134,CostaLink,Seville,2026-11-23,20:30,05:20,530.0,32.86,3,8,1 piece,True,True,6,4.3,77
-CO-135,CostaLink,Cadiz,2026-11-23,17:00,03:50,650.0,40.3,1,7,2 pieces,False,True,13,3.8,77
-CA-136,CaminoExpress,Bilbao,2026-11-23,12:30,19:10,400.0,30.0,0,0,2 pieces,True,True,7,5.0,92
-CA-137,CaminoExpress,Malaga,2026-11-24,11:00,19:50,530.0,39.75,0,0,2 pieces,False,True,10,3.7,92
-SO-138,SolRuta,Bilbao,2026-11-24,13:00,19:40,400.0,20.0,1,14,1 piece,False,False,11,4.7,65
-CA-139,CaminoExpress,Valencia,2026-11-24,11:00,16:55,355.0,26.625,0,0,2 pieces,False,False,4,5.0,92
-CO-140,CostaLink,San Sebastian,2026-11-25,19:30,03:20,470.0,29.14,3,9,1 piece,True,False,7,4.4,77
-CO-141,CostaLink,Barcelona,2026-11-25,19:30,05:50,620.0,38.44,1,10,2 pieces,False,True,14,4.8,77
-CA-142,CaminoExpress,Seville,2026-11-25,11:30,20:20,530.0,39.75,0,0,1 piece,True,False,15,3.6,92
-CO-143,CostaLink,San Sebastian,2026-11-26,16:30,00:20,470.0,29.14,3,14,2 pieces,False,False,14,4.5,77
-NO-144,NocheVia,Seville,2026-11-26,21:00,05:50,530.0,31.27,1,7,2 pieces,False,True,11,3.9,74
-VE-145,VerdeBus,Toledo,2026-11-26,21:30,22:40,70.0,4.97,3,10,2 pieces,False,True,18,4.2,100
-CA-146,CaminoExpress,Bilbao,2026-11-27,12:30,19:10,400.0,30.0,0,0,2 pieces,True,True,11,3.8,92
-CA-147,CaminoExpress,Valencia,2026-11-27,11:00,16:55,355.0,26.625,0,0,1 piece,False,True,16,4.1,92
-NO-148,NocheVia,Malaga,2026-11-27,21:30,06:20,530.0,31.27,3,12,2 pieces,True,True,2,4.8,74
-SO-149,SolRuta,Toledo,2026-11-28,08:30,09:40,70.0,3.5,2,4,1 piece,True,True,16,3.7,65
-VE-150,VerdeBus,Murcia,2026-11-28,21:30,04:10,400.0,28.4,3,9,2 pieces,False,True,17,4.2,100
-CA-151,CaminoExpress,Bilbao,2026-11-28,15:30,22:10,400.0,30.0,0,0,1 piece,False,False,4,4.6,92
-CA-152,CaminoExpress,Seville,2026-11-29,16:30,01:20,530.0,39.75,0,0,1 piece,True,True,9,4.1,92
-CA-153,CaminoExpress,Bilbao,2026-11-29,14:00,20:40,400.0,30.0,0,0,2 pieces,False,False,19,4.2,92
-SO-154,SolRuta,Malaga,2026-11-29,06:30,15:20,530.0,26.5,2,7,2 pieces,True,False,11,4.6,65
-VE-155,VerdeBus,Zaragoza,2026-11-30,19:30,00:50,320.0,22.72,3,12,1 piece,False,False,17,3.5,100
-CO-156,CostaLink,Alicante,2026-11-30,19:00,02:00,420.0,26.04,3,3,1 piece,False,True,4,4.5,77
-CA-157,CaminoExpress,Malaga,2026-11-30,13:00,21:50,530.0,39.75,0,0,2 pieces,False,False,8,4.2,92
-CO-158,CostaLink,Alicante,2026-12-01,19:30,02:30,420.0,26.04,2,13,1 piece,False,True,19,3.6,77
-CO-159,CostaLink,Malaga,2026-12-01,16:00,00:50,530.0,32.86,3,2,1 piece,True,True,6,3.9,77
-VE-160,VerdeBus,Murcia,2026-12-01,19:30,02:10,400.0,28.4,1,10,2 pieces,False,True,5,4.7,100
-CA-161,CaminoExpress,Seville,2026-12-02,12:00,20:50,530.0,39.75,0,0,2 pieces,False,False,8,3.6,92
-CA-162,CaminoExpress,Barcelona,2026-12-02,15:00,01:20,620.0,46.5,0,0,1 piece,False,False,13,3.6,92
-CO-163,CostaLink,Barcelona,2026-12-02,19:00,05:20,620.0,38.44,2,14,2 pieces,False,False,6,4.2,77
-NO-164,NocheVia,Murcia,2026-12-03,23:30,06:10,400.0,23.599999999999998,2,10,2 pieces,False,False,12,4.8,74
-SO-165,SolRuta,Granada,2026-12-03,13:30,20:40,430.0,21.5,2,4,2 pieces,True,False,12,3.8,65
-CA-166,CaminoExpress,Seville,2026-12-03,15:30,00:20,530.0,39.75,0,0,2 pieces,False,True,18,4.9,92
-SO-167,SolRuta,Malaga,2026-12-04,13:00,21:50,530.0,26.5,3,7,2 pieces,False,False,2,3.6,65
-CA-168,CaminoExpress,Malaga,2026-12-04,14:30,23:20,530.0,39.75,0,0,2 pieces,False,False,15,5.0,92
-NO-169,NocheVia,Cordoba,2026-12-04,22:30,05:10,400.0,23.599999999999998,2,12,2 pieces,False,True,5,4.6,74
-CO-170,CostaLink,Valencia,2026-12-05,17:00,22:55,355.0,22.01,3,9,1 piece,False,False,20,5.0,77
-NO-171,NocheVia,Alicante,2026-12-05,18:30,01:30,420.0,24.779999999999998,2,2,1 piece,False,True,11,3.5,74
-NO-172,NocheVia,Seville,2026-12-05,15:30,00:20,530.0,31.27,2,1,1 piece,False,True,2,4.4,74
-VE-173,VerdeBus,San Sebastian,2026-12-06,18:00,01:50,470.0,33.37,2,6,2 pieces,False,True,4,4.1,100
-SO-174,SolRuta,Alicante,2026-12-06,06:00,13:00,420.0,21.0,3,11,1 piece,False,True,9,3.7,65
-VE-175,VerdeBus,Alicante,2026-12-06,19:30,02:30,420.0,29.819999999999997,3,13,2 pieces,False,False,20,5.0,100
-CO-176,CostaLink,Barcelona,2026-12-07,16:00,02:20,620.0,38.44,3,12,1 piece,False,True,7,3.9,77
-NO-177,NocheVia,Valencia,2026-12-07,21:30,03:25,355.0,20.945,1,1,2 pieces,False,True,9,3.9,74
-CO-178,CostaLink,Murcia,2026-12-07,17:30,00:10,400.0,24.8,1,11,1 piece,False,True,19,3.8,77
-CA-179,CaminoExpress,Seville,2026-12-08,13:00,21:50,530.0,39.75,0,0,1 piece,True,False,20,4.9,92
-VE-180,VerdeBus,Valencia,2026-12-08,20:30,02:25,355.0,25.205,2,12,2 pieces,False,False,4,4.4,100
-VE-181,VerdeBus,Salamanca,2026-12-08,20:00,23:30,210.0,14.909999999999998,2,10,1 piece,True,True,10,4.4,100
-CA-182,CaminoExpress,Malaga,2026-12-09,19:30,04:20,530.0,39.75,0,0,2 pieces,True,False,17,5.0,92
-VE-183,VerdeBus,Cordoba,2026-12-09,21:00,03:40,400.0,28.4,2,6,1 piece,False,False,17,3.9,100
-VE-184,VerdeBus,Santiago de Compostela,2026-12-09,23:00,09:00,600.0,42.599999999999994,3,1,2 pieces,False,False,5,5.0,100
-VE-185,VerdeBus,Santiago de Compostela,2026-12-10,16:30,02:30,600.0,42.599999999999994,3,14,2 pieces,True,True,18,4.0,100
-VE-186,VerdeBus,Murcia,2026-12-10,16:00,22:40,400.0,28.4,2,13,2 pieces,True,False,16,4.8,100
-VE-187,VerdeBus,Valencia,2026-12-10,19:00,00:55,355.0,25.205,1,11,2 pieces,True,False,4,3.8,100
-SO-188,SolRuta,San Sebastian,2026-12-11,08:30,16:20,470.0,23.5,1,11,2 pieces,False,False,17,5.0,65
-CA-189,CaminoExpress,Malaga,2026-12-11,19:00,03:50,530.0,39.75,0,0,2 pieces,True,True,4,3.9,92
-VE-190,VerdeBus,Cordoba,2026-12-11,16:30,23:10,400.0,28.4,3,5,2 pieces,False,True,16,4.3,100
-CO-191,CostaLink,San Sebastian,2026-12-12,20:30,04:20,470.0,29.14,3,13,2 pieces,False,True,9,4.4,77
-CA-192,CaminoExpress,Malaga,2026-12-12,11:30,20:20,530.0,39.75,0,0,2 pieces,False,False,6,4.2,92
-SO-193,SolRuta,Seville,2026-12-12,11:00,19:50,530.0,26.5,3,10,2 pieces,True,False,2,4.6,65
-VE-194,VerdeBus,Santiago de Compostela,2026-12-13,17:30,03:30,600.0,42.599999999999994,3,3,2 pieces,False,False,4,4.8,100
-NO-195,NocheVia,Bilbao,2026-12-13,22:00,04:40,400.0,23.599999999999998,2,11,1 piece,True,False,9,4.6,74
-VE-196,VerdeBus,Valencia,2026-12-13,17:30,23:25,355.0,25.205,3,12,1 piece,False,True,3,4.0,100
-SO-197,SolRuta,Granada,2026-12-14,12:00,19:10,430.0,21.5,2,6,1 piece,False,True,7,3.8,65
-NO-198,NocheVia,Santiago de Compostela,2026-12-14,18:30,04:30,600.0,35.4,2,10,1 piece,True,False,10,4.2,74
-SO-199,SolRuta,Cadiz,2026-12-14,10:00,20:50,650.0,32.5,2,15,1 piece,False,False,20,3.9,65
-VE-200,VerdeBus,Salamanca,2026-12-15,20:00,23:30,210.0,14.909999999999998,2,8,2 pieces,False,True,9,4.1,100
-CO-201,CostaLink,Bilbao,2026-12-15,16:30,23:10,400.0,24.8,3,5,2 pieces,True,True,17,4.7,77
-CO-202,CostaLink,Malaga,2026-12-15,18:00,02:50,530.0,32.86,3,13,1 piece,False,True,5,4.9,77
-SO-203,SolRuta,Granada,2026-12-16,11:00,18:10,430.0,21.5,2,1,1 piece,False,False,15,3.8,65
-CA-204,CaminoExpress,Zaragoza,2026-12-16,16:30,21:50,320.0,24.0,0,0,1 piece,False,False,11,4.6,92
-CO-205,CostaLink,Valencia,2026-12-16,17:00,22:55,355.0,22.01,2,2,2 pieces,False,True,14,3.5,77
-NO-206,NocheVia,Valencia,2026-12-17,19:30,01:25,355.0,20.945,2,6,2 pieces,True,True,17,3.5,74
-NO-207,NocheVia,Cordoba,2026-12-17,16:30,23:10,400.0,23.599999999999998,3,4,2 pieces,False,True,6,3.6,74
-SO-208,SolRuta,Granada,2026-12-17,07:00,14:10,430.0,21.5,2,2,1 piece,False,False,13,4.5,65
-NO-209,NocheVia,Bilbao,2026-12-18,17:30,00:10,400.0,23.599999999999998,3,12,1 piece,False,False,10,3.5,74
-CO-210,CostaLink,Malaga,2026-12-18,17:30,02:20,530.0,32.86,2,8,1 piece,False,False,3,4.1,77
-CA-211,CaminoExpress,Barcelona,2026-12-18,18:00,04:20,620.0,46.5,0,0,1 piece,True,True,12,3.9,92
-CA-212,CaminoExpress,Zaragoza,2026-12-19,14:00,19:20,320.0,24.0,0,0,1 piece,True,True,12,4.7,92
-NO-213,NocheVia,Barcelona,2026-12-19,17:00,03:20,620.0,36.58,2,14,2 pieces,True,True,2,3.7,74
-CO-214,CostaLink,Malaga,2026-12-19,16:00,00:50,530.0,32.86,3,6,2 pieces,True,True,15,4.3,77
-SO-215,SolRuta,San Sebastian,2026-12-20,11:00,18:50,470.0,23.5,2,13,2 pieces,True,True,18,4.0,65
-SO-216,SolRuta,Barcelona,2026-12-20,12:30,22:50,620.0,31.0,2,14,1 piece,False,False,4,4.8,65
-CO-217,CostaLink,Seville,2026-12-20,18:30,03:20,530.0,32.86,1,3,2 pieces,False,False,18,4.4,77
-SO-218,SolRuta,Toledo,2026-12-21,14:00,15:10,70.0,3.5,3,2,2 pieces,False,True,15,4.0,65
-VE-219,VerdeBus,Bilbao,2026-12-21,17:30,00:10,400.0,28.4,2,12,2 pieces,False,False,13,4.9,100
-VE-220,VerdeBus,Valencia,2026-12-21,17:00,22:55,355.0,25.205,1,14,2 pieces,True,False,6,4.3,100
-NO-221,NocheVia,Zaragoza,2026-12-22,16:30,21:50,320.0,18.88,3,6,2 pieces,False,True,11,4.4,74
-CO-222,CostaLink,Valencia,2026-12-22,17:00,22:55,355.0,22.01,3,9,2 pieces,True,True,13,4.8,77
-CO-223,CostaLink,Valencia,2026-12-22,17:30,23:25,355.0,22.01,2,10,1 piece,False,True,7,3.9,77
-CO-224,CostaLink,San Sebastian,2026-12-23,17:00,00:50,470.0,29.14,2,1,2 pieces,True,True,2,3.6,77
-NO-225,NocheVia,Malaga,2026-12-23,22:30,07:20,530.0,31.27,2,7,1 piece,False,False,12,4.7,74
-NO-226,NocheVia,Alicante,2026-12-23,15:00,22:00,420.0,24.779999999999998,1,15,1 piece,True,True,10,4.2,74
-VE-227,VerdeBus,San Sebastian,2026-12-24,22:30,06:20,470.0,33.37,3,8,1 piece,True,False,15,3.7,100
-NO-228,NocheVia,San Sebastian,2026-12-24,19:00,02:50,470.0,27.729999999999997,3,11,1 piece,False,True,2,3.8,74
-CA-229,CaminoExpress,Valencia,2026-12-24,15:30,21:25,355.0,26.625,0,0,2 pieces,True,True,17,4.6,92
-CA-230,CaminoExpress,Valencia,2026-12-25,17:00,22:55,355.0,26.625,0,0,2 pieces,True,False,3,4.2,92
-VE-231,VerdeBus,Cadiz,2026-12-25,21:30,08:20,650.0,46.15,1,14,2 pieces,False,False,5,4.1,100
-CO-232,CostaLink,Seville,2026-12-25,18:00,02:50,530.0,32.86,3,8,2 pieces,True,True,15,4.4,77
-NO-233,NocheVia,Valencia,2026-12-26,19:30,01:25,355.0,20.945,2,14,1 piece,False,True,4,4.3,74
-SO-234,SolRuta,Zaragoza,2026-12-26,11:30,16:50,320.0,16.0,3,4,1 piece,True,True,6,3.9,65
-CA-235,CaminoExpress,Zaragoza,2026-12-26,13:00,18:20,320.0,24.0,0,0,1 piece,False,False,20,4.6,92
-VE-236,VerdeBus,Murcia,2026-12-27,21:30,04:10,400.0,28.4,3,11,1 piece,False,True,17,4.2,100
-CO-237,CostaLink,Bilbao,2026-12-27,18:00,00:40,400.0,24.8,3,1,2 pieces,False,False,3,3.6,77
-CO-238,CostaLink,Valencia,2026-12-27,16:30,22:25,355.0,22.01,3,14,2 pieces,True,False,20,4.5,77
-CO-239,CostaLink,Murcia,2026-12-28,16:30,23:10,400.0,24.8,3,3,1 piece,False,True,18,4.5,77
-SO-240,SolRuta,Malaga,2026-12-28,13:00,21:50,530.0,26.5,3,8,2 pieces,False,False,14,4.1,65
-CO-241,CostaLink,Barcelona,2026-12-28,18:00,04:20,620.0,38.44,3,11,2 pieces,True,False,11,3.9,77
-NO-242,NocheVia,Santiago de Compostela,2026-12-29,16:00,02:00,600.0,35.4,1,6,2 pieces,False,False,6,4.4,74
-SO-243,SolRuta,Granada,2026-12-29,11:00,18:10,430.0,21.5,3,7,1 piece,False,False,2,4.0,65
-CA-244,CaminoExpress,Valencia,2026-12-29,16:30,22:25,355.0,26.625,0,0,1 piece,True,True,6,3.6,92
-SO-245,SolRuta,Zaragoza,2026-12-30,14:00,19:20,320.0,16.0,3,14,2 pieces,True,False,6,3.7,65
-NO-246,NocheVia,Toledo,2026-12-30,22:00,23:10,70.0,4.13,1,12,2 pieces,False,True,16,4.4,74
-VE-247,VerdeBus,Malaga,2026-12-30,20:30,05:20,530.0,37.629999999999995,3,4,1 piece,False,False,16,4.7,100
-VE-248,VerdeBus,Zaragoza,2026-12-31,18:00,23:20,320.0,22.72,3,7,1 piece,False,True,17,4.8,100
-NO-249,NocheVia,Cadiz,2026-12-31,23:00,09:50,650.0,38.35,1,12,2 pieces,True,True,10,4.2,74
-NO-250,NocheVia,Seville,2026-12-31,18:30,03:20,530.0,31.27,2,2,2 pieces,True,False,3,4.1,74
-CO-251,CostaLink,Malaga,2027-01-01,18:00,02:50,530.0,32.86,2,2,1 piece,False,True,12,4.7,77
-CA-252,CaminoExpress,Barcelona,2027-01-01,15:30,01:50,620.0,46.5,0,0,1 piece,False,False,2,4.9,92
-SO-253,SolRuta,Granada,2027-01-01,08:30,15:40,430.0,21.5,1,14,1 piece,False,True,11,3.7,65
-CA-254,CaminoExpress,Malaga,2027-01-02,20:30,05:20,530.0,39.75,0,0,1 piece,True,False,19,3.5,92
-NO-255,NocheVia,Alicante,2027-01-02,17:30,00:30,420.0,24.779999999999998,1,12,2 pieces,True,False,9,4.4,74
-CA-256,CaminoExpress,Bilbao,2027-01-02,12:30,19:10,400.0,30.0,0,0,1 piece,True,False,17,3.6,92
-VE-257,VerdeBus,Cordoba,2027-01-03,16:30,23:10,400.0,28.4,2,12,1 piece,False,True,5,4.7,100
-CO-258,CostaLink,Seville,2027-01-03,20:30,05:20,530.0,32.86,1,6,1 piece,False,False,7,4.7,77
-SO-259,SolRuta,Salamanca,2027-01-03,10:00,13:30,210.0,10.5,2,1,1 piece,True,True,12,4.9,65
-NO-260,NocheVia,Bilbao,2027-01-04,19:00,01:40,400.0,23.599999999999998,3,8,1 piece,False,False,3,4.8,74
-CO-261,CostaLink,Bilbao,2027-01-04,18:30,01:10,400.0,24.8,1,13,2 pieces,False,False,12,5.0,77
-VE-262,VerdeBus,Salamanca,2027-01-04,20:00,23:30,210.0,14.909999999999998,2,6,2 pieces,True,False,7,4.3,100
-CO-263,CostaLink,Valencia,2027-01-05,18:30,00:25,355.0,22.01,1,6,2 pieces,False,True,16,4.0,77
-SO-264,SolRuta,Salamanca,2027-01-05,12:30,16:00,210.0,10.5,2,10,1 piece,True,False,13,4.3,65
-CA-265,CaminoExpress,Barcelona,2027-01-05,13:30,23:50,620.0,46.5,0,0,1 piece,True,True,9,4.7,92
-CO-266,CostaLink,San Sebastian,2027-01-06,16:00,23:50,470.0,29.14,2,10,2 pieces,False,False,16,4.6,77
-NO-267,NocheVia,Seville,2027-01-06,21:30,06:20,530.0,31.27,3,6,2 pieces,True,True,2,4.6,74
-VE-268,VerdeBus,Zaragoza,2027-01-06,17:30,22:50,320.0,22.72,2,15,2 pieces,False,True,11,4.5,100
-VE-269,VerdeBus,Malaga,2027-01-07,17:30,02:20,530.0,37.629999999999995,1,3,1 piece,False,True,12,4.5,100
-SO-270,SolRuta,Zaragoza,2027-01-07,10:00,15:20,320.0,16.0,3,5,1 piece,False,True,5,5.0,65
-CA-271,CaminoExpress,Valencia,2027-01-07,18:00,23:55,355.0,26.625,0,0,2 pieces,False,False,19,3.7,92
-SO-272,SolRuta,Valencia,2027-01-08,13:30,19:25,355.0,17.75,2,7,2 pieces,True,True,12,4.5,65
-VE-273,VerdeBus,San Sebastian,2027-01-08,21:00,04:50,470.0,33.37,3,9,1 piece,True,False,18,4.9,100
-SO-274,SolRuta,Santiago de Compostela,2027-01-08,08:30,18:30,600.0,30.0,1,9,1 piece,True,False,9,4.0,65
-NO-275,NocheVia,Cadiz,2027-01-09,16:30,03:20,650.0,38.35,2,14,1 piece,False,True,11,4.4,74
-SO-276,SolRuta,Zaragoza,2027-01-09,08:00,13:20,320.0,16.0,3,3,2 pieces,True,True,4,3.6,65
-NO-277,NocheVia,Granada,2027-01-09,21:00,04:10,430.0,25.369999999999997,3,4,2 pieces,False,False,17,3.9,74
-VE-278,VerdeBus,Granada,2027-01-10,16:00,23:10,430.0,30.529999999999998,2,2,2 pieces,False,False,16,3.8,100
-NO-279,NocheVia,Seville,2027-01-10,20:30,05:20,530.0,31.27,2,14,2 pieces,True,False,18,4.3,74
-CO-280,CostaLink,Malaga,2027-01-10,18:30,03:20,530.0,32.86,2,2,1 piece,True,True,3,3.9,77
-VE-281,VerdeBus,Santiago de Compostela,2027-01-11,19:00,05:00,600.0,42.599999999999994,3,7,2 pieces,False,True,7,4.2,100
-NO-282,NocheVia,San Sebastian,2027-01-11,19:30,03:20,470.0,27.729999999999997,2,15,1 piece,True,False,18,4.2,74
-CA-283,CaminoExpress,Valencia,2027-01-11,20:30,02:25,355.0,26.625,0,0,1 piece,True,False,17,4.4,92
-VE-284,VerdeBus,Granada,2027-01-12,17:30,00:40,430.0,30.529999999999998,3,1,1 piece,False,False,14,4.0,100
-VE-285,VerdeBus,Barcelona,2027-01-12,19:30,05:50,620.0,44.019999999999996,3,9,2 pieces,True,False,18,4.2,100
-NO-286,NocheVia,Granada,2027-01-12,16:00,23:10,430.0,25.369999999999997,3,11,1 piece,False,False,12,4.3,74
-CO-287,CostaLink,Seville,2027-01-13,20:30,05:20,530.0,32.86,1,10,1 piece,True,True,6,4.6,77
-VE-288,VerdeBus,Zaragoza,2027-01-13,18:30,23:50,320.0,22.72,2,3,2 pieces,True,False,11,4.4,100
-NO-289,NocheVia,Santiago de Compostela,2027-01-13,22:30,08:30,600.0,35.4,3,9,2 pieces,True,False,12,4.5,74
-VE-290,VerdeBus,Alicante,2027-01-14,16:30,23:30,420.0,29.819999999999997,2,13,2 pieces,True,True,20,4.2,100
-NO-291,NocheVia,Murcia,2027-01-14,21:00,03:40,400.0,23.599999999999998,3,10,1 piece,True,True,8,3.5,74
-CO-292,CostaLink,Alicante,2027-01-14,17:30,00:30,420.0,26.04,1,7,2 pieces,True,True,18,3.8,77
-CO-293,CostaLink,Murcia,2027-01-15,18:00,00:40,400.0,24.8,3,7,2 pieces,False,False,10,4.4,77
-CA-294,CaminoExpress,Valencia,2027-01-15,15:30,21:25,355.0,26.625,0,0,1 piece,False,False,8,4.5,92
-VE-295,VerdeBus,Cordoba,2027-01-15,20:30,03:10,400.0,28.4,2,6,1 piece,False,False,13,4.9,100
-CA-296,CaminoExpress,Seville,2027-01-16,11:30,20:20,530.0,39.75,0,0,1 piece,False,False,10,4.6,92
-CA-297,CaminoExpress,Valencia,2027-01-16,19:30,01:25,355.0,26.625,0,0,2 pieces,True,True,20,3.9,92
-SO-298,SolRuta,Murcia,2027-01-16,09:00,15:40,400.0,20.0,3,4,1 piece,False,False,17,3.7,65
-CA-299,CaminoExpress,Barcelona,2027-01-17,19:00,05:20,620.0,46.5,0,0,2 pieces,False,False,8,4.6,92
-CO-300,CostaLink,San Sebastian,2027-01-17,16:00,23:50,470.0,29.14,2,11,1 piece,True,True,15,4.8,77
-CA-301,CaminoExpress,Barcelona,2027-01-17,17:30,03:50,620.0,46.5,0,0,1 piece,False,True,2,3.9,92
-NO-302,NocheVia,Valencia,2027-01-18,22:30,04:25,355.0,20.945,2,5,1 piece,False,False,8,4.7,74
-CO-303,CostaLink,Seville,2027-01-18,18:00,02:50,530.0,32.86,3,8,1 piece,False,False,20,4.5,77
-CA-304,CaminoExpress,Valencia,2027-01-18,20:30,02:25,355.0,26.625,0,0,2 pieces,False,True,14,4.5,92
-CA-305,CaminoExpress,Valencia,2027-01-19,18:30,00:25,355.0,26.625,0,0,1 piece,True,False,14,3.9,92
-CO-306,CostaLink,San Sebastian,2027-01-19,20:00,03:50,470.0,29.14,2,10,2 pieces,False,True,3,4.5,77
-VE-307,VerdeBus,Granada,2027-01-19,20:00,03:10,430.0,30.529999999999998,1,7,2 pieces,False,True,9,4.9,100
-VE-308,VerdeBus,Seville,2027-01-20,21:30,06:20,530.0,37.629999999999995,2,12,2 pieces,True,True,4,4.3,100
-NO-309,NocheVia,Salamanca,2027-01-20,16:00,19:30,210.0,12.389999999999999,2,2,1 piece,True,True,12,4.8,74
-VE-310,VerdeBus,Valencia,2027-01-20,23:00,04:55,355.0,25.205,3,4,2 pieces,True,False,6,4.3,100
-VE-311,VerdeBus,Alicante,2027-01-21,23:30,06:30,420.0,29.819999999999997,1,9,1 piece,False,False,2,4.6,100
-NO-312,NocheVia,Valencia,2027-01-21,20:00,01:55,355.0,20.945,1,7,1 piece,True,False,3,3.9,74
-CA-313,CaminoExpress,Valencia,2027-01-21,17:30,23:25,355.0,26.625,0,0,2 pieces,False,False,14,3.6,92
-NO-314,NocheVia,Seville,2027-01-22,20:00,04:50,530.0,31.27,3,14,1 piece,False,True,9,4.8,74
-SO-315,SolRuta,Granada,2027-01-22,14:30,21:40,430.0,21.5,2,11,2 pieces,True,True,16,4.0,65
-CO-316,CostaLink,Malaga,2027-01-22,16:00,00:50,530.0,32.86,3,13,2 pieces,True,True,8,3.6,77
-NO-317,NocheVia,Barcelona,2027-01-23,15:00,01:20,620.0,36.58,2,10,1 piece,False,False,9,4.3,74
-SO-318,SolRuta,Seville,2027-01-23,09:30,18:20,530.0,26.5,3,5,2 pieces,True,False,6,5.0,65
-NO-319,NocheVia,Malaga,2027-01-23,19:00,03:50,530.0,31.27,2,5,1 piece,False,False,3,5.0,74
-VE-320,VerdeBus,Toledo,2027-01-24,22:30,23:40,70.0,4.97,3,6,1 piece,False,False,7,4.6,100
-VE-321,VerdeBus,Malaga,2027-01-24,18:30,03:20,530.0,37.629999999999995,1,5,1 piece,False,False,19,4.3,100
-VE-322,VerdeBus,Malaga,2027-01-24,21:00,05:50,530.0,37.629999999999995,2,4,2 pieces,False,True,19,4.6,100
-CA-323,CaminoExpress,Barcelona,2027-01-25,15:30,01:50,620.0,46.5,0,0,1 piece,True,True,20,4.6,92
-NO-324,NocheVia,Malaga,2027-01-25,20:30,05:20,530.0,31.27,2,4,1 piece,True,True,5,4.6,74
-VE-325,VerdeBus,Cadiz,2027-01-25,19:30,06:20,650.0,46.15,1,12,1 piece,False,False,14,4.2,100
-CO-326,CostaLink,Bilbao,2027-01-26,20:30,03:10,400.0,24.8,2,6,2 pieces,True,False,12,4.9,77
-CO-327,CostaLink,San Sebastian,2027-01-26,20:00,03:50,470.0,29.14,2,1,1 piece,True,False,19,4.9,77
-NO-328,NocheVia,Salamanca,2027-01-26,17:00,20:30,210.0,12.389999999999999,2,5,2 pieces,True,False,20,4.8,74
-VE-329,VerdeBus,Zaragoza,2027-01-27,21:30,02:50,320.0,22.72,3,11,2 pieces,False,False,7,4.6,100
-CO-330,CostaLink,Seville,2027-01-27,20:30,05:20,530.0,32.86,1,12,1 piece,True,True,4,4.9,77
-SO-331,SolRuta,Toledo,2027-01-27,08:00,09:10,70.0,3.5,1,7,1 piece,True,True,8,4.3,65
-CO-332,CostaLink,Barcelona,2027-01-28,20:30,06:50,620.0,38.44,3,11,2 pieces,True,True,19,4.3,77
-SO-333,SolRuta,Barcelona,2027-01-28,10:30,20:50,620.0,31.0,3,12,1 piece,False,True,5,4.9,65
-NO-334,NocheVia,Seville,2027-01-28,23:30,08:20,530.0,31.27,1,4,2 pieces,False,False,4,4.1,74
-VE-335,VerdeBus,San Sebastian,2027-01-29,19:30,03:20,470.0,33.37,3,4,1 piece,True,True,14,4.1,100
-NO-336,NocheVia,San Sebastian,2027-01-29,15:00,22:50,470.0,27.729999999999997,1,11,1 piece,False,False,12,4.3,74
-SO-337,SolRuta,Cadiz,2027-01-29,06:00,16:50,650.0,32.5,3,15,1 piece,False,False,3,4.9,65
-CO-338,CostaLink,Cadiz,2027-01-30,16:00,02:50,650.0,40.3,3,11,2 pieces,True,True,20,3.7,77
-VE-339,VerdeBus,Cadiz,2027-01-30,18:00,04:50,650.0,46.15,1,5,2 pieces,False,False,6,4.7,100
-SO-340,SolRuta,Zaragoza,2027-01-30,06:00,11:20,320.0,16.0,3,6,2 pieces,True,True,12,4.4,65
-NO-341,NocheVia,Alicante,2027-01-31,20:00,03:00,420.0,24.779999999999998,2,13,2 pieces,False,False,9,4.0,74
-VE-342,VerdeBus,Bilbao,2027-01-31,22:00,04:40,400.0,28.4,1,11,2 pieces,True,True,4,3.9,100
-VE-343,VerdeBus,Salamanca,2027-01-31,22:30,02:00,210.0,14.909999999999998,3,3,2 pieces,True,True,2,4.9,100
-VE-344,VerdeBus,Cordoba,2027-02-01,18:00,00:40,400.0,28.4,2,2,1 piece,False,False,19,4.3,100
-VE-345,VerdeBus,Valencia,2027-02-01,21:00,02:55,355.0,25.205,1,2,2 pieces,False,True,11,4.1,100
-SO-346,SolRuta,Salamanca,2027-02-01,09:00,12:30,210.0,10.5,3,15,2 pieces,True,True,10,4.0,65
-VE-347,VerdeBus,Seville,2027-02-02,22:30,07:20,530.0,37.629999999999995,1,3,2 pieces,False,False,4,4.0,100
-CA-348,CaminoExpress,Bilbao,2027-02-02,18:00,00:40,400.0,30.0,0,0,2 pieces,True,True,11,3.5,92
-VE-349,VerdeBus,Cordoba,2027-02-02,21:30,04:10,400.0,28.4,3,7,2 pieces,False,True,11,4.0,100
-CA-350,CaminoExpress,Malaga,2027-02-03,16:00,00:50,530.0,39.75,0,0,2 pieces,False,False,17,5.0,92
-CA-351,CaminoExpress,Seville,2027-02-03,17:30,02:20,530.0,39.75,0,0,2 pieces,False,True,20,3.8,92
-NO-352,NocheVia,Seville,2027-02-03,23:00,07:50,530.0,31.27,3,13,2 pieces,True,False,11,4.7,74
-SO-353,SolRuta,Santiago de Compostela,2027-02-04,13:00,23:00,600.0,30.0,2,11,2 pieces,True,False,6,4.6,65
-VE-354,VerdeBus,Valencia,2027-02-04,23:30,05:25,355.0,25.205,2,10,2 pieces,True,False,19,4.4,100
-SO-355,SolRuta,Valencia,2027-02-04,11:00,16:55,355.0,17.75,1,11,1 piece,False,False,15,3.7,65
-SO-356,SolRuta,Granada,2027-02-05,14:00,21:10,430.0,21.5,1,9,2 pieces,False,False,16,4.7,65
-NO-357,NocheVia,Salamanca,2027-02-05,20:00,23:30,210.0,12.389999999999999,3,3,2 pieces,True,False,15,4.9,74
-SO-358,SolRuta,Valencia,2027-02-05,11:30,17:25,355.0,17.75,3,3,2 pieces,False,True,18,4.2,65
-VE-359,VerdeBus,Valencia,2027-02-06,23:30,05:25,355.0,25.205,2,12,1 piece,False,True,5,3.5,100
-CO-360,CostaLink,Valencia,2027-02-06,17:00,22:55,355.0,22.01,3,13,1 piece,True,False,19,4.1,77
-VE-361,VerdeBus,Malaga,2027-02-06,18:00,02:50,530.0,37.629999999999995,2,11,2 pieces,False,True,8,4.2,100
-VE-362,VerdeBus,Bilbao,2027-02-07,19:00,01:40,400.0,28.4,1,12,2 pieces,True,True,19,3.8,100
-CO-363,CostaLink,Malaga,2027-02-07,18:30,03:20,530.0,32.86,2,2,2 pieces,False,False,20,3.7,77
-CO-364,CostaLink,Murcia,2027-02-07,18:00,00:40,400.0,24.8,3,3,1 piece,False,True,9,4.0,77
-CA-365,CaminoExpress,Seville,2027-02-08,13:30,22:20,530.0,39.75,0,0,2 pieces,True,False,15,3.8,92
-NO-366,NocheVia,Salamanca,2027-02-08,17:00,20:30,210.0,12.389999999999999,3,15,2 pieces,False,True,7,4.0,74
-VE-367,VerdeBus,Alicante,2027-02-08,21:00,04:00,420.0,29.819999999999997,1,14,2 pieces,True,True,14,4.9,100
-NO-368,NocheVia,Murcia,2027-02-09,22:30,05:10,400.0,23.599999999999998,2,7,2 pieces,False,True,4,4.3,74
-CA-369,CaminoExpress,Seville,2027-02-09,11:30,20:20,530.0,39.75,0,0,1 piece,False,True,16,4.3,92
-VE-370,VerdeBus,Zaragoza,2027-02-09,17:30,22:50,320.0,22.72,3,2,2 pieces,True,False,19,3.8,100
+SO-101,SolRuta,Barcelona,2026-11-13,09:00,19:20,620.0,31.0,3,5,3 bags,True,True,20,4.1,65
+SO-102,SolRuta,Zaragoza,2026-11-13,14:30,19:50,320.0,16.0,1,12,3 bags,False,False,2,4.6,65
+CO-103,CostaLink,Valencia,2026-11-13,16:30,22:25,355.0,22.01,1,7,4 bags,False,True,16,4.3,77
+SO-104,SolRuta,Barcelona,2026-11-13,10:00,20:20,620.0,31.0,3,4,3 bags,True,False,10,4.2,65
+CO-105,CostaLink,Valencia,2026-11-13,17:00,22:55,355.0,22.01,3,11,3 bags,False,False,10,5.0,77
+CO-106,CostaLink,Alicante,2026-11-13,17:30,00:30,420.0,26.04,2,2,3 bags,False,False,16,3.7,77
+NO-107,NocheVia,Bilbao,2026-11-13,17:30,00:10,400.0,23.599999999999998,2,4,2 bags,True,True,6,4.4,74
+VE-108,VerdeBus,Zaragoza,2026-11-13,16:00,21:20,320.0,22.72,2,9,4 bags,False,True,11,4.2,100
+NO-109,NocheVia,Cadiz,2026-11-13,19:00,05:50,650.0,38.35,1,14,3 bags,False,True,19,4.9,74
+CO-110,CostaLink,Bilbao,2026-11-13,17:00,23:40,400.0,24.8,1,1,2 bags,False,True,19,4.6,77
+NO-111,NocheVia,Bilbao,2026-11-14,23:00,05:40,400.0,23.599999999999998,1,15,4 bags,False,False,16,4.8,74
+SO-112,SolRuta,Alicante,2026-11-14,09:00,16:00,420.0,21.0,3,4,2 bags,True,True,4,4.9,65
+CA-113,CaminoExpress,Zaragoza,2026-11-14,13:30,18:50,320.0,24.0,0,0,3 bags,False,False,8,3.6,92
+SO-114,SolRuta,Murcia,2026-11-14,07:00,13:40,400.0,20.0,3,11,5 bags,False,True,9,3.8,65
+CA-115,CaminoExpress,Barcelona,2026-11-14,18:00,04:20,620.0,46.5,0,0,2 bags,True,True,9,3.7,92
+CA-116,CaminoExpress,Malaga,2026-11-14,11:30,20:20,530.0,39.75,0,0,4 bags,False,False,15,4.5,92
+SO-117,SolRuta,Alicante,2026-11-14,06:30,13:30,420.0,21.0,3,9,2 bags,True,False,18,4.9,65
+SO-118,SolRuta,Murcia,2026-11-14,07:00,13:40,400.0,20.0,1,7,2 bags,True,False,20,4.3,65
+VE-119,VerdeBus,Seville,2026-11-14,20:30,05:20,530.0,37.629999999999995,3,11,4 bags,True,True,16,4.4,100
+CO-120,CostaLink,Valencia,2026-11-14,18:00,23:55,355.0,22.01,1,6,5 bags,False,True,19,3.9,77
+NO-121,NocheVia,Seville,2026-11-15,18:30,03:20,530.0,31.27,2,5,3 bags,False,False,10,4.9,74
+CO-122,CostaLink,Seville,2026-11-15,17:30,02:20,530.0,32.86,3,5,5 bags,True,True,4,4.9,77
+VE-123,VerdeBus,Seville,2026-11-15,21:00,05:50,530.0,37.629999999999995,1,5,4 bags,True,True,5,4.0,100
+CA-124,CaminoExpress,Malaga,2026-11-15,11:00,19:50,530.0,39.75,0,0,4 bags,False,True,10,3.7,92
+VE-125,VerdeBus,Cordoba,2026-11-15,19:00,01:40,400.0,28.4,2,14,2 bags,True,False,12,3.9,100
+NO-126,NocheVia,Cordoba,2026-11-15,19:00,01:40,400.0,23.599999999999998,1,2,4 bags,True,True,15,4.0,74
+CA-127,CaminoExpress,Seville,2026-11-15,11:30,20:20,530.0,39.75,0,0,2 bags,True,False,15,3.6,92
+VE-128,VerdeBus,Cordoba,2026-11-15,20:00,02:40,400.0,28.4,2,12,3 bags,False,False,7,4.4,100
+VE-129,VerdeBus,Toledo,2026-11-15,21:30,22:40,70.0,4.97,3,10,5 bags,False,True,18,4.2,100
+NO-130,NocheVia,Cordoba,2026-11-15,18:30,01:10,400.0,23.599999999999998,1,14,3 bags,True,True,2,3.6,74
+NO-131,NocheVia,Malaga,2026-11-16,21:30,06:20,530.0,31.27,3,12,5 bags,True,True,2,4.8,74
+NO-132,NocheVia,San Sebastian,2026-11-16,18:00,01:50,470.0,27.729999999999997,1,9,5 bags,True,False,18,5.0,74
+CA-133,CaminoExpress,Bilbao,2026-11-16,18:30,01:10,400.0,30.0,0,0,4 bags,True,False,18,4.2,92
+CA-134,CaminoExpress,Seville,2026-11-16,16:30,01:20,530.0,39.75,0,0,2 bags,True,True,9,4.1,92
+NO-135,NocheVia,San Sebastian,2026-11-16,18:30,02:20,470.0,27.729999999999997,2,1,5 bags,True,False,17,3.5,74
+NO-136,NocheVia,Toledo,2026-11-16,18:30,19:40,70.0,4.13,3,15,3 bags,False,False,17,3.5,74
+NO-137,NocheVia,Zaragoza,2026-11-16,21:00,02:20,320.0,18.88,1,15,2 bags,False,True,16,3.8,74
+CO-138,CostaLink,Alicante,2026-11-16,19:30,02:30,420.0,26.04,2,13,2 bags,False,True,19,3.6,77
+CA-139,CaminoExpress,Valencia,2026-11-16,11:00,16:55,355.0,26.625,0,0,3 bags,True,False,5,4.3,92
+NO-140,NocheVia,Salamanca,2026-11-16,17:30,21:00,210.0,12.389999999999999,3,2,2 bags,True,False,20,4.5,74
+CA-141,CaminoExpress,Barcelona,2026-11-17,15:00,01:20,620.0,46.5,0,0,2 bags,False,False,13,3.6,92
+CO-142,CostaLink,Murcia,2026-11-17,19:00,01:40,400.0,24.8,3,3,4 bags,False,False,15,4.7,77
+VE-143,VerdeBus,Malaga,2026-11-17,22:30,07:20,530.0,37.629999999999995,2,10,2 bags,False,False,7,4.2,100
+CO-144,CostaLink,Cadiz,2026-11-17,17:00,03:50,650.0,40.3,1,9,3 bags,False,False,19,4.6,77
+CA-145,CaminoExpress,Malaga,2026-11-17,14:30,23:20,530.0,39.75,0,0,4 bags,False,False,15,5.0,92
+CA-146,CaminoExpress,Barcelona,2026-11-17,14:30,00:50,620.0,46.5,0,0,2 bags,True,True,8,4.6,92
+CO-147,CostaLink,Seville,2026-11-17,20:00,04:50,530.0,32.86,2,1,4 bags,True,True,19,3.9,77
+VE-148,VerdeBus,San Sebastian,2026-11-17,18:00,01:50,470.0,33.37,2,6,4 bags,False,True,4,4.1,100
+CO-149,CostaLink,Valencia,2026-11-17,20:30,02:25,355.0,22.01,1,2,3 bags,False,False,16,3.9,77
+CA-150,CaminoExpress,Bilbao,2026-11-17,14:30,21:10,400.0,30.0,0,0,2 bags,True,True,7,4.3,92
+VE-151,VerdeBus,Granada,2026-11-18,20:30,03:40,430.0,30.529999999999998,1,4,5 bags,True,True,10,4.7,100
+CA-152,CaminoExpress,Seville,2026-11-18,13:00,21:50,530.0,39.75,0,0,2 bags,True,False,20,4.9,92
+CO-153,CostaLink,Cadiz,2026-11-18,19:00,05:50,650.0,40.3,3,8,2 bags,False,False,10,3.5,77
+CA-154,CaminoExpress,Malaga,2026-11-18,19:30,04:20,530.0,39.75,0,0,4 bags,True,False,17,5.0,92
+SO-155,SolRuta,Santiago de Compostela,2026-11-18,12:30,22:30,600.0,30.0,1,6,4 bags,False,True,16,3.6,65
+SO-156,SolRuta,Murcia,2026-11-18,12:00,18:40,400.0,20.0,3,8,3 bags,False,False,16,4.6,65
+VE-157,VerdeBus,Valencia,2026-11-18,19:00,00:55,355.0,25.205,1,11,4 bags,True,False,4,3.8,100
+CO-158,CostaLink,Cadiz,2026-11-18,19:30,06:20,650.0,40.3,3,5,5 bags,True,False,19,3.7,77
+VE-159,VerdeBus,Cordoba,2026-11-18,16:30,23:10,400.0,28.4,3,5,4 bags,False,True,16,4.3,100
+CA-160,CaminoExpress,Bilbao,2026-11-18,14:30,21:10,400.0,30.0,0,0,3 bags,False,True,12,4.6,92
+CA-161,CaminoExpress,Zaragoza,2026-11-19,20:30,01:50,320.0,24.0,0,0,2 bags,False,True,18,4.9,92
+CO-162,CostaLink,San Sebastian,2026-11-19,19:00,02:50,470.0,29.14,3,12,4 bags,False,False,17,4.8,77
+SO-163,SolRuta,Bilbao,2026-11-19,07:30,14:10,400.0,20.0,1,13,3 bags,False,True,3,4.0,65
+CA-164,CaminoExpress,Zaragoza,2026-11-19,17:00,22:20,320.0,24.0,0,0,3 bags,True,True,14,4.4,92
+CO-165,CostaLink,Murcia,2026-11-19,16:30,23:10,400.0,24.8,2,11,4 bags,True,True,16,4.9,77
+CA-166,CaminoExpress,Malaga,2026-11-19,18:00,02:50,530.0,39.75,0,0,3 bags,False,False,20,3.9,92
+SO-167,SolRuta,Cadiz,2026-11-19,13:30,00:20,650.0,32.5,3,12,3 bags,False,True,8,4.4,65
+SO-168,SolRuta,Alicante,2026-11-19,08:00,15:00,420.0,21.0,2,12,4 bags,False,False,7,3.8,65
+VE-169,VerdeBus,Toledo,2026-11-19,21:00,22:10,70.0,4.97,2,12,5 bags,True,True,9,4.8,100
+NO-170,NocheVia,Valencia,2026-11-19,19:30,01:25,355.0,20.945,2,6,4 bags,True,True,17,3.5,74
+CO-171,CostaLink,Alicante,2026-11-20,16:00,23:00,420.0,26.04,1,3,4 bags,False,True,5,3.9,77
+NO-172,NocheVia,Bilbao,2026-11-20,17:30,00:10,400.0,23.599999999999998,3,12,2 bags,False,False,10,3.5,74
+CO-173,CostaLink,Valencia,2026-11-20,20:30,02:25,355.0,22.01,3,6,2 bags,False,False,8,5.0,77
+CO-174,CostaLink,Malaga,2026-11-20,20:00,04:50,530.0,32.86,1,13,2 bags,True,True,9,4.0,77
+NO-175,NocheVia,Granada,2026-11-20,15:00,22:10,430.0,25.369999999999997,1,2,2 bags,False,True,20,4.0,74
+NO-176,NocheVia,Valencia,2026-11-20,22:30,04:25,355.0,20.945,3,2,4 bags,True,False,18,3.8,74
+VE-177,VerdeBus,Santiago de Compostela,2026-11-20,17:30,03:30,600.0,42.599999999999994,2,7,5 bags,True,True,12,4.4,100
+CO-178,CostaLink,Alicante,2026-11-20,18:30,01:30,420.0,26.04,3,9,5 bags,True,True,19,4.6,77
+VE-179,VerdeBus,Bilbao,2026-11-20,17:30,00:10,400.0,28.4,2,12,5 bags,False,False,13,4.9,100
+SO-180,SolRuta,Salamanca,2026-11-20,08:00,11:30,210.0,10.5,3,6,4 bags,True,False,13,4.8,65
+NO-181,NocheVia,Zaragoza,2026-11-21,22:00,03:20,320.0,18.88,1,3,2 bags,False,False,5,4.6,74
+CO-182,CostaLink,Bilbao,2026-11-21,16:00,22:40,400.0,24.8,2,6,3 bags,False,True,6,4.6,77
+CO-183,CostaLink,Seville,2026-11-21,18:00,02:50,530.0,32.86,2,5,2 bags,True,True,3,4.5,77
+VE-184,VerdeBus,Granada,2026-11-21,17:30,00:40,430.0,30.529999999999998,1,13,5 bags,True,False,20,4.2,100
+SO-185,SolRuta,Barcelona,2026-11-21,09:00,19:20,620.0,31.0,1,5,4 bags,False,False,5,3.5,65
+CA-186,CaminoExpress,Zaragoza,2026-11-21,19:30,00:50,320.0,24.0,0,0,2 bags,False,True,15,3.5,92
+VE-187,VerdeBus,Granada,2026-11-21,16:30,23:40,430.0,30.529999999999998,1,7,3 bags,False,False,4,4.2,100
+SO-188,SolRuta,Bilbao,2026-11-21,11:00,17:40,400.0,20.0,2,12,4 bags,True,True,18,4.4,65
+CA-189,CaminoExpress,Seville,2026-11-21,14:00,22:50,530.0,39.75,0,0,3 bags,True,True,17,4.2,92
+VE-190,VerdeBus,San Sebastian,2026-11-21,20:00,03:50,470.0,33.37,3,5,4 bags,True,False,16,4.2,100
+SO-191,SolRuta,Alicante,2026-11-22,12:30,19:30,420.0,21.0,3,9,2 bags,False,True,12,4.4,65
+CO-192,CostaLink,Valencia,2026-11-22,17:00,22:55,355.0,22.01,3,11,3 bags,False,False,18,4.3,77
+CO-193,CostaLink,Barcelona,2026-11-22,18:00,04:20,620.0,38.44,3,11,4 bags,True,False,11,3.9,77
+CO-194,CostaLink,Bilbao,2026-11-22,19:00,01:40,400.0,24.8,3,12,2 bags,False,False,12,4.7,77
+CA-195,CaminoExpress,Valencia,2026-11-22,16:30,22:25,355.0,26.625,0,0,3 bags,True,True,6,3.6,92
+CA-196,CaminoExpress,Valencia,2026-11-22,13:00,18:55,355.0,26.625,0,0,5 bags,True,False,13,4.5,92
+CA-197,CaminoExpress,Seville,2026-11-22,18:00,02:50,530.0,39.75,0,0,4 bags,False,False,11,4.7,92
+SO-198,SolRuta,Murcia,2026-11-22,11:00,17:40,400.0,20.0,2,14,2 bags,False,True,7,3.9,65
+CO-199,CostaLink,Barcelona,2026-11-22,19:30,05:50,620.0,38.44,2,1,3 bags,False,True,13,3.8,77
+CO-200,CostaLink,Murcia,2026-11-22,17:30,00:10,400.0,24.8,3,14,5 bags,True,True,2,3.9,77
+SO-201,SolRuta,Barcelona,2026-11-23,13:00,23:20,620.0,31.0,1,7,2 bags,False,True,18,4.4,65
+CA-202,CaminoExpress,Zaragoza,2026-11-23,17:00,22:20,320.0,24.0,0,0,2 bags,False,True,18,4.3,92
+CO-203,CostaLink,Bilbao,2026-11-23,18:00,00:40,400.0,24.8,3,1,4 bags,True,True,20,4.6,77
+CA-204,CaminoExpress,Bilbao,2026-11-23,18:30,01:10,400.0,30.0,0,0,3 bags,True,True,16,3.6,92
+CO-205,CostaLink,Cadiz,2026-11-23,20:30,07:20,650.0,40.3,2,14,4 bags,True,True,11,4.0,77
+VE-206,VerdeBus,Cadiz,2026-11-23,23:30,10:20,650.0,46.15,2,12,4 bags,True,False,17,4.1,100
+CA-207,CaminoExpress,Zaragoza,2026-11-23,15:30,20:50,320.0,24.0,0,0,2 bags,True,False,11,4.0,92
+CO-208,CostaLink,Alicante,2026-11-23,16:00,23:00,420.0,26.04,2,11,5 bags,False,True,2,3.7,77
+CO-209,CostaLink,San Sebastian,2026-11-23,16:00,23:50,470.0,29.14,2,10,5 bags,False,False,16,4.6,77
+CA-210,CaminoExpress,Barcelona,2026-11-23,11:00,21:20,620.0,46.5,0,0,5 bags,False,True,10,4.7,92
+CA-211,CaminoExpress,Barcelona,2026-11-24,18:00,04:20,620.0,46.5,0,0,5 bags,True,False,13,4.6,92
+NO-212,NocheVia,Malaga,2026-11-24,17:00,01:50,530.0,31.27,1,4,5 bags,True,False,19,4.4,74
+VE-213,VerdeBus,Zaragoza,2026-11-24,22:00,03:20,320.0,22.72,2,13,3 bags,False,True,16,4.2,100
+SO-214,SolRuta,Santiago de Compostela,2026-11-24,08:30,18:30,600.0,30.0,1,9,3 bags,True,False,9,4.0,65
+NO-215,NocheVia,Granada,2026-11-24,19:00,02:10,430.0,25.369999999999997,1,11,3 bags,True,True,12,4.8,74
+NO-216,NocheVia,Granada,2026-11-24,21:00,04:10,430.0,25.369999999999997,3,4,5 bags,False,False,17,3.9,74
+CA-217,CaminoExpress,Malaga,2026-11-24,17:30,02:20,530.0,39.75,0,0,5 bags,True,False,6,4.0,92
+NO-218,NocheVia,Zaragoza,2026-11-24,18:30,23:50,320.0,18.88,1,6,2 bags,False,False,9,3.7,74
+CA-219,CaminoExpress,Seville,2026-11-24,20:30,05:20,530.0,39.75,0,0,3 bags,True,False,18,4.2,92
+NO-220,NocheVia,San Sebastian,2026-11-24,20:00,03:50,470.0,27.729999999999997,1,4,2 bags,False,False,17,3.9,74
+CO-221,CostaLink,Alicante,2026-11-25,19:00,02:00,420.0,26.04,2,1,3 bags,False,False,4,4.1,77
+VE-222,VerdeBus,Cordoba,2026-11-25,21:00,03:40,400.0,28.4,2,9,3 bags,False,True,3,3.6,100
+NO-223,NocheVia,Seville,2026-11-25,20:00,04:50,530.0,31.27,2,15,5 bags,False,False,18,4.7,74
+SO-224,SolRuta,Bilbao,2026-11-25,06:30,13:10,400.0,20.0,3,5,4 bags,True,True,20,4.2,65
+SO-225,SolRuta,Malaga,2026-11-25,11:30,20:20,530.0,26.5,1,8,3 bags,False,True,15,4.3,65
+CO-226,CostaLink,Murcia,2026-11-25,18:00,00:40,400.0,24.8,3,7,5 bags,False,False,10,4.4,77
+CO-227,CostaLink,Bilbao,2026-11-25,19:30,02:10,400.0,24.8,3,4,5 bags,False,False,11,3.7,77
+CO-228,CostaLink,Valencia,2026-11-25,19:30,01:25,355.0,22.01,2,15,5 bags,True,True,19,3.9,77
+SO-229,SolRuta,Murcia,2026-11-25,09:00,15:40,400.0,20.0,3,4,2 bags,False,False,17,3.7,65
+VE-230,VerdeBus,San Sebastian,2026-11-25,20:30,04:20,470.0,33.37,3,4,4 bags,True,True,20,3.8,100
+SO-231,SolRuta,Santiago de Compostela,2026-11-26,13:00,23:00,600.0,30.0,2,13,4 bags,True,True,11,4.4,65
+NO-232,NocheVia,Zaragoza,2026-11-26,17:30,22:50,320.0,18.88,2,15,4 bags,True,True,12,3.7,74
+CO-233,CostaLink,Malaga,2026-11-26,19:30,04:20,530.0,32.86,1,10,4 bags,True,False,5,3.8,77
+VE-234,VerdeBus,Malaga,2026-11-26,20:30,05:20,530.0,37.629999999999995,2,13,4 bags,True,False,13,4.5,100
+NO-235,NocheVia,Cadiz,2026-11-26,19:00,05:50,650.0,38.35,3,13,4 bags,False,True,9,4.9,74
+NO-236,NocheVia,Cadiz,2026-11-26,23:00,09:50,650.0,38.35,2,13,3 bags,True,False,18,4.6,74
+CA-237,CaminoExpress,Zaragoza,2026-11-26,19:00,00:20,320.0,24.0,0,0,3 bags,False,False,5,4.5,92
+NO-238,NocheVia,Bilbao,2026-11-26,15:30,22:10,400.0,23.599999999999998,2,10,4 bags,True,False,10,4.7,74
+SO-239,SolRuta,Zaragoza,2026-11-26,07:30,12:50,320.0,16.0,1,15,2 bags,False,False,7,4.7,65
+VE-240,VerdeBus,Bilbao,2026-11-26,18:30,01:10,400.0,28.4,1,11,2 bags,True,False,18,3.7,100
+NO-241,NocheVia,Bilbao,2026-11-27,18:00,00:40,400.0,23.599999999999998,3,7,5 bags,False,True,10,3.8,74
+SO-242,SolRuta,Valencia,2026-11-27,13:00,18:55,355.0,17.75,3,1,3 bags,True,False,16,3.9,65
+CA-243,CaminoExpress,Bilbao,2026-11-27,20:30,03:10,400.0,30.0,0,0,4 bags,True,False,6,5.0,92
+NO-244,NocheVia,Cadiz,2026-11-27,17:30,04:20,650.0,38.35,3,15,5 bags,True,False,14,4.7,74
+CA-245,CaminoExpress,Zaragoza,2026-11-27,18:00,23:20,320.0,24.0,0,0,3 bags,False,True,16,4.9,92
+CA-246,CaminoExpress,Seville,2026-11-27,12:30,21:20,530.0,39.75,0,0,4 bags,True,True,3,3.9,92
+NO-247,NocheVia,Malaga,2026-11-27,20:30,05:20,530.0,31.27,2,4,2 bags,True,True,5,4.6,74
+NO-248,NocheVia,Cordoba,2026-11-27,22:30,05:10,400.0,23.599999999999998,2,7,4 bags,False,False,18,4.8,74
+CO-249,CostaLink,San Sebastian,2026-11-27,20:00,03:50,470.0,29.14,2,1,3 bags,True,False,19,4.9,77
+VE-250,VerdeBus,Alicante,2026-11-27,21:30,04:30,420.0,29.819999999999997,1,8,5 bags,False,False,7,4.6,100
+NO-251,NocheVia,Murcia,2026-11-28,15:00,21:40,400.0,23.599999999999998,1,9,2 bags,True,False,6,4.8,74
+VE-252,VerdeBus,Cordoba,2026-11-28,23:30,06:10,400.0,28.4,1,10,2 bags,True,False,2,3.5,100
+VE-253,VerdeBus,Toledo,2026-11-28,17:00,18:10,70.0,4.97,1,2,3 bags,True,False,13,3.9,100
+CA-254,CaminoExpress,Bilbao,2026-11-28,14:30,21:10,400.0,30.0,0,0,2 bags,True,True,14,4.1,92
+VE-255,VerdeBus,Murcia,2026-11-28,17:00,23:40,400.0,28.4,2,10,3 bags,True,False,10,3.6,100
+CO-256,CostaLink,Barcelona,2026-11-28,17:30,03:50,620.0,38.44,1,10,2 bags,False,True,20,3.9,77
+SO-257,SolRuta,Zaragoza,2026-11-28,06:00,11:20,320.0,16.0,3,6,5 bags,True,True,12,4.4,65
+VE-258,VerdeBus,San Sebastian,2026-11-28,22:30,06:20,470.0,33.37,1,6,3 bags,False,True,11,4.7,100
+CA-259,CaminoExpress,Bilbao,2026-11-28,17:30,00:10,400.0,30.0,0,0,4 bags,True,True,2,4.9,92
+CA-260,CaminoExpress,Malaga,2026-11-28,18:30,03:20,530.0,39.75,0,0,2 bags,True,True,13,4.3,92
+SO-261,SolRuta,Salamanca,2026-11-29,09:00,12:30,210.0,10.5,3,15,5 bags,True,True,10,4.0,65
+VE-262,VerdeBus,Granada,2026-11-29,17:30,00:40,430.0,30.529999999999998,2,13,4 bags,True,False,8,4.2,100
+NO-263,NocheVia,Bilbao,2026-11-29,20:30,03:10,400.0,23.599999999999998,2,8,3 bags,False,False,8,4.2,74
+VE-264,VerdeBus,Alicante,2026-11-29,22:30,05:30,420.0,29.819999999999997,1,6,5 bags,False,True,20,3.8,100
+CO-265,CostaLink,Valencia,2026-11-29,19:00,00:55,355.0,22.01,2,11,4 bags,True,False,6,4.6,77
+NO-266,NocheVia,Zaragoza,2026-11-29,23:00,04:20,320.0,18.88,3,7,4 bags,True,True,9,4.5,74
+VE-267,VerdeBus,Toledo,2026-11-29,22:00,23:10,70.0,4.97,2,13,2 bags,True,False,9,4.3,100
+NO-268,NocheVia,Salamanca,2026-11-29,20:00,23:30,210.0,12.389999999999999,3,3,5 bags,True,False,15,4.9,74
+VE-269,VerdeBus,Toledo,2026-11-29,23:30,00:40,70.0,4.97,1,9,5 bags,True,False,16,4.0,100
+SO-270,SolRuta,Murcia,2026-11-29,09:00,15:40,400.0,20.0,1,15,3 bags,False,False,16,3.8,65
+NO-271,NocheVia,Cadiz,2026-11-30,21:30,08:20,650.0,38.35,1,8,2 bags,True,True,10,4.6,74
+VE-272,VerdeBus,Valencia,2026-11-30,23:30,05:25,355.0,25.205,2,11,5 bags,False,True,13,4.0,100
+CA-273,CaminoExpress,Seville,2026-11-30,12:00,20:50,530.0,39.75,0,0,4 bags,True,True,13,4.5,92
+CA-274,CaminoExpress,Malaga,2026-11-30,19:00,03:50,530.0,39.75,0,0,3 bags,False,False,6,3.8,92
+CA-275,CaminoExpress,Malaga,2026-11-30,19:30,04:20,530.0,39.75,0,0,5 bags,False,False,16,4.2,92
+CA-276,CaminoExpress,Zaragoza,2026-11-30,15:00,20:20,320.0,24.0,0,0,5 bags,False,True,20,3.7,92
+VE-277,VerdeBus,Valencia,2026-11-30,19:30,01:25,355.0,25.205,3,14,2 bags,False,False,13,4.8,100
+NO-278,NocheVia,Salamanca,2026-11-30,21:00,00:30,210.0,12.389999999999999,2,14,3 bags,True,True,3,4.4,74
+CO-279,CostaLink,Cadiz,2026-11-30,16:00,02:50,650.0,40.3,3,14,5 bags,True,False,6,4.6,77
+VE-280,VerdeBus,San Sebastian,2026-11-30,20:30,04:20,470.0,33.37,1,10,5 bags,False,True,4,4.1,100
+SO-281,SolRuta,Santiago de Compostela,2026-12-01,13:30,23:30,600.0,30.0,3,2,2 bags,False,True,15,4.7,65
+NO-282,NocheVia,Seville,2026-12-01,22:30,07:20,530.0,31.27,3,14,2 bags,True,True,16,3.5,74
+VE-283,VerdeBus,Malaga,2026-12-01,18:30,03:20,530.0,37.629999999999995,3,15,3 bags,False,True,13,3.9,100
+CA-284,CaminoExpress,Malaga,2026-12-01,12:00,20:50,530.0,39.75,0,0,2 bags,True,False,4,3.7,92
+SO-285,SolRuta,Santiago de Compostela,2026-12-01,08:30,18:30,600.0,30.0,2,12,2 bags,True,False,4,4.6,65
+CA-286,CaminoExpress,Malaga,2026-12-01,13:00,21:50,530.0,39.75,0,0,2 bags,True,True,16,4.0,92
+SO-287,SolRuta,Cadiz,2026-12-01,07:30,18:20,650.0,32.5,1,3,4 bags,False,False,6,3.9,65
+CO-288,CostaLink,Malaga,2026-12-01,20:00,04:50,530.0,32.86,3,10,5 bags,False,True,9,4.2,77
+SO-289,SolRuta,Cordoba,2026-12-01,12:30,19:10,400.0,20.0,2,3,4 bags,True,False,4,3.5,65
+SO-290,SolRuta,Toledo,2026-12-01,10:30,11:40,70.0,3.5,2,9,5 bags,False,True,19,4.3,65
+CA-291,CaminoExpress,Valencia,2026-12-02,19:30,01:25,355.0,26.625,0,0,5 bags,True,False,15,4.6,92
+SO-292,SolRuta,San Sebastian,2026-12-02,06:30,14:20,470.0,23.5,3,10,3 bags,True,True,6,4.6,65
+CO-293,CostaLink,Seville,2026-12-02,18:00,02:50,530.0,32.86,2,3,2 bags,False,False,10,4.3,77
+SO-294,SolRuta,San Sebastian,2026-12-02,11:00,18:50,470.0,23.5,3,3,4 bags,True,True,9,4.6,65
+CO-295,CostaLink,Alicante,2026-12-02,16:30,23:30,420.0,26.04,1,3,3 bags,False,True,15,4.9,77
+NO-296,NocheVia,Murcia,2026-12-02,18:00,00:40,400.0,23.599999999999998,1,3,5 bags,True,False,11,4.7,74
+CO-297,CostaLink,Malaga,2026-12-02,18:00,02:50,530.0,32.86,2,10,5 bags,False,False,8,4.6,77
+NO-298,NocheVia,Cordoba,2026-12-02,15:30,22:10,400.0,23.599999999999998,3,14,2 bags,False,False,5,3.8,74
+CA-299,CaminoExpress,Bilbao,2026-12-02,15:00,21:40,400.0,30.0,0,0,2 bags,True,False,13,4.2,92
+NO-300,NocheVia,Barcelona,2026-12-02,17:00,03:20,620.0,36.58,2,11,4 bags,False,False,14,4.6,74
+CA-301,CaminoExpress,Valencia,2026-12-03,20:00,01:55,355.0,26.625,0,0,3 bags,True,True,16,4.2,92
+VE-302,VerdeBus,Granada,2026-12-03,18:30,01:40,430.0,30.529999999999998,1,2,2 bags,True,False,6,3.6,100
+CO-303,CostaLink,Bilbao,2026-12-03,19:30,02:10,400.0,24.8,1,1,3 bags,True,False,5,4.7,77
+CA-304,CaminoExpress,Valencia,2026-12-03,14:30,20:25,355.0,26.625,0,0,4 bags,True,False,4,3.5,92
+CO-305,CostaLink,Valencia,2026-12-03,16:00,21:55,355.0,22.01,1,8,5 bags,False,False,2,4.1,77
+CO-306,CostaLink,Bilbao,2026-12-03,17:00,23:40,400.0,24.8,2,15,3 bags,False,False,15,4.8,77
+VE-307,VerdeBus,Malaga,2026-12-03,19:00,03:50,530.0,37.629999999999995,3,15,5 bags,False,False,19,4.7,100
+CO-308,CostaLink,Malaga,2026-12-03,18:00,02:50,530.0,32.86,1,15,5 bags,False,True,7,3.7,77
+VE-309,VerdeBus,Cordoba,2026-12-03,19:30,02:10,400.0,28.4,1,3,4 bags,True,False,20,4.3,100
+SO-310,SolRuta,Barcelona,2026-12-03,09:00,19:20,620.0,31.0,1,10,5 bags,True,False,8,4.7,65
+NO-311,NocheVia,Salamanca,2026-12-04,16:30,20:00,210.0,12.389999999999999,1,13,2 bags,False,False,20,3.7,74
+VE-312,VerdeBus,Toledo,2026-12-04,21:00,22:10,70.0,4.97,3,8,4 bags,True,True,14,4.0,100
+NO-313,NocheVia,Bilbao,2026-12-04,17:30,00:10,400.0,23.599999999999998,3,1,3 bags,True,False,6,4.0,74
+SO-314,SolRuta,Santiago de Compostela,2026-12-04,11:30,21:30,600.0,30.0,3,11,2 bags,False,True,9,4.5,65
+VE-315,VerdeBus,Salamanca,2026-12-04,22:30,02:00,210.0,14.909999999999998,2,3,5 bags,False,False,5,4.7,100
+SO-316,SolRuta,Granada,2026-12-04,10:00,17:10,430.0,21.5,1,6,2 bags,False,True,14,3.7,65
+VE-317,VerdeBus,Murcia,2026-12-04,22:00,04:40,400.0,28.4,1,10,2 bags,True,False,8,5.0,100
+SO-318,SolRuta,Bilbao,2026-12-04,13:00,19:40,400.0,20.0,3,9,2 bags,False,True,15,3.6,65
+CO-319,CostaLink,Valencia,2026-12-04,16:30,22:25,355.0,22.01,2,14,5 bags,False,False,10,3.6,77
+VE-320,VerdeBus,Barcelona,2026-12-04,23:30,09:50,620.0,44.019999999999996,2,8,3 bags,False,True,6,4.6,100
+NO-321,NocheVia,Malaga,2026-12-05,21:30,06:20,530.0,31.27,3,1,5 bags,True,False,11,3.6,74
+CA-322,CaminoExpress,Valencia,2026-12-05,14:00,19:55,355.0,26.625,0,0,2 bags,False,True,15,3.8,92
+NO-323,NocheVia,Bilbao,2026-12-05,19:30,02:10,400.0,23.599999999999998,3,6,2 bags,False,True,15,3.7,74
+CO-324,CostaLink,Alicante,2026-12-05,19:30,02:30,420.0,26.04,2,7,2 bags,True,False,14,3.7,77
+SO-325,SolRuta,Salamanca,2026-12-05,10:30,14:00,210.0,10.5,2,15,2 bags,False,False,11,3.9,65
+VE-326,VerdeBus,Toledo,2026-12-05,22:00,23:10,70.0,4.97,2,5,3 bags,False,True,15,4.6,100
+NO-327,NocheVia,Bilbao,2026-12-05,23:00,05:40,400.0,23.599999999999998,1,13,3 bags,True,True,3,3.9,74
+VE-328,VerdeBus,Zaragoza,2026-12-05,17:00,22:20,320.0,22.72,2,11,3 bags,False,False,16,3.8,100
+CO-329,CostaLink,Valencia,2026-12-05,19:00,00:55,355.0,22.01,2,1,3 bags,True,True,9,4.5,77
+CA-330,CaminoExpress,Bilbao,2026-12-05,13:00,19:40,400.0,30.0,0,0,3 bags,False,False,10,4.1,92
+CO-331,CostaLink,Cadiz,2026-12-06,20:00,06:50,650.0,40.3,3,7,2 bags,False,False,11,4.5,77
+CO-332,CostaLink,Bilbao,2026-12-06,18:00,00:40,400.0,24.8,3,12,3 bags,True,True,14,4.5,77
+VE-333,VerdeBus,Bilbao,2026-12-06,16:00,22:40,400.0,28.4,2,12,4 bags,True,False,13,4.3,100
+CO-334,CostaLink,Cadiz,2026-12-06,18:00,04:50,650.0,40.3,1,11,3 bags,False,True,11,4.1,77
+SO-335,SolRuta,San Sebastian,2026-12-06,07:30,15:20,470.0,23.5,1,14,3 bags,True,False,18,3.9,65
+NO-336,NocheVia,Cadiz,2026-12-06,20:00,06:50,650.0,38.35,2,3,2 bags,False,False,7,4.0,74
+CA-337,CaminoExpress,Zaragoza,2026-12-06,13:30,18:50,320.0,24.0,0,0,2 bags,True,False,15,4.1,92
+CO-338,CostaLink,Barcelona,2026-12-06,20:00,06:20,620.0,38.44,2,13,2 bags,True,True,9,4.5,77
+NO-339,NocheVia,Granada,2026-12-06,15:30,22:40,430.0,25.369999999999997,1,2,4 bags,False,False,15,4.8,74
+CA-340,CaminoExpress,Malaga,2026-12-06,11:00,19:50,530.0,39.75,0,0,3 bags,True,True,2,4.4,92
+CO-341,CostaLink,Cadiz,2026-12-07,20:00,06:50,650.0,40.3,3,1,2 bags,True,True,5,4.1,77
+CA-342,CaminoExpress,Bilbao,2026-12-07,11:30,18:10,400.0,30.0,0,0,5 bags,True,False,6,4.1,92
+VE-343,VerdeBus,Malaga,2026-12-07,20:00,04:50,530.0,37.629999999999995,3,4,4 bags,False,False,7,3.6,100
+SO-344,SolRuta,Murcia,2026-12-07,07:30,14:10,400.0,20.0,1,15,3 bags,True,True,5,4.9,65
+SO-345,SolRuta,Santiago de Compostela,2026-12-07,06:30,16:30,600.0,30.0,1,14,4 bags,False,False,5,3.6,65
+VE-346,VerdeBus,Alicante,2026-12-07,17:30,00:30,420.0,29.819999999999997,2,15,4 bags,True,True,14,4.1,100
+CA-347,CaminoExpress,Barcelona,2026-12-07,13:00,23:20,620.0,46.5,0,0,3 bags,True,False,20,4.2,92
+CA-348,CaminoExpress,Malaga,2026-12-07,18:00,02:50,530.0,39.75,0,0,5 bags,False,True,4,3.9,92
+NO-349,NocheVia,Valencia,2026-12-07,18:30,00:25,355.0,20.945,2,11,4 bags,False,True,19,4.8,74
+VE-350,VerdeBus,Santiago de Compostela,2026-12-07,23:30,09:30,600.0,42.599999999999994,1,2,3 bags,False,False,3,4.3,100
+NO-351,NocheVia,San Sebastian,2026-12-08,22:30,06:20,470.0,27.729999999999997,1,14,4 bags,True,False,2,3.7,74
+NO-352,NocheVia,Murcia,2026-12-08,23:00,05:40,400.0,23.599999999999998,2,15,5 bags,False,False,3,4.7,74
+SO-353,SolRuta,Valencia,2026-12-08,06:30,12:25,355.0,17.75,3,4,4 bags,False,False,5,3.6,65
+NO-354,NocheVia,Malaga,2026-12-08,21:00,05:50,530.0,31.27,1,2,5 bags,True,False,5,4.6,74
+NO-355,NocheVia,Seville,2026-12-08,23:00,07:50,530.0,31.27,2,1,5 bags,False,True,20,3.8,74
+VE-356,VerdeBus,Bilbao,2026-12-08,19:30,02:10,400.0,28.4,3,15,5 bags,False,False,16,4.7,100
+NO-357,NocheVia,Murcia,2026-12-08,18:30,01:10,400.0,23.599999999999998,1,4,4 bags,True,True,18,4.3,74
+NO-358,NocheVia,Murcia,2026-12-08,23:30,06:10,400.0,23.599999999999998,3,7,5 bags,True,True,2,4.1,74
+CA-359,CaminoExpress,Seville,2026-12-08,15:00,23:50,530.0,39.75,0,0,2 bags,False,True,19,3.5,92
+NO-360,NocheVia,Toledo,2026-12-08,15:30,16:40,70.0,4.13,3,5,5 bags,False,False,19,3.6,74
+CO-361,CostaLink,Cadiz,2026-12-09,17:00,03:50,650.0,40.3,3,10,4 bags,False,True,4,3.8,77
+NO-362,NocheVia,Granada,2026-12-09,19:00,02:10,430.0,25.369999999999997,1,3,4 bags,False,True,3,3.7,74
+NO-363,NocheVia,Cordoba,2026-12-09,20:00,02:40,400.0,23.599999999999998,1,13,3 bags,True,True,15,4.3,74
+CO-364,CostaLink,San Sebastian,2026-12-09,17:30,01:20,470.0,29.14,2,5,2 bags,True,False,16,3.9,77
+SO-365,SolRuta,Bilbao,2026-12-09,10:00,16:40,400.0,20.0,2,9,4 bags,False,False,3,3.9,65
+NO-366,NocheVia,Zaragoza,2026-12-09,16:00,21:20,320.0,18.88,1,11,3 bags,False,True,8,4.3,74
+CO-367,CostaLink,Barcelona,2026-12-09,16:00,02:20,620.0,38.44,1,2,4 bags,True,True,10,4.1,77
+SO-368,SolRuta,Zaragoza,2026-12-09,07:00,12:20,320.0,16.0,1,11,2 bags,False,True,11,4.7,65
+SO-369,SolRuta,San Sebastian,2026-12-09,09:00,16:50,470.0,23.5,1,9,5 bags,False,True,11,4.5,65
+NO-370,NocheVia,Alicante,2026-12-09,23:00,06:00,420.0,24.779999999999998,2,9,4 bags,True,False,8,4.1,74
+CO-371,CostaLink,Malaga,2026-12-10,20:00,04:50,530.0,32.86,1,3,5 bags,True,False,4,3.9,77
+CA-372,CaminoExpress,Barcelona,2026-12-10,15:00,01:20,620.0,46.5,0,0,3 bags,False,False,16,4.0,92
+CA-373,CaminoExpress,Barcelona,2026-12-10,16:00,02:20,620.0,46.5,0,0,3 bags,False,False,13,3.7,92
+CO-374,CostaLink,Murcia,2026-12-10,17:00,23:40,400.0,24.8,3,2,4 bags,True,True,10,4.6,77
+NO-375,NocheVia,Alicante,2026-12-10,18:00,01:00,420.0,24.779999999999998,2,13,4 bags,False,True,13,4.1,74
+VE-376,VerdeBus,Cordoba,2026-12-10,19:00,01:40,400.0,28.4,3,1,3 bags,False,True,7,4.3,100
+VE-377,VerdeBus,Malaga,2026-12-10,21:00,05:50,530.0,37.629999999999995,1,5,2 bags,True,False,14,4.2,100
+NO-378,NocheVia,Murcia,2026-12-10,19:00,01:40,400.0,23.599999999999998,2,14,5 bags,False,False,20,4.5,74
+CO-379,CostaLink,San Sebastian,2026-12-10,19:00,02:50,470.0,29.14,2,13,3 bags,False,True,9,3.6,77
+NO-380,NocheVia,Salamanca,2026-12-10,18:30,22:00,210.0,12.389999999999999,1,11,4 bags,True,False,17,4.2,74
+NO-381,NocheVia,Alicante,2026-12-11,23:00,06:00,420.0,24.779999999999998,1,3,3 bags,True,True,10,4.9,74
+NO-382,NocheVia,San Sebastian,2026-12-11,18:30,02:20,470.0,27.729999999999997,2,3,3 bags,True,False,7,4.6,74
+CA-383,CaminoExpress,Barcelona,2026-12-11,11:00,21:20,620.0,46.5,0,0,5 bags,True,True,7,4.2,92
+NO-384,NocheVia,Zaragoza,2026-12-11,21:30,02:50,320.0,18.88,1,15,4 bags,True,False,9,4.9,74
+NO-385,NocheVia,Valencia,2026-12-11,19:30,01:25,355.0,20.945,2,3,3 bags,True,False,19,4.1,74
+NO-386,NocheVia,Barcelona,2026-12-11,18:30,04:50,620.0,36.58,2,11,5 bags,False,True,6,4.1,74
+CO-387,CostaLink,Alicante,2026-12-11,20:30,03:30,420.0,26.04,1,7,3 bags,False,False,10,5.0,77
+VE-388,VerdeBus,Toledo,2026-12-11,17:00,18:10,70.0,4.97,3,3,5 bags,False,True,7,4.1,100
+VE-389,VerdeBus,Valencia,2026-12-11,19:30,01:25,355.0,25.205,1,5,2 bags,True,False,14,4.4,100
+CA-390,CaminoExpress,Bilbao,2026-12-11,19:30,02:10,400.0,30.0,0,0,3 bags,True,True,7,4.5,92
+CO-391,CostaLink,Alicante,2026-12-12,19:30,02:30,420.0,26.04,2,11,3 bags,True,True,4,4.3,77
+CA-392,CaminoExpress,Malaga,2026-12-12,17:00,01:50,530.0,39.75,0,0,4 bags,True,False,18,3.7,92
+CO-393,CostaLink,Cadiz,2026-12-12,19:30,06:20,650.0,40.3,3,5,5 bags,True,False,16,4.5,77
+CA-394,CaminoExpress,Bilbao,2026-12-12,14:30,21:10,400.0,30.0,0,0,5 bags,False,True,10,3.9,92
+CA-395,CaminoExpress,Malaga,2026-12-12,16:30,01:20,530.0,39.75,0,0,3 bags,False,True,8,4.2,92
+CA-396,CaminoExpress,Valencia,2026-12-12,20:30,02:25,355.0,26.625,0,0,3 bags,True,True,4,4.5,92
+CO-397,CostaLink,Murcia,2026-12-12,18:30,01:10,400.0,24.8,3,14,3 bags,False,False,9,4.6,77
+SO-398,SolRuta,Zaragoza,2026-12-12,08:30,13:50,320.0,16.0,2,7,2 bags,False,False,2,3.5,65
+CO-399,CostaLink,Seville,2026-12-12,17:30,02:20,530.0,32.86,3,5,5 bags,False,False,7,4.2,77
+CO-400,CostaLink,Murcia,2026-12-12,17:00,23:40,400.0,24.8,1,10,2 bags,False,True,19,4.1,77
+SO-401,SolRuta,Seville,2026-12-13,08:30,17:20,530.0,26.5,2,8,5 bags,False,False,19,4.8,65
+CO-402,CostaLink,Murcia,2026-12-13,19:30,02:10,400.0,24.8,3,2,4 bags,False,False,19,4.3,77
+NO-403,NocheVia,Malaga,2026-12-13,23:00,07:50,530.0,31.27,3,10,4 bags,False,False,18,4.2,74
+CA-404,CaminoExpress,Valencia,2026-12-13,16:30,22:25,355.0,26.625,0,0,5 bags,True,True,7,4.0,92
+VE-405,VerdeBus,Granada,2026-12-13,21:30,04:40,430.0,30.529999999999998,2,13,5 bags,True,True,2,3.7,100
+SO-406,SolRuta,Valencia,2026-12-13,13:00,18:55,355.0,17.75,1,15,2 bags,False,True,5,3.9,65
+CO-407,CostaLink,Murcia,2026-12-13,17:00,23:40,400.0,24.8,3,3,2 bags,True,False,12,4.8,77
+NO-408,NocheVia,Seville,2026-12-13,22:30,07:20,530.0,31.27,3,10,4 bags,False,False,19,3.8,74
+CA-409,CaminoExpress,Seville,2026-12-13,11:00,19:50,530.0,39.75,0,0,3 bags,False,False,17,4.3,92
+CO-410,CostaLink,Malaga,2026-12-13,18:00,02:50,530.0,32.86,1,9,5 bags,False,False,9,3.7,77
+CA-411,CaminoExpress,Zaragoza,2026-12-14,20:30,01:50,320.0,24.0,0,0,4 bags,False,False,8,4.8,92
+NO-412,NocheVia,San Sebastian,2026-12-14,22:00,05:50,470.0,27.729999999999997,2,12,4 bags,True,True,3,5.0,74
+VE-413,VerdeBus,Salamanca,2026-12-14,17:00,20:30,210.0,14.909999999999998,1,4,2 bags,False,True,12,4.1,100
+CA-414,CaminoExpress,Barcelona,2026-12-14,15:30,01:50,620.0,46.5,0,0,2 bags,False,True,8,4.8,92
+CA-415,CaminoExpress,Malaga,2026-12-14,18:00,02:50,530.0,39.75,0,0,2 bags,True,False,5,4.3,92
+CA-416,CaminoExpress,Bilbao,2026-12-14,11:00,17:40,400.0,30.0,0,0,4 bags,False,False,8,4.0,92
+CO-417,CostaLink,Barcelona,2026-12-14,18:00,04:20,620.0,38.44,1,13,5 bags,True,True,3,4.4,77
+VE-418,VerdeBus,Valencia,2026-12-14,21:00,02:55,355.0,25.205,3,10,2 bags,False,True,19,4.7,100
+CO-419,CostaLink,Murcia,2026-12-14,16:30,23:10,400.0,24.8,3,4,4 bags,True,False,3,4.2,77
+NO-420,NocheVia,Cordoba,2026-12-14,22:30,05:10,400.0,23.599999999999998,2,12,3 bags,True,True,16,3.9,74
+NO-421,NocheVia,Bilbao,2026-12-15,15:30,22:10,400.0,23.599999999999998,3,3,3 bags,False,True,19,4.7,74
+CO-422,CostaLink,Valencia,2026-12-15,16:00,21:55,355.0,22.01,1,9,3 bags,True,True,8,3.7,77
+VE-423,VerdeBus,Murcia,2026-12-15,20:00,02:40,400.0,28.4,2,9,4 bags,True,True,2,4.9,100
+SO-424,SolRuta,Cordoba,2026-12-15,12:30,19:10,400.0,20.0,3,12,2 bags,False,True,4,4.8,65
+NO-425,NocheVia,Bilbao,2026-12-15,23:00,05:40,400.0,23.599999999999998,1,4,3 bags,False,True,20,4.0,74
+NO-426,NocheVia,Bilbao,2026-12-15,17:30,00:10,400.0,23.599999999999998,3,6,4 bags,False,False,13,4.1,74
+VE-427,VerdeBus,Toledo,2026-12-15,20:30,21:40,70.0,4.97,3,15,5 bags,False,False,2,4.6,100
+CA-428,CaminoExpress,Valencia,2026-12-15,16:00,21:55,355.0,26.625,0,0,4 bags,True,True,3,4.2,92
+CA-429,CaminoExpress,Valencia,2026-12-15,15:30,21:25,355.0,26.625,0,0,2 bags,False,True,4,4.6,92
+SO-430,SolRuta,Alicante,2026-12-15,06:30,13:30,420.0,21.0,3,5,2 bags,True,False,13,4.8,65
+NO-431,NocheVia,Cadiz,2026-12-16,21:00,07:50,650.0,38.35,1,11,4 bags,True,False,19,4.3,74
+VE-432,VerdeBus,San Sebastian,2026-12-16,17:00,00:50,470.0,33.37,3,10,5 bags,False,False,6,3.7,100
+SO-433,SolRuta,Bilbao,2026-12-16,08:00,14:40,400.0,20.0,3,7,5 bags,True,False,14,4.5,65
+VE-434,VerdeBus,Cordoba,2026-12-16,17:00,23:40,400.0,28.4,3,15,5 bags,False,False,13,3.8,100
+NO-435,NocheVia,Santiago de Compostela,2026-12-16,17:30,03:30,600.0,35.4,2,10,2 bags,True,True,13,3.7,74
+CA-436,CaminoExpress,Seville,2026-12-16,11:30,20:20,530.0,39.75,0,0,2 bags,False,False,17,3.5,92
+CO-437,CostaLink,Cadiz,2026-12-16,17:00,03:50,650.0,40.3,2,10,5 bags,True,False,7,3.6,77
+SO-438,SolRuta,Valencia,2026-12-16,10:30,16:25,355.0,17.75,2,11,2 bags,True,False,14,3.8,65
+NO-439,NocheVia,Valencia,2026-12-16,23:30,05:25,355.0,20.945,1,4,2 bags,True,True,18,4.0,74
+CO-440,CostaLink,San Sebastian,2026-12-16,17:30,01:20,470.0,29.14,3,5,2 bags,False,False,2,4.9,77
+CA-441,CaminoExpress,Barcelona,2026-12-17,17:00,03:20,620.0,46.5,0,0,5 bags,True,True,15,5.0,92
+NO-442,NocheVia,Zaragoza,2026-12-17,18:00,23:20,320.0,18.88,3,13,4 bags,True,False,6,4.5,74
+SO-443,SolRuta,Seville,2026-12-17,08:00,16:50,530.0,26.5,2,14,4 bags,False,False,11,4.2,65
+SO-444,SolRuta,Toledo,2026-12-17,10:00,11:10,70.0,3.5,3,10,3 bags,True,True,13,3.6,65
+VE-445,VerdeBus,San Sebastian,2026-12-17,18:00,01:50,470.0,33.37,2,3,3 bags,True,False,2,4.9,100
+VE-446,VerdeBus,Santiago de Compostela,2026-12-17,21:30,07:30,600.0,42.599999999999994,3,8,3 bags,False,False,3,4.4,100
+NO-447,NocheVia,Murcia,2026-12-17,15:00,21:40,400.0,23.599999999999998,3,13,5 bags,False,True,9,4.3,74
+SO-448,SolRuta,Malaga,2026-12-17,12:30,21:20,530.0,26.5,2,8,4 bags,False,True,15,3.9,65
+NO-449,NocheVia,Valencia,2026-12-17,23:00,04:55,355.0,20.945,1,13,5 bags,False,False,16,3.5,74
+CA-450,CaminoExpress,Bilbao,2026-12-17,12:00,18:40,400.0,30.0,0,0,2 bags,False,False,4,4.3,92
+CA-451,CaminoExpress,Seville,2026-12-18,20:00,04:50,530.0,39.75,0,0,3 bags,True,True,3,4.1,92
+CA-452,CaminoExpress,Valencia,2026-12-18,11:30,17:25,355.0,26.625,0,0,2 bags,False,False,17,4.3,92
+VE-453,VerdeBus,San Sebastian,2026-12-18,17:00,00:50,470.0,33.37,2,8,3 bags,False,True,3,3.8,100
+NO-454,NocheVia,Santiago de Compostela,2026-12-18,20:00,06:00,600.0,35.4,3,5,2 bags,True,False,7,3.7,74
+SO-455,SolRuta,Valencia,2026-12-18,11:30,17:25,355.0,17.75,2,6,2 bags,False,True,11,4.2,65
+CA-456,CaminoExpress,Bilbao,2026-12-18,14:00,20:40,400.0,30.0,0,0,2 bags,True,False,11,4.1,92
+VE-457,VerdeBus,Zaragoza,2026-12-18,23:30,04:50,320.0,22.72,3,11,3 bags,True,False,8,3.5,100
+VE-458,VerdeBus,Bilbao,2026-12-18,21:00,03:40,400.0,28.4,1,6,2 bags,True,False,10,4.7,100
+CO-459,CostaLink,San Sebastian,2026-12-18,20:00,03:50,470.0,29.14,2,12,3 bags,True,False,12,4.9,77
+VE-460,VerdeBus,Cadiz,2026-12-18,21:30,08:20,650.0,46.15,3,15,5 bags,True,False,20,4.6,100
+CO-461,CostaLink,Valencia,2026-12-19,16:30,22:25,355.0,22.01,1,5,5 bags,True,False,7,4.4,77
+VE-462,VerdeBus,Cadiz,2026-12-19,23:30,10:20,650.0,46.15,1,6,3 bags,False,True,5,4.1,100
+VE-463,VerdeBus,Cadiz,2026-12-19,19:30,06:20,650.0,46.15,3,3,5 bags,False,False,6,4.7,100
+NO-464,NocheVia,Valencia,2026-12-19,15:00,20:55,355.0,20.945,1,5,4 bags,False,True,5,4.3,74
+CA-465,CaminoExpress,Seville,2026-12-19,15:30,00:20,530.0,39.75,0,0,5 bags,True,False,6,3.7,92
+NO-466,NocheVia,Cordoba,2026-12-19,19:00,01:40,400.0,23.599999999999998,2,3,3 bags,True,False,12,4.3,74
+SO-467,SolRuta,Valencia,2026-12-19,07:30,13:25,355.0,17.75,2,1,5 bags,True,False,13,4.0,65
+VE-468,VerdeBus,Valencia,2026-12-19,23:30,05:25,355.0,25.205,2,5,3 bags,True,True,10,4.9,100
+SO-469,SolRuta,Valencia,2026-12-19,11:30,17:25,355.0,17.75,2,2,5 bags,True,False,13,4.4,65
+SO-470,SolRuta,Toledo,2026-12-19,13:30,14:40,70.0,3.5,2,9,5 bags,True,True,19,3.7,65
+NO-471,NocheVia,Bilbao,2026-12-20,20:00,02:40,400.0,23.599999999999998,2,10,3 bags,True,False,5,4.4,74
+VE-472,VerdeBus,Valencia,2026-12-20,22:30,04:25,355.0,25.205,3,2,5 bags,True,True,8,4.7,100
+VE-473,VerdeBus,Alicante,2026-12-20,19:00,02:00,420.0,29.819999999999997,3,8,4 bags,False,False,15,4.6,100
+CA-474,CaminoExpress,Seville,2026-12-20,11:30,20:20,530.0,39.75,0,0,2 bags,True,False,5,4.8,92
+CO-475,CostaLink,Alicante,2026-12-20,19:00,02:00,420.0,26.04,2,7,3 bags,False,True,8,4.3,77
+CA-476,CaminoExpress,Valencia,2026-12-20,11:00,16:55,355.0,26.625,0,0,2 bags,True,False,15,5.0,92
+NO-477,NocheVia,Cadiz,2026-12-20,17:30,04:20,650.0,38.35,2,10,5 bags,False,False,13,3.8,74
+CO-478,CostaLink,Alicante,2026-12-20,18:00,01:00,420.0,26.04,3,10,2 bags,False,False,5,4.4,77
+NO-479,NocheVia,Cadiz,2026-12-20,18:30,05:20,650.0,38.35,3,2,2 bags,False,True,12,4.3,74
+NO-480,NocheVia,Salamanca,2026-12-20,20:30,00:00,210.0,12.389999999999999,2,7,4 bags,True,True,11,4.6,74
+SO-481,SolRuta,Murcia,2026-12-21,06:30,13:10,400.0,20.0,2,13,5 bags,True,True,18,3.6,65
+CO-482,CostaLink,Barcelona,2026-12-21,20:00,06:20,620.0,38.44,3,2,3 bags,False,False,7,3.9,77
+CO-483,CostaLink,Valencia,2026-12-21,17:30,23:25,355.0,22.01,1,10,5 bags,False,True,16,4.6,77
+SO-484,SolRuta,Barcelona,2026-12-21,12:30,22:50,620.0,31.0,1,8,4 bags,False,True,14,4.5,65
+VE-485,VerdeBus,Barcelona,2026-12-21,23:30,09:50,620.0,44.019999999999996,2,15,4 bags,True,True,19,4.5,100
+SO-486,SolRuta,Granada,2026-12-21,12:30,19:40,430.0,21.5,3,10,3 bags,True,False,7,4.0,65
+NO-487,NocheVia,Valencia,2026-12-21,20:00,01:55,355.0,20.945,3,8,4 bags,False,True,3,3.5,74
+SO-488,SolRuta,Valencia,2026-12-21,12:00,17:55,355.0,17.75,3,3,2 bags,True,False,11,4.2,65
+CO-489,CostaLink,Bilbao,2026-12-21,16:30,23:10,400.0,24.8,1,13,2 bags,False,False,12,5.0,77
+CA-490,CaminoExpress,Zaragoza,2026-12-21,17:00,22:20,320.0,24.0,0,0,5 bags,True,True,19,4.7,92
+SO-491,SolRuta,Valencia,2026-12-22,10:30,16:25,355.0,17.75,3,12,2 bags,False,True,2,4.9,65
+NO-492,NocheVia,Barcelona,2026-12-22,22:30,08:50,620.0,36.58,3,12,5 bags,False,True,19,3.8,74
+CO-493,CostaLink,San Sebastian,2026-12-22,19:00,02:50,470.0,29.14,3,5,2 bags,False,False,4,4.8,77
+VE-494,VerdeBus,Murcia,2026-12-22,22:00,04:40,400.0,28.4,1,5,4 bags,False,True,16,4.6,100
+NO-495,NocheVia,Malaga,2026-12-22,16:30,01:20,530.0,31.27,2,7,5 bags,False,True,3,4.0,74
+NO-496,NocheVia,San Sebastian,2026-12-22,23:00,06:50,470.0,27.729999999999997,3,14,3 bags,True,True,6,4.2,74
+CA-497,CaminoExpress,Barcelona,2026-12-22,13:00,23:20,620.0,46.5,0,0,4 bags,True,False,7,4.8,92
+NO-498,NocheVia,Malaga,2026-12-22,18:30,03:20,530.0,31.27,1,13,4 bags,False,False,5,5.0,74
+CO-499,CostaLink,Valencia,2026-12-22,17:30,23:25,355.0,22.01,1,5,3 bags,False,True,16,3.9,77
+SO-500,SolRuta,Cadiz,2026-12-22,06:00,16:50,650.0,32.5,2,2,3 bags,True,False,15,4.5,65
+NO-501,NocheVia,San Sebastian,2026-12-23,17:00,00:50,470.0,27.729999999999997,2,4,3 bags,False,True,11,4.0,74
+SO-502,SolRuta,Alicante,2026-12-23,14:00,21:00,420.0,21.0,2,14,5 bags,True,False,3,3.8,65
+SO-503,SolRuta,Barcelona,2026-12-23,10:00,20:20,620.0,31.0,3,6,5 bags,False,False,16,3.6,65
+SO-504,SolRuta,Valencia,2026-12-23,13:30,19:25,355.0,17.75,1,12,5 bags,True,False,9,4.7,65
+CA-505,CaminoExpress,Malaga,2026-12-23,14:00,22:50,530.0,39.75,0,0,5 bags,False,True,15,3.7,92
+CA-506,CaminoExpress,Bilbao,2026-12-23,16:30,23:10,400.0,30.0,0,0,3 bags,False,True,3,4.5,92
+VE-507,VerdeBus,Bilbao,2026-12-23,21:00,03:40,400.0,28.4,1,13,4 bags,True,True,20,5.0,100
+CA-508,CaminoExpress,Zaragoza,2026-12-23,18:30,23:50,320.0,24.0,0,0,4 bags,True,False,9,3.9,92
+VE-509,VerdeBus,Barcelona,2026-12-23,16:30,02:50,620.0,44.019999999999996,1,8,5 bags,False,True,16,4.2,100
+CO-510,CostaLink,Malaga,2026-12-23,16:30,01:20,530.0,32.86,3,2,4 bags,True,False,20,4.6,77
+VE-511,VerdeBus,Seville,2026-12-24,23:00,07:50,530.0,37.629999999999995,2,11,2 bags,False,False,18,3.5,100
+CO-512,CostaLink,Barcelona,2026-12-24,18:00,04:20,620.0,38.44,3,15,2 bags,False,False,16,4.4,77
+NO-513,NocheVia,Salamanca,2026-12-24,20:00,23:30,210.0,12.389999999999999,1,3,2 bags,False,True,9,4.0,74
+CO-514,CostaLink,Murcia,2026-12-24,20:00,02:40,400.0,24.8,2,9,5 bags,False,False,13,4.7,77
+CA-515,CaminoExpress,Seville,2026-12-24,12:00,20:50,530.0,39.75,0,0,3 bags,False,True,6,4.2,92
+NO-516,NocheVia,Cadiz,2026-12-24,20:30,07:20,650.0,38.35,1,8,5 bags,True,False,8,3.6,74
+CO-517,CostaLink,Murcia,2026-12-24,20:30,03:10,400.0,24.8,3,11,5 bags,False,True,11,3.8,77
+SO-518,SolRuta,Seville,2026-12-24,13:00,21:50,530.0,26.5,2,5,3 bags,False,True,7,4.8,65
+CO-519,CostaLink,Seville,2026-12-24,18:00,02:50,530.0,32.86,2,5,3 bags,True,False,13,3.7,77
+VE-520,VerdeBus,Cadiz,2026-12-24,18:30,05:20,650.0,46.15,2,13,4 bags,True,True,19,5.0,100
+NO-521,NocheVia,Murcia,2026-12-25,22:30,05:10,400.0,23.599999999999998,1,13,2 bags,False,True,6,4.5,74
+CA-522,CaminoExpress,Malaga,2026-12-25,16:00,00:50,530.0,39.75,0,0,4 bags,True,True,20,4.3,92
+VE-523,VerdeBus,Murcia,2026-12-25,22:00,04:40,400.0,28.4,3,2,5 bags,False,True,13,4.1,100
+CO-524,CostaLink,San Sebastian,2026-12-25,20:00,03:50,470.0,29.14,2,8,3 bags,False,False,16,3.9,77
+CA-525,CaminoExpress,Valencia,2026-12-25,15:30,21:25,355.0,26.625,0,0,4 bags,True,False,4,3.5,92
+NO-526,NocheVia,Toledo,2026-12-25,17:30,18:40,70.0,4.13,1,4,4 bags,False,True,11,4.8,74
+SO-527,SolRuta,Seville,2026-12-25,13:00,21:50,530.0,26.5,2,5,4 bags,False,True,17,4.9,65
+SO-528,SolRuta,Alicante,2026-12-25,13:30,20:30,420.0,21.0,3,6,4 bags,False,True,13,4.3,65
+CO-529,CostaLink,Murcia,2026-12-25,18:00,00:40,400.0,24.8,3,3,2 bags,False,False,15,4.5,77
+SO-530,SolRuta,Zaragoza,2026-12-25,08:00,13:20,320.0,16.0,1,13,3 bags,False,False,11,3.9,65
+NO-531,NocheVia,Granada,2026-12-26,22:30,05:40,430.0,25.369999999999997,2,13,4 bags,True,True,8,3.7,74
+SO-532,SolRuta,Valencia,2026-12-26,06:30,12:25,355.0,17.75,1,15,4 bags,False,False,6,4.7,65
+SO-533,SolRuta,Malaga,2026-12-26,08:00,16:50,530.0,26.5,1,14,4 bags,True,True,6,5.0,65
+VE-534,VerdeBus,Barcelona,2026-12-26,16:00,02:20,620.0,44.019999999999996,1,2,5 bags,True,False,3,3.6,100
+CA-535,CaminoExpress,Valencia,2026-12-26,16:00,21:55,355.0,26.625,0,0,2 bags,True,False,20,4.0,92
+SO-536,SolRuta,Zaragoza,2026-12-26,09:30,14:50,320.0,16.0,1,12,3 bags,True,True,8,4.9,65
+SO-537,SolRuta,Seville,2026-12-26,12:00,20:50,530.0,26.5,2,7,3 bags,False,True,12,3.7,65
+NO-538,NocheVia,Salamanca,2026-12-26,20:30,00:00,210.0,12.389999999999999,1,2,2 bags,False,False,16,4.4,74
+VE-539,VerdeBus,Malaga,2026-12-26,23:30,08:20,530.0,37.629999999999995,1,15,3 bags,True,False,5,4.1,100
+NO-540,NocheVia,Valencia,2026-12-26,17:00,22:55,355.0,20.945,3,15,4 bags,True,False,8,4.4,74
+CO-541,CostaLink,Bilbao,2026-12-27,18:30,01:10,400.0,24.8,3,7,5 bags,False,False,6,4.7,77
+CA-542,CaminoExpress,Barcelona,2026-12-27,12:00,22:20,620.0,46.5,0,0,2 bags,False,True,7,4.1,92
+NO-543,NocheVia,Toledo,2026-12-27,22:00,23:10,70.0,4.13,2,13,4 bags,False,False,18,3.9,74
+SO-544,SolRuta,Bilbao,2026-12-27,12:30,19:10,400.0,20.0,2,6,5 bags,True,True,7,4.3,65
+VE-545,VerdeBus,San Sebastian,2026-12-27,23:30,07:20,470.0,33.37,1,10,5 bags,True,True,14,3.9,100
+NO-546,NocheVia,Barcelona,2026-12-27,20:30,06:50,620.0,36.58,1,14,2 bags,False,False,5,4.1,74
+CA-547,CaminoExpress,Valencia,2026-12-27,15:00,20:55,355.0,26.625,0,0,2 bags,False,True,12,3.8,92
+VE-548,VerdeBus,Granada,2026-12-27,23:00,06:10,430.0,30.529999999999998,1,12,4 bags,False,False,12,4.4,100
+CO-549,CostaLink,Seville,2026-12-27,18:30,03:20,530.0,32.86,3,5,3 bags,False,True,19,3.8,77
+CA-550,CaminoExpress,Zaragoza,2026-12-27,12:00,17:20,320.0,24.0,0,0,4 bags,False,True,20,4.7,92
+CO-551,CostaLink,Cadiz,2026-12-28,20:30,07:20,650.0,40.3,2,7,3 bags,False,False,10,4.4,77
+NO-552,NocheVia,San Sebastian,2026-12-28,22:30,06:20,470.0,27.729999999999997,1,11,5 bags,True,True,13,4.2,74
+SO-553,SolRuta,Murcia,2026-12-28,12:30,19:10,400.0,20.0,1,14,4 bags,True,False,9,4.1,65
+CO-554,CostaLink,Murcia,2026-12-28,19:30,02:10,400.0,24.8,2,9,2 bags,True,True,10,3.7,77
+VE-555,VerdeBus,Toledo,2026-12-28,17:30,18:40,70.0,4.97,1,1,4 bags,True,False,13,4.5,100
+NO-556,NocheVia,Cadiz,2026-12-28,23:30,10:20,650.0,38.35,1,9,5 bags,True,True,5,4.7,74
+CA-557,CaminoExpress,Valencia,2026-12-28,12:00,17:55,355.0,26.625,0,0,3 bags,False,False,15,3.9,92
+VE-558,VerdeBus,San Sebastian,2026-12-28,20:00,03:50,470.0,33.37,3,4,4 bags,False,False,11,3.5,100
+CO-559,CostaLink,San Sebastian,2026-12-28,20:00,03:50,470.0,29.14,3,2,5 bags,False,True,14,4.9,77
+CA-560,CaminoExpress,Malaga,2026-12-28,16:30,01:20,530.0,39.75,0,0,2 bags,False,True,17,4.2,92
+CO-561,CostaLink,Cadiz,2026-12-29,19:30,06:20,650.0,40.3,1,6,5 bags,True,True,7,4.4,77
+CO-562,CostaLink,Valencia,2026-12-29,17:00,22:55,355.0,22.01,1,3,5 bags,False,False,17,4.8,77
+CO-563,CostaLink,Malaga,2026-12-29,18:00,02:50,530.0,32.86,1,7,5 bags,False,True,2,4.9,77
+CA-564,CaminoExpress,Barcelona,2026-12-29,17:30,03:50,620.0,46.5,0,0,4 bags,True,True,13,3.8,92
+VE-565,VerdeBus,Valencia,2026-12-29,19:00,00:55,355.0,25.205,1,12,4 bags,False,False,14,3.7,100
+VE-566,VerdeBus,Toledo,2026-12-29,20:30,21:40,70.0,4.97,1,1,3 bags,False,True,13,4.4,100
+CO-567,CostaLink,Alicante,2026-12-29,19:30,02:30,420.0,26.04,3,4,4 bags,True,True,19,3.6,77
+NO-568,NocheVia,Salamanca,2026-12-29,15:00,18:30,210.0,12.389999999999999,3,13,4 bags,False,False,14,4.5,74
+VE-569,VerdeBus,Cadiz,2026-12-29,23:00,09:50,650.0,46.15,2,15,2 bags,False,False,6,3.9,100
+CO-570,CostaLink,San Sebastian,2026-12-29,18:30,02:20,470.0,29.14,2,5,4 bags,False,True,12,4.6,77
+SO-571,SolRuta,Malaga,2026-12-30,13:30,22:20,530.0,26.5,1,1,3 bags,False,False,5,5.0,65
+NO-572,NocheVia,San Sebastian,2026-12-30,16:00,23:50,470.0,27.729999999999997,2,8,2 bags,False,True,8,4.8,74
+NO-573,NocheVia,Malaga,2026-12-30,23:00,07:50,530.0,31.27,3,1,5 bags,True,True,17,4.5,74
+NO-574,NocheVia,Cadiz,2026-12-30,20:00,06:50,650.0,38.35,1,14,2 bags,True,False,17,4.2,74
+VE-575,VerdeBus,Cordoba,2026-12-30,18:00,00:40,400.0,28.4,3,12,2 bags,False,False,3,4.6,100
+VE-576,VerdeBus,Valencia,2026-12-30,19:00,00:55,355.0,25.205,1,14,5 bags,False,False,6,3.7,100
+SO-577,SolRuta,Santiago de Compostela,2026-12-30,09:30,19:30,600.0,30.0,2,9,5 bags,False,False,10,4.3,65
+VE-578,VerdeBus,Murcia,2026-12-30,16:30,23:10,400.0,28.4,2,2,5 bags,True,True,17,4.3,100
+VE-579,VerdeBus,Granada,2026-12-30,20:00,03:10,430.0,30.529999999999998,1,3,5 bags,False,True,19,3.6,100
+NO-580,NocheVia,Santiago de Compostela,2026-12-30,19:00,05:00,600.0,35.4,2,6,2 bags,True,False,7,4.7,74
+CO-581,CostaLink,San Sebastian,2026-12-31,19:30,03:20,470.0,29.14,3,12,4 bags,False,True,8,3.8,77
+VE-582,VerdeBus,Valencia,2026-12-31,23:30,05:25,355.0,25.205,1,3,5 bags,False,False,13,4.5,100
+CA-583,CaminoExpress,Barcelona,2026-12-31,11:00,21:20,620.0,46.5,0,0,2 bags,True,False,6,4.5,92
+CA-584,CaminoExpress,Malaga,2026-12-31,17:00,01:50,530.0,39.75,0,0,2 bags,True,True,16,4.9,92
+CO-585,CostaLink,Alicante,2026-12-31,16:00,23:00,420.0,26.04,1,6,5 bags,False,False,20,4.4,77
+NO-586,NocheVia,Salamanca,2026-12-31,22:00,01:30,210.0,12.389999999999999,3,15,2 bags,True,False,20,4.0,74
+NO-587,NocheVia,Murcia,2026-12-31,21:00,03:40,400.0,23.599999999999998,2,8,3 bags,False,True,17,4.0,74
+CO-588,CostaLink,Alicante,2026-12-31,18:30,01:30,420.0,26.04,2,14,3 bags,True,False,4,4.5,77
+SO-589,SolRuta,Toledo,2026-12-31,10:00,11:10,70.0,3.5,2,8,3 bags,True,True,13,4.8,65
+SO-590,SolRuta,Cordoba,2026-12-31,09:00,15:40,400.0,20.0,2,2,3 bags,False,False,12,4.7,65
+SO-591,SolRuta,Salamanca,2027-01-01,13:30,17:00,210.0,10.5,1,15,2 bags,True,True,19,3.6,65
+CA-592,CaminoExpress,Bilbao,2027-01-01,15:30,22:10,400.0,30.0,0,0,5 bags,True,True,13,4.0,92
+SO-593,SolRuta,Malaga,2027-01-01,10:00,18:50,530.0,26.5,2,6,2 bags,False,False,15,4.0,65
+VE-594,VerdeBus,Bilbao,2027-01-01,23:30,06:10,400.0,28.4,2,15,2 bags,False,True,2,4.6,100
+CA-595,CaminoExpress,Malaga,2027-01-01,11:30,20:20,530.0,39.75,0,0,2 bags,True,True,18,5.0,92
+SO-596,SolRuta,Santiago de Compostela,2027-01-01,14:00,00:00,600.0,30.0,2,15,5 bags,False,True,19,4.4,65
+SO-597,SolRuta,Barcelona,2027-01-01,12:00,22:20,620.0,31.0,3,6,4 bags,True,True,18,4.3,65
+NO-598,NocheVia,Alicante,2027-01-01,19:30,02:30,420.0,24.779999999999998,2,4,2 bags,True,False,10,4.4,74
+NO-599,NocheVia,Salamanca,2027-01-01,20:00,23:30,210.0,12.389999999999999,1,8,3 bags,False,False,11,4.5,74
+NO-600,NocheVia,Malaga,2027-01-01,16:00,00:50,530.0,31.27,2,8,5 bags,False,True,4,3.6,74
+NO-601,NocheVia,Bilbao,2027-01-02,23:30,06:10,400.0,23.599999999999998,3,9,4 bags,False,False,16,4.5,74
+VE-602,VerdeBus,Salamanca,2027-01-02,17:00,20:30,210.0,14.909999999999998,2,3,5 bags,False,True,7,4.9,100
+NO-603,NocheVia,Granada,2027-01-02,17:00,00:10,430.0,25.369999999999997,1,9,4 bags,False,False,11,3.9,74
+CO-604,CostaLink,Bilbao,2027-01-02,19:00,01:40,400.0,24.8,1,3,2 bags,False,True,3,4.1,77
+NO-605,NocheVia,Seville,2027-01-02,22:30,07:20,530.0,31.27,1,9,5 bags,True,False,4,4.7,74
+SO-606,SolRuta,Murcia,2027-01-02,10:00,16:40,400.0,20.0,2,12,3 bags,True,False,19,4.5,65
+VE-607,VerdeBus,Zaragoza,2027-01-02,18:00,23:20,320.0,22.72,1,2,4 bags,True,True,20,4.2,100
+SO-608,SolRuta,Cordoba,2027-01-02,12:00,18:40,400.0,20.0,2,3,4 bags,False,False,4,3.7,65
+SO-609,SolRuta,Seville,2027-01-02,08:00,16:50,530.0,26.5,2,7,4 bags,True,True,3,3.9,65
+CO-610,CostaLink,Alicante,2027-01-02,17:00,00:00,420.0,26.04,1,1,3 bags,False,False,5,3.9,77
+VE-611,VerdeBus,Murcia,2027-01-03,16:30,23:10,400.0,28.4,1,15,2 bags,True,True,11,4.4,100
+CA-612,CaminoExpress,Valencia,2027-01-03,19:30,01:25,355.0,26.625,0,0,5 bags,True,True,16,4.9,92
+VE-613,VerdeBus,Granada,2027-01-03,22:30,05:40,430.0,30.529999999999998,3,5,3 bags,False,True,7,4.6,100
+CA-614,CaminoExpress,Bilbao,2027-01-03,19:30,02:10,400.0,30.0,0,0,5 bags,True,False,12,4.5,92
+VE-615,VerdeBus,Alicante,2027-01-03,18:00,01:00,420.0,29.819999999999997,2,1,5 bags,True,True,7,4.1,100
+VE-616,VerdeBus,Murcia,2027-01-03,22:30,05:10,400.0,28.4,1,6,5 bags,True,True,5,4.2,100
+CO-617,CostaLink,San Sebastian,2027-01-03,20:30,04:20,470.0,29.14,1,2,3 bags,True,False,13,3.6,77
+VE-618,VerdeBus,Valencia,2027-01-03,23:00,04:55,355.0,25.205,2,10,3 bags,True,True,20,3.7,100
+NO-619,NocheVia,Salamanca,2027-01-03,15:30,19:00,210.0,12.389999999999999,2,4,5 bags,True,False,3,4.8,74
+NO-620,NocheVia,San Sebastian,2027-01-03,23:00,06:50,470.0,27.729999999999997,2,6,3 bags,True,False,15,4.3,74
+NO-621,NocheVia,Toledo,2027-01-04,18:30,19:40,70.0,4.13,1,12,2 bags,True,True,7,4.0,74
+SO-622,SolRuta,Alicante,2027-01-04,11:30,18:30,420.0,21.0,3,15,3 bags,True,False,9,4.9,65
+NO-623,NocheVia,San Sebastian,2027-01-04,22:00,05:50,470.0,27.729999999999997,1,11,2 bags,True,True,14,4.0,74
+NO-624,NocheVia,Murcia,2027-01-04,16:00,22:40,400.0,23.599999999999998,2,2,2 bags,False,False,14,3.6,74
+VE-625,VerdeBus,Cadiz,2027-01-04,17:30,04:20,650.0,46.15,3,10,2 bags,False,False,20,3.8,100
+CA-626,CaminoExpress,Zaragoza,2027-01-04,13:30,18:50,320.0,24.0,0,0,4 bags,False,False,16,3.8,92
+VE-627,VerdeBus,Zaragoza,2027-01-04,21:30,02:50,320.0,22.72,3,13,3 bags,True,False,11,4.4,100
+CA-628,CaminoExpress,Barcelona,2027-01-04,14:00,00:20,620.0,46.5,0,0,5 bags,False,True,8,4.5,92
+VE-629,VerdeBus,Alicante,2027-01-04,21:30,04:30,420.0,29.819999999999997,3,6,5 bags,False,True,5,4.2,100
+CA-630,CaminoExpress,Malaga,2027-01-04,20:00,04:50,530.0,39.75,0,0,3 bags,False,False,14,3.8,92
+SO-631,SolRuta,Zaragoza,2027-01-05,10:30,15:50,320.0,16.0,1,3,3 bags,False,True,2,3.8,65
+CO-632,CostaLink,Cadiz,2027-01-05,17:00,03:50,650.0,40.3,1,3,3 bags,False,True,2,4.7,77
+CO-633,CostaLink,Murcia,2027-01-05,18:00,00:40,400.0,24.8,1,6,5 bags,True,True,6,4.8,77
+CO-634,CostaLink,San Sebastian,2027-01-05,17:00,00:50,470.0,29.14,3,7,3 bags,False,True,12,3.9,77
+VE-635,VerdeBus,Toledo,2027-01-05,17:00,18:10,70.0,4.97,3,10,5 bags,False,False,18,4.2,100
+NO-636,NocheVia,Bilbao,2027-01-05,15:00,21:40,400.0,23.599999999999998,3,15,3 bags,True,False,9,4.1,74
+CO-637,CostaLink,Bilbao,2027-01-05,17:00,23:40,400.0,24.8,3,2,4 bags,False,False,9,4.4,77
+VE-638,VerdeBus,Cordoba,2027-01-05,20:30,03:10,400.0,28.4,2,6,2 bags,True,False,9,3.9,100
+NO-639,NocheVia,Zaragoza,2027-01-05,19:00,00:20,320.0,18.88,3,2,2 bags,True,True,13,3.6,74
+CO-640,CostaLink,Malaga,2027-01-05,17:30,02:20,530.0,32.86,3,10,2 bags,False,False,13,4.7,77
+CA-641,CaminoExpress,Malaga,2027-01-06,14:00,22:50,530.0,39.75,0,0,3 bags,False,True,18,4.4,92
+CA-642,CaminoExpress,Malaga,2027-01-06,17:00,01:50,530.0,39.75,0,0,5 bags,False,True,13,3.7,92
+CO-643,CostaLink,San Sebastian,2027-01-06,19:30,03:20,470.0,29.14,1,7,4 bags,False,True,20,4.7,77
+NO-644,NocheVia,Cadiz,2027-01-06,21:30,08:20,650.0,38.35,3,10,3 bags,False,True,19,4.1,74
+CO-645,CostaLink,Valencia,2027-01-06,20:00,01:55,355.0,22.01,1,2,2 bags,False,True,7,3.8,77
+NO-646,NocheVia,Valencia,2027-01-06,20:00,01:55,355.0,20.945,2,1,3 bags,False,False,14,3.7,74
+VE-647,VerdeBus,Cadiz,2027-01-06,19:30,06:20,650.0,46.15,1,3,5 bags,False,True,20,4.9,100
+CA-648,CaminoExpress,Malaga,2027-01-06,12:30,21:20,530.0,39.75,0,0,3 bags,False,False,16,4.2,92
+CO-649,CostaLink,Alicante,2027-01-06,17:30,00:30,420.0,26.04,3,14,3 bags,True,False,16,4.1,77
+CA-650,CaminoExpress,Seville,2027-01-06,19:30,04:20,530.0,39.75,0,0,2 bags,True,False,15,5.0,92
+CO-651,CostaLink,Alicante,2027-01-07,18:00,01:00,420.0,26.04,2,3,2 bags,False,True,4,4.5,77
+VE-652,VerdeBus,Barcelona,2027-01-07,17:00,03:20,620.0,44.019999999999996,1,5,4 bags,False,False,16,3.6,100
+CA-653,CaminoExpress,Valencia,2027-01-07,11:00,16:55,355.0,26.625,0,0,3 bags,False,True,19,4.6,92
+CO-654,CostaLink,Seville,2027-01-07,16:00,00:50,530.0,32.86,1,12,5 bags,True,True,14,4.5,77
+CA-655,CaminoExpress,Valencia,2027-01-07,16:00,21:55,355.0,26.625,0,0,3 bags,True,True,15,3.5,92
+SO-656,SolRuta,Toledo,2027-01-07,08:00,09:10,70.0,3.5,3,3,5 bags,True,False,12,4.3,65
+CA-657,CaminoExpress,Barcelona,2027-01-07,16:30,02:50,620.0,46.5,0,0,3 bags,True,False,12,3.5,92
+CO-658,CostaLink,San Sebastian,2027-01-07,17:30,01:20,470.0,29.14,1,2,4 bags,False,True,19,4.7,77
+VE-659,VerdeBus,Murcia,2027-01-07,21:00,03:40,400.0,28.4,3,3,4 bags,False,True,12,3.5,100
+SO-660,SolRuta,Malaga,2027-01-07,07:30,16:20,530.0,26.5,1,10,3 bags,False,True,4,3.6,65
+CA-661,CaminoExpress,Bilbao,2027-01-08,11:00,17:40,400.0,30.0,0,0,5 bags,False,True,10,4.0,92
+CO-662,CostaLink,San Sebastian,2027-01-08,20:00,03:50,470.0,29.14,1,4,3 bags,True,False,18,4.0,77
+CA-663,CaminoExpress,Barcelona,2027-01-08,13:00,23:20,620.0,46.5,0,0,3 bags,True,True,20,4.3,92
+CO-664,CostaLink,Seville,2027-01-08,17:30,02:20,530.0,32.86,3,4,3 bags,True,False,11,4.4,77
+CO-665,CostaLink,Alicante,2027-01-08,19:30,02:30,420.0,26.04,2,3,5 bags,False,True,17,3.5,77
+CA-666,CaminoExpress,Zaragoza,2027-01-08,13:30,18:50,320.0,24.0,0,0,5 bags,False,False,16,3.9,92
+CA-667,CaminoExpress,Valencia,2027-01-08,14:00,19:55,355.0,26.625,0,0,2 bags,False,False,14,4.9,92
+NO-668,NocheVia,Valencia,2027-01-08,15:00,20:55,355.0,20.945,2,15,5 bags,True,True,15,4.9,74
+VE-669,VerdeBus,Salamanca,2027-01-08,23:00,02:30,210.0,14.909999999999998,1,4,4 bags,True,True,10,4.4,100
+CA-670,CaminoExpress,Barcelona,2027-01-08,12:00,22:20,620.0,46.5,0,0,5 bags,False,True,18,4.9,92
+NO-671,NocheVia,Zaragoza,2027-01-09,21:30,02:50,320.0,18.88,3,15,5 bags,True,True,20,4.7,74
+VE-672,VerdeBus,Salamanca,2027-01-09,18:30,22:00,210.0,14.909999999999998,2,1,2 bags,True,True,15,4.3,100
+CA-673,CaminoExpress,Valencia,2027-01-09,18:00,23:55,355.0,26.625,0,0,2 bags,False,True,7,3.8,92
+NO-674,NocheVia,Valencia,2027-01-09,16:30,22:25,355.0,20.945,3,3,2 bags,False,True,10,3.6,74
+SO-675,SolRuta,Barcelona,2027-01-09,06:00,16:20,620.0,31.0,1,5,2 bags,True,True,14,4.4,65
+CO-676,CostaLink,San Sebastian,2027-01-09,18:30,02:20,470.0,29.14,3,15,3 bags,False,False,14,4.4,77
+VE-677,VerdeBus,Salamanca,2027-01-09,17:30,21:00,210.0,14.909999999999998,1,1,3 bags,False,False,17,4.3,100
+SO-678,SolRuta,Toledo,2027-01-09,13:00,14:10,70.0,3.5,3,6,5 bags,False,True,13,4.1,65
+CA-679,CaminoExpress,Zaragoza,2027-01-09,20:00,01:20,320.0,24.0,0,0,3 bags,False,True,11,4.7,92
+NO-680,NocheVia,Malaga,2027-01-09,17:00,01:50,530.0,31.27,1,4,2 bags,False,True,7,4.9,74
+VE-681,VerdeBus,Cadiz,2027-01-10,18:30,05:20,650.0,46.15,3,2,2 bags,False,True,20,4.6,100
+NO-682,NocheVia,Santiago de Compostela,2027-01-10,18:00,04:00,600.0,35.4,2,13,4 bags,True,False,4,3.7,74
+CO-683,CostaLink,Alicante,2027-01-10,16:30,23:30,420.0,26.04,3,12,2 bags,True,False,15,4.0,77
+NO-684,NocheVia,Santiago de Compostela,2027-01-10,17:30,03:30,600.0,35.4,2,6,3 bags,False,False,6,4.4,74
+SO-685,SolRuta,Granada,2027-01-10,13:00,20:10,430.0,21.5,3,10,5 bags,False,False,3,5.0,65
+SO-686,SolRuta,Cadiz,2027-01-10,13:30,00:20,650.0,32.5,1,14,4 bags,True,True,19,4.1,65
+NO-687,NocheVia,Salamanca,2027-01-10,18:30,22:00,210.0,12.389999999999999,2,5,2 bags,True,False,20,4.8,74
+VE-688,VerdeBus,Salamanca,2027-01-10,18:00,21:30,210.0,14.909999999999998,2,5,3 bags,True,True,13,4.6,100
+CA-689,CaminoExpress,Barcelona,2027-01-10,12:30,22:50,620.0,46.5,0,0,5 bags,True,True,5,5.0,92
+SO-690,SolRuta,Malaga,2027-01-10,10:00,18:50,530.0,26.5,2,8,5 bags,True,False,14,3.9,65
+SO-691,SolRuta,San Sebastian,2027-01-11,14:00,21:50,470.0,23.5,3,11,2 bags,False,False,5,4.7,65
+CA-692,CaminoExpress,Barcelona,2027-01-11,16:00,02:20,620.0,46.5,0,0,3 bags,False,True,14,4.3,92
+SO-693,SolRuta,Seville,2027-01-11,08:00,16:50,530.0,26.5,3,12,5 bags,False,True,3,3.7,65
+SO-694,SolRuta,Valencia,2027-01-11,10:30,16:25,355.0,17.75,1,9,3 bags,False,True,9,4.0,65
+CO-695,CostaLink,Cadiz,2027-01-11,20:00,06:50,650.0,40.3,2,10,2 bags,True,True,3,3.8,77
+CO-696,CostaLink,Bilbao,2027-01-11,20:30,03:10,400.0,24.8,1,12,2 bags,False,False,14,4.5,77
+VE-697,VerdeBus,Salamanca,2027-01-11,19:00,22:30,210.0,14.909999999999998,1,9,4 bags,True,False,20,4.5,100
+VE-698,VerdeBus,Bilbao,2027-01-11,19:00,01:40,400.0,28.4,1,10,4 bags,True,True,19,4.1,100
+CA-699,CaminoExpress,Valencia,2027-01-11,15:00,20:55,355.0,26.625,0,0,2 bags,False,True,14,4.9,92
+VE-700,VerdeBus,Valencia,2027-01-11,20:30,02:25,355.0,25.205,3,6,2 bags,True,True,12,4.9,100
+VE-701,VerdeBus,San Sebastian,2027-01-12,20:00,03:50,470.0,33.37,3,3,3 bags,True,True,14,4.4,100
+VE-702,VerdeBus,Salamanca,2027-01-12,23:30,03:00,210.0,14.909999999999998,2,3,5 bags,False,False,15,4.3,100
+CO-703,CostaLink,Valencia,2027-01-12,16:00,21:55,355.0,22.01,3,2,2 bags,True,True,4,4.6,77
+CA-704,CaminoExpress,Malaga,2027-01-12,18:00,02:50,530.0,39.75,0,0,5 bags,True,True,2,4.6,92
+NO-705,NocheVia,Cadiz,2027-01-12,16:30,03:20,650.0,38.35,1,3,3 bags,False,True,15,4.2,74
+CA-706,CaminoExpress,Zaragoza,2027-01-12,12:30,17:50,320.0,24.0,0,0,4 bags,False,False,10,3.8,92
+SO-707,SolRuta,Cadiz,2027-01-12,13:00,23:50,650.0,32.5,2,15,4 bags,True,False,12,3.9,65
+SO-708,SolRuta,Valencia,2027-01-12,09:00,14:55,355.0,17.75,2,8,3 bags,False,True,17,3.5,65
+CO-709,CostaLink,Alicante,2027-01-12,18:00,01:00,420.0,26.04,1,9,5 bags,False,True,6,4.0,77
+CO-710,CostaLink,Barcelona,2027-01-12,19:30,05:50,620.0,38.44,1,7,2 bags,True,True,17,4.9,77
+CA-711,CaminoExpress,Seville,2027-01-13,17:30,02:20,530.0,39.75,0,0,3 bags,True,True,2,3.7,92
+CO-712,CostaLink,Alicante,2027-01-13,16:30,23:30,420.0,26.04,3,12,5 bags,False,False,17,3.6,77
+CO-713,CostaLink,Valencia,2027-01-13,17:30,23:25,355.0,22.01,2,12,3 bags,False,True,18,4.4,77
+SO-714,SolRuta,Granada,2027-01-13,08:30,15:40,430.0,21.5,1,15,2 bags,True,True,3,4.1,65
+SO-715,SolRuta,Zaragoza,2027-01-13,06:30,11:50,320.0,16.0,2,11,2 bags,False,False,10,4.9,65
+SO-716,SolRuta,Barcelona,2027-01-13,11:00,21:20,620.0,31.0,3,12,4 bags,False,False,5,4.1,65
+SO-717,SolRuta,Murcia,2027-01-13,14:00,20:40,400.0,20.0,1,11,4 bags,False,False,20,4.3,65
+SO-718,SolRuta,Cadiz,2027-01-13,07:00,17:50,650.0,32.5,1,3,3 bags,True,False,5,3.6,65
+CA-719,CaminoExpress,Barcelona,2027-01-13,13:00,23:20,620.0,46.5,0,0,5 bags,False,False,13,4.2,92
+NO-720,NocheVia,Toledo,2027-01-13,19:00,20:10,70.0,4.13,1,3,4 bags,True,True,8,4.6,74
+NO-721,NocheVia,Bilbao,2027-01-14,21:30,04:10,400.0,23.599999999999998,3,13,4 bags,True,True,2,3.7,74
+NO-722,NocheVia,Granada,2027-01-14,18:30,01:40,430.0,25.369999999999997,2,14,4 bags,True,True,9,3.6,74
+CO-723,CostaLink,Seville,2027-01-14,16:00,00:50,530.0,32.86,2,14,3 bags,True,True,13,4.4,77
+CA-724,CaminoExpress,Malaga,2027-01-14,20:30,05:20,530.0,39.75,0,0,4 bags,True,True,13,3.8,92
+NO-725,NocheVia,Valencia,2027-01-14,21:30,03:25,355.0,20.945,3,12,3 bags,False,True,12,3.9,74
+VE-726,VerdeBus,Cordoba,2027-01-14,23:00,05:40,400.0,28.4,1,15,5 bags,True,False,7,4.7,100
+SO-727,SolRuta,Granada,2027-01-14,08:30,15:40,430.0,21.5,1,15,3 bags,True,True,4,4.1,65
+SO-728,SolRuta,Alicante,2027-01-14,12:00,19:00,420.0,21.0,1,7,2 bags,True,True,6,3.9,65
+SO-729,SolRuta,Toledo,2027-01-14,11:00,12:10,70.0,3.5,1,9,3 bags,True,False,20,4.8,65
+SO-730,SolRuta,Zaragoza,2027-01-14,14:00,19:20,320.0,16.0,3,5,2 bags,True,True,19,3.9,65
+VE-731,VerdeBus,Bilbao,2027-01-15,20:00,02:40,400.0,28.4,1,6,5 bags,True,False,7,5.0,100
+CO-732,CostaLink,Valencia,2027-01-15,16:00,21:55,355.0,22.01,2,15,3 bags,True,False,18,4.0,77
+CO-733,CostaLink,San Sebastian,2027-01-15,19:30,03:20,470.0,29.14,1,5,4 bags,True,True,6,4.7,77
+VE-734,VerdeBus,Santiago de Compostela,2027-01-15,22:30,08:30,600.0,42.599999999999994,1,2,3 bags,True,False,6,3.8,100
+VE-735,VerdeBus,Alicante,2027-01-15,18:00,01:00,420.0,29.819999999999997,3,6,5 bags,False,False,19,4.3,100
+NO-736,NocheVia,Alicante,2027-01-15,18:00,01:00,420.0,24.779999999999998,3,13,3 bags,False,True,8,5.0,74
+SO-737,SolRuta,Cadiz,2027-01-15,08:30,19:20,650.0,32.5,2,6,5 bags,True,False,9,3.8,65
+CA-738,CaminoExpress,Malaga,2027-01-15,11:30,20:20,530.0,39.75,0,0,4 bags,True,True,20,3.6,92
+CA-739,CaminoExpress,Barcelona,2027-01-15,11:30,21:50,620.0,46.5,0,0,3 bags,True,False,6,4.6,92
+SO-740,SolRuta,Granada,2027-01-15,06:00,13:10,430.0,21.5,1,3,3 bags,True,True,14,4.7,65
+CA-741,CaminoExpress,Seville,2027-01-16,12:30,21:20,530.0,39.75,0,0,3 bags,True,False,3,3.8,92
+VE-742,VerdeBus,Santiago de Compostela,2027-01-16,16:30,02:30,600.0,42.599999999999994,2,3,5 bags,True,False,5,3.7,100
+NO-743,NocheVia,Valencia,2027-01-16,15:30,21:25,355.0,20.945,1,4,3 bags,True,True,9,3.9,74
+CO-744,CostaLink,Barcelona,2027-01-16,18:30,04:50,620.0,38.44,2,13,3 bags,False,False,13,5.0,77
+CA-745,CaminoExpress,Barcelona,2027-01-16,20:30,06:50,620.0,46.5,0,0,5 bags,True,False,7,3.7,92
+CA-746,CaminoExpress,Bilbao,2027-01-16,13:30,20:10,400.0,30.0,0,0,5 bags,True,False,11,4.0,92
+NO-747,NocheVia,Alicante,2027-01-16,22:00,05:00,420.0,24.779999999999998,1,3,2 bags,True,False,19,4.8,74
+CO-748,CostaLink,Seville,2027-01-16,20:30,05:20,530.0,32.86,1,5,4 bags,True,True,7,4.6,77
+VE-749,VerdeBus,Murcia,2027-01-16,23:00,05:40,400.0,28.4,1,2,4 bags,False,False,15,4.8,100
+CO-750,CostaLink,San Sebastian,2027-01-16,19:30,03:20,470.0,29.14,1,11,4 bags,True,True,9,4.5,77
+NO-751,NocheVia,Bilbao,2027-01-17,21:30,04:10,400.0,23.599999999999998,1,4,2 bags,False,False,16,4.5,74
+VE-752,VerdeBus,Toledo,2027-01-17,22:30,23:40,70.0,4.97,2,4,2 bags,False,False,17,3.8,100
+CA-753,CaminoExpress,Malaga,2027-01-17,13:00,21:50,530.0,39.75,0,0,4 bags,True,False,3,4.9,92
+SO-754,SolRuta,Toledo,2027-01-17,10:30,11:40,70.0,3.5,3,7,3 bags,True,True,4,3.9,65
+CO-755,CostaLink,Seville,2027-01-17,19:30,04:20,530.0,32.86,1,2,4 bags,True,True,13,4.9,77
+NO-756,NocheVia,Bilbao,2027-01-17,18:00,00:40,400.0,23.599999999999998,1,9,3 bags,False,False,2,3.7,74
+VE-757,VerdeBus,Granada,2027-01-17,16:30,23:40,430.0,30.529999999999998,3,12,3 bags,False,True,3,3.8,100
+CA-758,CaminoExpress,Valencia,2027-01-17,20:00,01:55,355.0,26.625,0,0,4 bags,False,True,11,4.8,92
+CO-759,CostaLink,Cadiz,2027-01-17,18:00,04:50,650.0,40.3,2,9,3 bags,False,False,13,3.8,77
+VE-760,VerdeBus,Murcia,2027-01-17,17:00,23:40,400.0,28.4,2,12,2 bags,True,True,15,3.7,100
+CA-761,CaminoExpress,Valencia,2027-01-18,18:30,00:25,355.0,26.625,0,0,2 bags,True,False,5,4.0,92
+CA-762,CaminoExpress,Zaragoza,2027-01-18,15:30,20:50,320.0,24.0,0,0,4 bags,False,False,9,3.5,92
+CO-763,CostaLink,Cadiz,2027-01-18,18:30,05:20,650.0,40.3,3,10,3 bags,False,True,19,5.0,77
+VE-764,VerdeBus,Salamanca,2027-01-18,21:00,00:30,210.0,14.909999999999998,1,7,5 bags,True,True,6,4.3,100
+SO-765,SolRuta,Barcelona,2027-01-18,08:00,18:20,620.0,31.0,2,1,2 bags,False,True,6,5.0,65
+NO-766,NocheVia,Santiago de Compostela,2027-01-18,21:30,07:30,600.0,35.4,1,12,2 bags,False,True,6,4.4,74
+CO-767,CostaLink,Bilbao,2027-01-18,16:30,23:10,400.0,24.8,1,2,4 bags,True,False,5,4.2,77
+SO-768,SolRuta,Malaga,2027-01-18,12:30,21:20,530.0,26.5,3,7,5 bags,True,True,11,3.5,65
+VE-769,VerdeBus,Alicante,2027-01-18,16:00,23:00,420.0,29.819999999999997,3,9,4 bags,True,True,2,4.3,100
+SO-770,SolRuta,Cordoba,2027-01-18,07:00,13:40,400.0,20.0,1,4,4 bags,False,False,8,4.9,65
+VE-771,VerdeBus,Cadiz,2027-01-19,18:00,04:50,650.0,46.15,1,5,4 bags,False,True,20,4.7,100
+VE-772,VerdeBus,Bilbao,2027-01-19,20:30,03:10,400.0,28.4,3,12,2 bags,False,False,8,4.4,100
+NO-773,NocheVia,Granada,2027-01-19,19:30,02:40,430.0,25.369999999999997,3,7,5 bags,True,True,7,4.7,74
+CO-774,CostaLink,San Sebastian,2027-01-19,18:00,01:50,470.0,29.14,1,13,2 bags,False,True,12,3.8,77
+CA-775,CaminoExpress,Zaragoza,2027-01-19,14:00,19:20,320.0,24.0,0,0,4 bags,True,False,15,4.0,92
+VE-776,VerdeBus,Barcelona,2027-01-19,17:00,03:20,620.0,44.019999999999996,2,7,5 bags,True,False,20,4.1,100
+VE-777,VerdeBus,Granada,2027-01-19,22:00,05:10,430.0,30.529999999999998,1,14,2 bags,False,True,4,4.2,100
+VE-778,VerdeBus,Valencia,2027-01-19,21:30,03:25,355.0,25.205,3,13,2 bags,False,False,16,4.2,100
+SO-779,SolRuta,Seville,2027-01-19,12:00,20:50,530.0,26.5,1,6,3 bags,True,True,13,4.7,65
+CO-780,CostaLink,Valencia,2027-01-19,20:30,02:25,355.0,22.01,2,6,4 bags,True,True,20,4.2,77
+VE-781,VerdeBus,Murcia,2027-01-20,17:00,23:40,400.0,28.4,2,11,5 bags,False,False,12,4.7,100
+SO-782,SolRuta,Cordoba,2027-01-20,09:00,15:40,400.0,20.0,3,14,2 bags,True,False,3,3.8,65
+CO-783,CostaLink,Malaga,2027-01-20,20:30,05:20,530.0,32.86,3,13,4 bags,False,True,18,3.7,77
+NO-784,NocheVia,Zaragoza,2027-01-20,21:00,02:20,320.0,18.88,1,13,2 bags,False,False,7,4.5,74
+CA-785,CaminoExpress,Barcelona,2027-01-20,18:00,04:20,620.0,46.5,0,0,4 bags,True,False,18,4.2,92
+CA-786,CaminoExpress,Malaga,2027-01-20,19:30,04:20,530.0,39.75,0,0,4 bags,True,False,10,4.1,92
+VE-787,VerdeBus,Seville,2027-01-20,23:30,08:20,530.0,37.629999999999995,3,5,2 bags,True,True,5,3.8,100
+SO-788,SolRuta,Granada,2027-01-20,12:30,19:40,430.0,21.5,1,15,5 bags,True,True,10,4.2,65
+CO-789,CostaLink,Barcelona,2027-01-20,20:30,06:50,620.0,38.44,1,3,4 bags,True,True,12,4.5,77
+SO-790,SolRuta,Murcia,2027-01-20,11:00,17:40,400.0,20.0,2,7,3 bags,False,True,7,4.5,65
+CA-791,CaminoExpress,Malaga,2027-01-21,12:00,20:50,530.0,39.75,0,0,2 bags,False,True,18,4.3,92
+CO-792,CostaLink,Murcia,2027-01-21,18:30,01:10,400.0,24.8,2,12,5 bags,False,False,16,3.5,77
+NO-793,NocheVia,San Sebastian,2027-01-21,23:00,06:50,470.0,27.729999999999997,1,5,3 bags,False,True,6,4.0,74
+SO-794,SolRuta,Malaga,2027-01-21,07:30,16:20,530.0,26.5,2,11,5 bags,True,False,13,4.8,65
+NO-795,NocheVia,Zaragoza,2027-01-21,16:30,21:50,320.0,18.88,3,6,5 bags,False,False,5,5.0,74
+CO-796,CostaLink,Cadiz,2027-01-21,18:30,05:20,650.0,40.3,3,3,4 bags,True,False,2,4.2,77
+SO-797,SolRuta,Bilbao,2027-01-21,06:00,12:40,400.0,20.0,2,11,4 bags,True,False,11,4.7,65
+CA-798,CaminoExpress,Malaga,2027-01-21,20:00,04:50,530.0,39.75,0,0,4 bags,True,True,17,4.9,92
+SO-799,SolRuta,Cadiz,2027-01-21,10:30,21:20,650.0,32.5,2,15,3 bags,False,False,20,3.7,65
+CO-800,CostaLink,Bilbao,2027-01-21,20:30,03:10,400.0,24.8,1,5,3 bags,False,False,5,3.7,77
+VE-801,VerdeBus,Bilbao,2027-01-22,16:00,22:40,400.0,28.4,2,8,5 bags,True,True,11,4.7,100
+VE-802,VerdeBus,Seville,2027-01-22,16:30,01:20,530.0,37.629999999999995,2,11,5 bags,True,True,3,3.9,100
+CO-803,CostaLink,Barcelona,2027-01-22,20:00,06:20,620.0,38.44,1,12,3 bags,True,False,6,3.8,77
+NO-804,NocheVia,Salamanca,2027-01-22,16:00,19:30,210.0,12.389999999999999,1,2,3 bags,True,True,9,3.8,74
+SO-805,SolRuta,Granada,2027-01-22,08:00,15:10,430.0,21.5,2,8,4 bags,False,True,15,3.7,65
+NO-806,NocheVia,Malaga,2027-01-22,19:30,04:20,530.0,31.27,2,8,2 bags,False,False,10,4.1,74
+CO-807,CostaLink,Murcia,2027-01-22,19:00,01:40,400.0,24.8,1,10,4 bags,True,False,3,4.9,77
+CA-808,CaminoExpress,Seville,2027-01-22,19:00,03:50,530.0,39.75,0,0,4 bags,False,True,7,4.5,92
+CO-809,CostaLink,Alicante,2027-01-22,19:30,02:30,420.0,26.04,1,15,5 bags,True,False,6,4.5,77
+CA-810,CaminoExpress,Valencia,2027-01-22,12:00,17:55,355.0,26.625,0,0,5 bags,False,False,9,5.0,92
+VE-811,VerdeBus,Cadiz,2027-01-23,20:00,06:50,650.0,46.15,1,1,2 bags,True,False,13,4.4,100
+VE-812,VerdeBus,Seville,2027-01-23,19:00,03:50,530.0,37.629999999999995,3,10,4 bags,False,False,11,3.8,100
+SO-813,SolRuta,Malaga,2027-01-23,08:00,16:50,530.0,26.5,1,13,4 bags,False,True,12,3.8,65
+NO-814,NocheVia,Cordoba,2027-01-23,23:00,05:40,400.0,23.599999999999998,2,10,2 bags,False,False,14,4.8,74
+CA-815,CaminoExpress,Barcelona,2027-01-23,20:30,06:50,620.0,46.5,0,0,2 bags,True,False,10,4.1,92
+NO-816,NocheVia,Malaga,2027-01-23,23:30,08:20,530.0,31.27,3,15,5 bags,True,True,20,4.2,74
+CA-817,CaminoExpress,Seville,2027-01-23,11:00,19:50,530.0,39.75,0,0,3 bags,False,True,9,4.2,92
+NO-818,NocheVia,Cadiz,2027-01-23,23:30,10:20,650.0,38.35,1,15,3 bags,False,True,5,3.6,74
+CA-819,CaminoExpress,Barcelona,2027-01-23,11:00,21:20,620.0,46.5,0,0,3 bags,False,True,19,4.2,92
+NO-820,NocheVia,Seville,2027-01-23,16:30,01:20,530.0,31.27,1,8,4 bags,True,False,15,4.9,74
+VE-821,VerdeBus,Salamanca,2027-01-24,16:00,19:30,210.0,14.909999999999998,3,10,3 bags,True,True,3,3.7,100
+CA-822,CaminoExpress,Seville,2027-01-24,13:30,22:20,530.0,39.75,0,0,5 bags,True,True,4,3.9,92
+CO-823,CostaLink,San Sebastian,2027-01-24,17:30,01:20,470.0,29.14,3,5,4 bags,True,True,13,4.9,77
+NO-824,NocheVia,Malaga,2027-01-24,23:00,07:50,530.0,31.27,2,12,2 bags,False,True,3,5.0,74
+SO-825,SolRuta,Granada,2027-01-24,12:30,19:40,430.0,21.5,2,10,2 bags,True,False,14,4.2,65
+VE-826,VerdeBus,Seville,2027-01-24,16:30,01:20,530.0,37.629999999999995,3,7,2 bags,False,True,12,4.9,100
+NO-827,NocheVia,Bilbao,2027-01-24,15:00,21:40,400.0,23.599999999999998,2,13,5 bags,False,False,15,4.4,74
+CA-828,CaminoExpress,Valencia,2027-01-24,11:30,17:25,355.0,26.625,0,0,4 bags,True,True,19,3.9,92
+CO-829,CostaLink,Barcelona,2027-01-24,20:30,06:50,620.0,38.44,1,5,4 bags,True,False,16,3.5,77
+NO-830,NocheVia,Malaga,2027-01-24,16:30,01:20,530.0,31.27,2,1,4 bags,True,False,7,3.9,74
+CA-831,CaminoExpress,Valencia,2027-01-25,20:00,01:55,355.0,26.625,0,0,3 bags,True,True,7,4.5,92
+SO-832,SolRuta,Salamanca,2027-01-25,06:30,10:00,210.0,10.5,2,5,2 bags,True,False,5,3.6,65
+NO-833,NocheVia,Cordoba,2027-01-25,16:30,23:10,400.0,23.599999999999998,3,7,4 bags,True,True,12,4.4,74
+CO-834,CostaLink,Barcelona,2027-01-25,16:30,02:50,620.0,38.44,1,6,3 bags,True,True,8,4.7,77
+CA-835,CaminoExpress,Malaga,2027-01-25,12:00,20:50,530.0,39.75,0,0,3 bags,False,True,18,4.7,92
+NO-836,NocheVia,Granada,2027-01-25,18:30,01:40,430.0,25.369999999999997,1,6,3 bags,False,False,5,4.5,74
+NO-837,NocheVia,Valencia,2027-01-25,22:00,03:55,355.0,20.945,2,11,5 bags,False,True,20,4.7,74
+NO-838,NocheVia,Granada,2027-01-25,20:00,03:10,430.0,25.369999999999997,2,6,2 bags,False,False,18,5.0,74
+SO-839,SolRuta,Bilbao,2027-01-25,14:30,21:10,400.0,20.0,2,13,2 bags,True,True,15,3.5,65
+VE-840,VerdeBus,Cadiz,2027-01-25,18:30,05:20,650.0,46.15,2,6,3 bags,False,True,12,4.8,100
+CO-841,CostaLink,Murcia,2027-01-26,19:30,02:10,400.0,24.8,2,11,4 bags,False,True,7,4.6,77
+VE-842,VerdeBus,Bilbao,2027-01-26,18:30,01:10,400.0,28.4,2,8,2 bags,True,False,17,4.0,100
+CA-843,CaminoExpress,Valencia,2027-01-26,11:00,16:55,355.0,26.625,0,0,5 bags,False,False,5,4.0,92
+CA-844,CaminoExpress,Valencia,2027-01-26,15:30,21:25,355.0,26.625,0,0,2 bags,True,False,6,3.6,92
+CA-845,CaminoExpress,Barcelona,2027-01-26,18:00,04:20,620.0,46.5,0,0,4 bags,True,False,20,4.1,92
+SO-846,SolRuta,San Sebastian,2027-01-26,10:00,17:50,470.0,23.5,2,8,3 bags,False,True,13,4.7,65
+CO-847,CostaLink,Murcia,2027-01-26,20:00,02:40,400.0,24.8,3,12,4 bags,True,False,5,4.9,77
+NO-848,NocheVia,Bilbao,2027-01-26,18:30,01:10,400.0,23.599999999999998,1,11,5 bags,True,False,7,4.6,74
+CA-849,CaminoExpress,Barcelona,2027-01-26,17:00,03:20,620.0,46.5,0,0,5 bags,True,True,3,4.1,92
+CA-850,CaminoExpress,Seville,2027-01-26,14:30,23:20,530.0,39.75,0,0,5 bags,False,False,13,4.3,92
+CO-851,CostaLink,Alicante,2027-01-27,17:30,00:30,420.0,26.04,2,6,2 bags,True,False,12,4.5,77
+VE-852,VerdeBus,Alicante,2027-01-27,19:00,02:00,420.0,29.819999999999997,2,11,4 bags,False,True,15,3.6,100
+VE-853,VerdeBus,Bilbao,2027-01-27,16:30,23:10,400.0,28.4,2,5,5 bags,True,False,3,4.0,100
+SO-854,SolRuta,Alicante,2027-01-27,08:00,15:00,420.0,21.0,3,6,2 bags,False,True,12,4.9,65
+CA-855,CaminoExpress,Zaragoza,2027-01-27,17:00,22:20,320.0,24.0,0,0,4 bags,True,False,12,4.1,92
+NO-856,NocheVia,Valencia,2027-01-27,22:00,03:55,355.0,20.945,3,7,3 bags,False,False,2,3.8,74
+VE-857,VerdeBus,Murcia,2027-01-27,20:00,02:40,400.0,28.4,2,3,2 bags,True,False,2,3.5,100
+CO-858,CostaLink,San Sebastian,2027-01-27,16:30,00:20,470.0,29.14,2,9,4 bags,False,True,5,3.9,77
+VE-859,VerdeBus,Zaragoza,2027-01-27,20:00,01:20,320.0,22.72,2,8,5 bags,True,False,14,4.9,100
+VE-860,VerdeBus,Toledo,2027-01-27,21:30,22:40,70.0,4.97,1,8,2 bags,False,False,6,4.7,100
+VE-861,VerdeBus,Alicante,2027-01-28,18:30,01:30,420.0,29.819999999999997,1,2,5 bags,True,True,17,3.9,100
+NO-862,NocheVia,Alicante,2027-01-28,15:30,22:30,420.0,24.779999999999998,2,14,3 bags,False,False,12,4.9,74
+SO-863,SolRuta,Cadiz,2027-01-28,07:30,18:20,650.0,32.5,1,7,3 bags,True,True,18,4.6,65
+VE-864,VerdeBus,San Sebastian,2027-01-28,23:00,06:50,470.0,33.37,1,11,5 bags,False,True,11,3.7,100
+CA-865,CaminoExpress,Valencia,2027-01-28,15:00,20:55,355.0,26.625,0,0,4 bags,False,False,16,3.8,92
+VE-866,VerdeBus,Barcelona,2027-01-28,18:00,04:20,620.0,44.019999999999996,2,7,5 bags,True,True,11,4.6,100
+NO-867,NocheVia,San Sebastian,2027-01-28,16:30,00:20,470.0,27.729999999999997,3,3,3 bags,False,True,8,3.9,74
+NO-868,NocheVia,Zaragoza,2027-01-28,18:00,23:20,320.0,18.88,3,11,3 bags,True,True,10,3.8,74
+NO-869,NocheVia,Alicante,2027-01-28,22:00,05:00,420.0,24.779999999999998,2,13,3 bags,True,True,8,3.6,74
+CO-870,CostaLink,Valencia,2027-01-28,20:30,02:25,355.0,22.01,1,3,5 bags,False,False,11,4.3,77
+VE-871,VerdeBus,Cordoba,2027-01-29,21:00,03:40,400.0,28.4,2,14,3 bags,True,False,6,4.8,100
+VE-872,VerdeBus,Murcia,2027-01-29,16:30,23:10,400.0,28.4,2,3,5 bags,False,False,8,4.4,100
+SO-873,SolRuta,Malaga,2027-01-29,14:00,22:50,530.0,26.5,2,6,2 bags,False,False,5,4.9,65
+VE-874,VerdeBus,Bilbao,2027-01-29,20:30,03:10,400.0,28.4,1,12,2 bags,True,False,16,4.2,100
+CA-875,CaminoExpress,Bilbao,2027-01-29,13:00,19:40,400.0,30.0,0,0,2 bags,False,True,3,4.2,92
+CA-876,CaminoExpress,Bilbao,2027-01-29,20:00,02:40,400.0,30.0,0,0,4 bags,False,True,20,4.6,92
+SO-877,SolRuta,Valencia,2027-01-29,14:00,19:55,355.0,17.75,1,14,4 bags,True,True,16,3.6,65
+NO-878,NocheVia,Cordoba,2027-01-29,22:00,04:40,400.0,23.599999999999998,1,6,5 bags,True,True,4,3.8,74
+SO-879,SolRuta,Toledo,2027-01-29,06:00,07:10,70.0,3.5,1,13,4 bags,False,True,9,4.0,65
+CO-880,CostaLink,Seville,2027-01-29,20:30,05:20,530.0,32.86,2,3,5 bags,True,True,10,4.8,77
+VE-881,VerdeBus,Cordoba,2027-01-30,21:30,04:10,400.0,28.4,3,6,3 bags,True,False,6,4.3,100
+NO-882,NocheVia,Zaragoza,2027-01-30,19:00,00:20,320.0,18.88,3,13,3 bags,False,True,16,3.9,74
+CO-883,CostaLink,San Sebastian,2027-01-30,20:00,03:50,470.0,29.14,3,7,4 bags,True,False,2,3.7,77
+CO-884,CostaLink,Bilbao,2027-01-30,20:00,02:40,400.0,24.8,1,8,2 bags,False,False,20,4.4,77
+CO-885,CostaLink,San Sebastian,2027-01-30,19:30,03:20,470.0,29.14,2,11,2 bags,True,True,15,4.1,77
+CO-886,CostaLink,Cadiz,2027-01-30,17:00,03:50,650.0,40.3,1,10,4 bags,True,True,11,4.7,77
+SO-887,SolRuta,Murcia,2027-01-30,08:30,15:10,400.0,20.0,1,4,4 bags,True,True,9,4.8,65
+CO-888,CostaLink,Barcelona,2027-01-30,18:00,04:20,620.0,38.44,2,3,5 bags,False,True,17,4.5,77
+CA-889,CaminoExpress,Malaga,2027-01-30,16:30,01:20,530.0,39.75,0,0,5 bags,False,True,13,4.2,92
+CO-890,CostaLink,Cadiz,2027-01-30,20:30,07:20,650.0,40.3,1,10,2 bags,True,True,17,3.8,77
+CA-891,CaminoExpress,Malaga,2027-01-31,13:30,22:20,530.0,39.75,0,0,4 bags,False,False,3,3.9,92
+SO-892,SolRuta,San Sebastian,2027-01-31,07:30,15:20,470.0,23.5,1,6,2 bags,True,False,6,4.4,65
+VE-893,VerdeBus,Bilbao,2027-01-31,22:30,05:10,400.0,28.4,1,5,2 bags,False,False,17,4.6,100
+VE-894,VerdeBus,Santiago de Compostela,2027-01-31,18:00,04:00,600.0,42.599999999999994,3,2,4 bags,False,True,18,4.7,100
+SO-895,SolRuta,Santiago de Compostela,2027-01-31,11:00,21:00,600.0,30.0,2,8,4 bags,False,False,12,4.5,65
+SO-896,SolRuta,San Sebastian,2027-01-31,06:00,13:50,470.0,23.5,2,5,4 bags,True,False,9,3.8,65
+CO-897,CostaLink,San Sebastian,2027-01-31,20:00,03:50,470.0,29.14,2,12,5 bags,True,True,12,4.1,77
+SO-898,SolRuta,Cordoba,2027-01-31,10:30,17:10,400.0,20.0,3,12,5 bags,True,True,10,4.6,65
+CO-899,CostaLink,Cadiz,2027-01-31,17:00,03:50,650.0,40.3,3,14,4 bags,False,True,15,3.9,77
+CO-900,CostaLink,Bilbao,2027-01-31,17:00,23:40,400.0,24.8,1,7,5 bags,True,False,10,4.2,77
+CO-901,CostaLink,Malaga,2027-02-01,18:30,03:20,530.0,32.86,1,10,5 bags,False,False,17,4.9,77
+VE-902,VerdeBus,Seville,2027-02-01,23:00,07:50,530.0,37.629999999999995,2,14,3 bags,False,False,14,3.5,100
+NO-903,NocheVia,Cordoba,2027-02-01,20:30,03:10,400.0,23.599999999999998,2,5,5 bags,True,True,20,3.8,74
+CO-904,CostaLink,Cadiz,2027-02-01,17:30,04:20,650.0,40.3,3,8,3 bags,False,True,5,4.1,77
+VE-905,VerdeBus,Zaragoza,2027-02-01,19:30,00:50,320.0,22.72,2,6,4 bags,False,False,5,4.5,100
+VE-906,VerdeBus,Granada,2027-02-01,18:30,01:40,430.0,30.529999999999998,2,3,4 bags,True,False,16,4.5,100
+SO-907,SolRuta,Alicante,2027-02-01,14:00,21:00,420.0,21.0,1,3,5 bags,True,False,9,3.7,65
+VE-908,VerdeBus,Zaragoza,2027-02-01,19:00,00:20,320.0,22.72,3,14,5 bags,False,True,7,4.2,100
+SO-909,SolRuta,Malaga,2027-02-01,13:00,21:50,530.0,26.5,3,8,5 bags,True,True,16,4.3,65
+SO-910,SolRuta,Barcelona,2027-02-01,12:30,22:50,620.0,31.0,3,1,5 bags,True,False,10,4.8,65
+SO-911,SolRuta,Granada,2027-02-02,06:30,13:40,430.0,21.5,2,14,5 bags,False,False,5,3.7,65
+CO-912,CostaLink,Seville,2027-02-02,19:00,03:50,530.0,32.86,1,13,4 bags,True,False,4,4.2,77
+VE-913,VerdeBus,Cordoba,2027-02-02,20:30,03:10,400.0,28.4,2,12,2 bags,True,True,18,3.9,100
+CA-914,CaminoExpress,Zaragoza,2027-02-02,15:30,20:50,320.0,24.0,0,0,5 bags,False,True,6,3.7,92
+CA-915,CaminoExpress,Zaragoza,2027-02-02,15:00,20:20,320.0,24.0,0,0,2 bags,False,False,18,4.6,92
+NO-916,NocheVia,Santiago de Compostela,2027-02-02,23:30,09:30,600.0,35.4,3,6,5 bags,False,True,18,4.2,74
+CO-917,CostaLink,Malaga,2027-02-02,18:00,02:50,530.0,32.86,1,3,3 bags,False,False,16,4.4,77
+VE-918,VerdeBus,Murcia,2027-02-02,17:30,00:10,400.0,28.4,1,6,2 bags,True,False,20,4.3,100
+VE-919,VerdeBus,Seville,2027-02-02,20:30,05:20,530.0,37.629999999999995,1,10,2 bags,True,True,6,4.3,100
+NO-920,NocheVia,San Sebastian,2027-02-02,23:00,06:50,470.0,27.729999999999997,2,2,4 bags,True,True,17,3.7,74
+CA-921,CaminoExpress,Zaragoza,2027-02-03,18:30,23:50,320.0,24.0,0,0,2 bags,False,True,16,4.7,92
+NO-922,NocheVia,Granada,2027-02-03,17:30,00:40,430.0,25.369999999999997,2,11,5 bags,False,False,10,4.8,74
+VE-923,VerdeBus,Valencia,2027-02-03,16:30,22:25,355.0,25.205,1,8,5 bags,False,True,7,3.6,100
+NO-924,NocheVia,Santiago de Compostela,2027-02-03,16:00,02:00,600.0,35.4,1,4,3 bags,False,False,12,4.6,74
+CA-925,CaminoExpress,Seville,2027-02-03,13:00,21:50,530.0,39.75,0,0,5 bags,True,True,7,4.0,92
+VE-926,VerdeBus,Cadiz,2027-02-03,18:30,05:20,650.0,46.15,2,6,4 bags,False,False,16,4.0,100
+VE-927,VerdeBus,Cordoba,2027-02-03,18:30,01:10,400.0,28.4,3,13,4 bags,True,True,8,4.5,100
+VE-928,VerdeBus,Cordoba,2027-02-03,19:00,01:40,400.0,28.4,3,9,5 bags,False,True,4,3.9,100
+VE-929,VerdeBus,Salamanca,2027-02-03,19:30,23:00,210.0,14.909999999999998,3,8,5 bags,True,True,3,4.5,100
+CA-930,CaminoExpress,Bilbao,2027-02-03,12:30,19:10,400.0,30.0,0,0,5 bags,True,True,20,3.9,92
+NO-931,NocheVia,Toledo,2027-02-04,23:30,00:40,70.0,4.13,3,5,2 bags,True,True,12,4.9,74
+CA-932,CaminoExpress,Malaga,2027-02-04,16:30,01:20,530.0,39.75,0,0,3 bags,False,False,2,3.7,92
+NO-933,NocheVia,Barcelona,2027-02-04,15:30,01:50,620.0,36.58,3,6,2 bags,False,False,11,4.4,74
+NO-934,NocheVia,Seville,2027-02-04,16:30,01:20,530.0,31.27,3,14,3 bags,True,False,10,4.2,74
+CO-935,CostaLink,Murcia,2027-02-04,19:00,01:40,400.0,24.8,3,13,5 bags,False,True,14,3.5,77
+CA-936,CaminoExpress,Zaragoza,2027-02-04,16:30,21:50,320.0,24.0,0,0,3 bags,False,True,8,4.7,92
+NO-937,NocheVia,Santiago de Compostela,2027-02-04,17:30,03:30,600.0,35.4,1,13,2 bags,False,False,9,4.5,74
+CA-938,CaminoExpress,Valencia,2027-02-04,16:00,21:55,355.0,26.625,0,0,3 bags,False,True,14,3.5,92
+CA-939,CaminoExpress,Valencia,2027-02-04,17:00,22:55,355.0,26.625,0,0,2 bags,True,True,7,4.6,92
+CA-940,CaminoExpress,Barcelona,2027-02-04,19:30,05:50,620.0,46.5,0,0,5 bags,False,True,16,3.5,92
+CO-941,CostaLink,Valencia,2027-02-05,18:00,23:55,355.0,22.01,2,14,2 bags,False,False,2,4.9,77
+CA-942,CaminoExpress,Zaragoza,2027-02-05,11:00,16:20,320.0,24.0,0,0,3 bags,True,False,3,3.6,92
+VE-943,VerdeBus,Seville,2027-02-05,18:00,02:50,530.0,37.629999999999995,1,15,4 bags,True,True,2,4.2,100
+SO-944,SolRuta,Toledo,2027-02-05,06:30,07:40,70.0,3.5,1,6,2 bags,True,False,3,4.3,65
+CA-945,CaminoExpress,Barcelona,2027-02-05,17:00,03:20,620.0,46.5,0,0,2 bags,False,False,15,4.8,92
+CO-946,CostaLink,Seville,2027-02-05,20:30,05:20,530.0,32.86,2,11,2 bags,False,False,20,3.8,77
+SO-947,SolRuta,Salamanca,2027-02-05,07:00,10:30,210.0,10.5,2,5,3 bags,False,True,11,4.0,65
+CA-948,CaminoExpress,Zaragoza,2027-02-05,11:30,16:50,320.0,24.0,0,0,2 bags,True,True,2,3.7,92
+NO-949,NocheVia,San Sebastian,2027-02-05,20:00,03:50,470.0,27.729999999999997,2,14,5 bags,False,True,16,4.4,74
+CO-950,CostaLink,Seville,2027-02-05,19:30,04:20,530.0,32.86,2,6,2 bags,False,False,4,4.7,77
+VE-951,VerdeBus,Santiago de Compostela,2027-02-06,20:00,06:00,600.0,42.599999999999994,1,2,4 bags,False,False,15,4.3,100
+CA-952,CaminoExpress,Barcelona,2027-02-06,14:30,00:50,620.0,46.5,0,0,3 bags,True,False,19,3.8,92
+NO-953,NocheVia,Malaga,2027-02-06,23:30,08:20,530.0,31.27,3,3,3 bags,False,True,14,3.9,74
+CO-954,CostaLink,Barcelona,2027-02-06,20:30,06:50,620.0,38.44,1,5,3 bags,True,True,15,3.7,77
+VE-955,VerdeBus,Bilbao,2027-02-06,19:30,02:10,400.0,28.4,3,4,2 bags,True,False,6,4.8,100
+CO-956,CostaLink,San Sebastian,2027-02-06,16:30,00:20,470.0,29.14,1,11,2 bags,False,True,16,3.9,77
+CO-957,CostaLink,Bilbao,2027-02-06,18:00,00:40,400.0,24.8,1,7,5 bags,False,True,17,4.6,77
+VE-958,VerdeBus,Santiago de Compostela,2027-02-06,22:00,08:00,600.0,42.599999999999994,3,7,2 bags,False,False,10,4.5,100
+SO-959,SolRuta,Salamanca,2027-02-06,13:00,16:30,210.0,10.5,2,4,5 bags,False,True,17,4.3,65
+SO-960,SolRuta,Alicante,2027-02-06,09:30,16:30,420.0,21.0,1,2,5 bags,False,True,13,4.5,65
+VE-961,VerdeBus,Murcia,2027-02-07,18:00,00:40,400.0,28.4,1,4,4 bags,True,False,15,4.7,100
+CA-962,CaminoExpress,Seville,2027-02-07,18:00,02:50,530.0,39.75,0,0,4 bags,False,False,7,3.8,92
+SO-963,SolRuta,Cordoba,2027-02-07,14:00,20:40,400.0,20.0,2,10,4 bags,False,True,4,4.5,65
+VE-964,VerdeBus,Cordoba,2027-02-07,23:30,06:10,400.0,28.4,2,13,3 bags,True,False,2,3.7,100
+SO-965,SolRuta,Malaga,2027-02-07,12:30,21:20,530.0,26.5,1,2,3 bags,False,False,14,3.7,65
+CO-966,CostaLink,Malaga,2027-02-07,16:00,00:50,530.0,32.86,2,14,3 bags,False,True,17,3.8,77
+CA-967,CaminoExpress,Valencia,2027-02-07,11:30,17:25,355.0,26.625,0,0,3 bags,True,False,16,4.1,92
+NO-968,NocheVia,Cadiz,2027-02-07,19:30,06:20,650.0,38.35,2,12,4 bags,False,False,13,4.9,74
+CA-969,CaminoExpress,Seville,2027-02-07,14:00,22:50,530.0,39.75,0,0,2 bags,False,False,5,4.7,92
+SO-970,SolRuta,San Sebastian,2027-02-07,13:30,21:20,470.0,23.5,3,8,2 bags,True,True,19,4.2,65
+CO-971,CostaLink,Valencia,2027-02-08,20:30,02:25,355.0,22.01,3,5,2 bags,False,False,6,5.0,77
+CO-972,CostaLink,San Sebastian,2027-02-08,20:30,04:20,470.0,29.14,1,10,3 bags,False,True,3,4.6,77
+CA-973,CaminoExpress,Bilbao,2027-02-08,14:00,20:40,400.0,30.0,0,0,3 bags,True,True,17,4.6,92
+VE-974,VerdeBus,Toledo,2027-02-08,23:00,00:10,70.0,4.97,2,7,4 bags,True,True,11,4.0,100
+VE-975,VerdeBus,Malaga,2027-02-08,17:30,02:20,530.0,37.629999999999995,1,6,5 bags,True,False,2,4.8,100
+NO-976,NocheVia,Barcelona,2027-02-08,21:30,07:50,620.0,36.58,1,6,2 bags,False,True,7,3.8,74
+CA-977,CaminoExpress,Zaragoza,2027-02-08,16:00,21:20,320.0,24.0,0,0,5 bags,True,True,16,3.5,92
+CA-978,CaminoExpress,Zaragoza,2027-02-08,19:00,00:20,320.0,24.0,0,0,2 bags,False,True,6,5.0,92
+NO-979,NocheVia,Valencia,2027-02-08,20:00,01:55,355.0,20.945,2,4,3 bags,False,True,14,3.6,74
+CO-980,CostaLink,Cadiz,2027-02-08,20:30,07:20,650.0,40.3,3,10,3 bags,False,False,6,4.2,77
+SO-981,SolRuta,San Sebastian,2027-02-09,07:30,15:20,470.0,23.5,1,8,5 bags,False,False,17,5.0,65
+CO-982,CostaLink,Cadiz,2027-02-09,18:00,04:50,650.0,40.3,1,11,2 bags,True,False,14,3.8,77
+SO-983,SolRuta,Cadiz,2027-02-09,13:00,23:50,650.0,32.5,1,2,3 bags,False,True,8,4.2,65
+SO-984,SolRuta,Cadiz,2027-02-09,09:30,20:20,650.0,32.5,2,1,3 bags,False,True,13,4.9,65
+NO-985,NocheVia,Murcia,2027-02-09,21:30,04:10,400.0,23.599999999999998,2,15,3 bags,False,False,2,4.1,74
+VE-986,VerdeBus,Granada,2027-02-09,22:00,05:10,430.0,30.529999999999998,3,1,5 bags,True,True,4,4.5,100
+CO-987,CostaLink,Seville,2027-02-09,19:30,04:20,530.0,32.86,3,5,4 bags,False,False,5,4.6,77
+CA-988,CaminoExpress,Valencia,2027-02-09,19:00,00:55,355.0,26.625,0,0,5 bags,False,True,5,3.8,92
+NO-989,NocheVia,Cordoba,2027-02-09,17:30,00:10,400.0,23.599999999999998,2,12,2 bags,True,True,12,3.6,74
+CO-990,CostaLink,Murcia,2027-02-09,16:30,23:10,400.0,24.8,1,15,5 bags,True,False,18,3.6,77
+VE-991,VerdeBus,Valencia,2027-02-10,20:00,01:55,355.0,25.205,1,10,3 bags,False,True,5,4.5,100
+CA-992,CaminoExpress,Barcelona,2027-02-10,14:00,00:20,620.0,46.5,0,0,5 bags,True,True,14,4.7,92
+SO-993,SolRuta,Murcia,2027-02-10,12:30,19:10,400.0,20.0,2,15,5 bags,False,True,17,4.4,65
+CO-994,CostaLink,Malaga,2027-02-10,17:30,02:20,530.0,32.86,1,5,4 bags,True,False,2,4.1,77
+NO-995,NocheVia,Santiago de Compostela,2027-02-10,17:30,03:30,600.0,35.4,1,7,3 bags,False,False,15,4.2,74
+CO-996,CostaLink,Alicante,2027-02-10,20:00,03:00,420.0,26.04,1,12,3 bags,True,True,20,3.8,77
+CA-997,CaminoExpress,Malaga,2027-02-10,13:30,22:20,530.0,39.75,0,0,2 bags,False,False,15,3.6,92
+VE-998,VerdeBus,Seville,2027-02-10,19:30,04:20,530.0,37.629999999999995,2,1,3 bags,False,True,14,4.4,100
+CA-999,CaminoExpress,Malaga,2027-02-10,16:00,00:50,530.0,39.75,0,0,2 bags,True,True,2,3.5,92
+CO-1000,CostaLink,Malaga,2027-02-10,17:30,02:20,530.0,32.86,3,3,2 bags,False,False,20,4.9,77

@@ -1,9 +1,6 @@
 from helper_functions import get_field, normalize
 
 
-
-
-
 def evaluate_departure_time(prefered_departure: str,offer_time:int) -> float:
 
     time_windows = {

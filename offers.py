@@ -1,5 +1,5 @@
 
-from models import Destination, BusCompany
+from models import Destination, BusCompany,Offer
 
 import random
 from datetime import datetime, timedelta
@@ -161,6 +161,7 @@ def create_automated_offers():
     major_cities = ["Barcelona", "Valencia", "Seville", "Malaga", "Zaragoza", "Bilbao"]
 
     offers_data = []
+    offers_data_class =[]
     offer_counter = 101
 
     random.seed(42) # for reproduciblity
@@ -173,7 +174,7 @@ def create_automated_offers():
         travel_date_str = current_day.strftime("%Y-%m-%d")
 
         # creates 3 offers per day
-        for _ in range(3):
+        for _ in range(10):
             company = random.choice(bus_company)
             company = bus_companies[company]
 
@@ -210,13 +211,20 @@ def create_automated_offers():
                 "price_eur": price,
                 "transfers": transfers,
                 "stops": stops,  # Column tracking intermediate stops
-                "luggage_allowance": random.choice(["1 piece", "2 pieces"]),
+                "luggage_allowance": random.choice(["2 bags", "3 bags","4 bags","5 bags"]),
                 "changeable": random.choice([True, False]),
                 "refundable": random.choice([True, False]),
                 "available_seats": random.randint(2, 20),
                 "customer_rating": round(random.uniform(3.5, 5.0), 1),
                 "environmental_score": calculate_env_score(company=company,destination=dest)
             })
+
+            offers_data_class.append(Offer(offer_id=f"{company.name[:2].upper()}-{offer_counter}",company=company.name,
+                                           destination = dest.name, travel_date = travel_date_str,departure_time = dep_time,
+                                           arrival_time = arr_time, duration_minutes = duration*60,price_eur=price,transfers=transfers,stops=stops,luggage_allowance=random.choice(["2 bags", "3 bags","4 bags","5 bags"]),
+                                           changeable = random.choice([True, False]), refundable = random.choice([True, False]), available_seats= random.randint(2, 20),customer_rating=round(random.uniform(3.5, 5.0), 1),
+                                           environmental_score = calculate_env_score(company=company,destination=dest)
+                                           ))
             offer_counter += 1
 
 
@@ -233,14 +241,14 @@ def create_automated_offers():
             writter.writerows(offers_data)
 
 
+    return offers_data_class
+
+
+            
 
 
 
             
 
-
-
-            
-create_automated_offers()
 
 

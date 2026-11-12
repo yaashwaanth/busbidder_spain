@@ -1,25 +1,25 @@
 from models import Offer
 
-def filter_offers(offers:Offer,trip_request):
+def filter_offers(offers,trip_request):
     """Filters the offers before ranking them based on the mandatory requirements of the traveller"""
     filtered = []
 
     for offer in offers:
         if offer.destination.lower() != trip_request.destination.lower():
             continue
-        if not(trip_request.travel_date<= offer.travel_start_date <= offer.travel_end_date ):
+        if not(trip_request.travel_start_date<= offer.travel_date <= trip_request.travel_end_date ):
             continue
-        if offer.price> trip_request.budget:
+        if offer.price_eur>trip_request.budget:
             continue
         if offer.transfers > trip_request.max_transfers:
             continue
         if offer.available_seats < 1:
             continue
-        if offer.luggage_allowance < trip_request.max_luggage:
+        if offer.luggage_allowance.split()[0] < trip_request.max_luggage.split()[0]:
             continue
-        if offer.duration > trip_request.max_duration:
+        if offer.duration_minutes/60 > trip_request.max_duration:
             continue
-        if offer.changeablity and not trip_request.flexiblity:
+        if offer.changeable and not trip_request.flexiblity:
             continue
 
         filtered.append(offer)

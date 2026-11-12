@@ -51,7 +51,7 @@ class BusCompany:
 
 
 class Offer:
-    def __init(self,offer_id,company,destination,travel_date,departure_time,duration_minutes,arrival_time, price_eur, transfers,luggage_allowance, changeable,refundable, available_seats, customer_rating, environmental_score,stops):
+    def __init__(self,offer_id,company,destination,travel_date,departure_time,duration_minutes,arrival_time, price_eur, transfers,luggage_allowance, changeable,refundable, available_seats, customer_rating, environmental_score,stops):
         self.offer_id = offer_id
         self.company = company #string
         self.destination = destination #string
@@ -73,15 +73,24 @@ class Offer:
 
 
 class Trip_Request(Traveller):
-    def __init__(self,traveller,destination,travel_start_date,travel_end_date,budget,max_transfers,required_luggage,prefered_departure,max_duration,flexiblity):
+    def __init__(self,traveller,destination,travel_start_date,travel_end_date,budget,max_transfers,max_luggage,prefered_departure,max_duration,flexiblity):
         self.traveller = traveller
         self.destination = destination
         self.travel_start_date = travel_start_date
         self.travel_end_date = travel_end_date
         self.budget=budget
         self.max_transfers = max_transfers
-        self.max_luggage = required_luggage
+        self.max_luggage = max_luggage
         self.max_transfers = max_transfers
         self.max_duration = max_duration
         self.prefered_departure = prefered_departure # morning, afternoon, evening, night
         self.flexiblity = flexiblity
+
+
+# Multiple inheritance
+class Booking(Traveller,Offer):
+    def __init__(self,traveller,offer):
+        self.traveller = traveller
+        self.offer = offer
+
+

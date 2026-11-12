@@ -1,63 +1,8 @@
 import csv
-import streamlit as st
-
-
-
-
-class Offer:
-    def __init(self,company,origin,destination,travel_date,departure_time,arrival_time, duration, price, transfers,luggage_allowance, changeablity,refundablity, available_seats, customer_rating, environmental_measure,terms_and_conditions):
-        self.company = company
-        self.origin = origin
-        self.destination = destination
-        self.travel_date = travel_date
-        self.departure_time = departure_time
-        self.arrival_time = arrival_time
-        self.duration = duration
-        self.price = price
-        self.transfers = transfers
-        self.luggage = self.luggage
-        self.luggage_allowance = luggage_allowance
-        self.changeablity = changeablity
-        self.refundablity = refundablity
-        self.available_seats = available_seats
-        self.customer_rating = customer_rating
-        self.environmental_measure = environmental_measure
-        self.terms_and_conditions = terms_and_conditions
-
-
-
-# Multiple inheritance
-class Booking(Traveller,Offer):
-    def __init__(self,traveller,offer):
-        self.traveller = traveller
-        self.offer = offer
-
-
-
-def getDetails(self):
-          return {
-              "name": self.name,
-              "age":self.age,
-              "gender":self.gender,
-              "phone":self.phone,
-              "email":self.email,
-              "type": self.traveller_type
-  
-          }
-
-
-
-def create_user(name, age, gender,phone, email,traveller_type) -> Traveller:
-   return Traveller(name, age, gender,phone,email,traveller_type)
-
-
-def create_offer(company,origin,destination,travel_date,departure_time,arrival_time, duration, price, transfers,luggage_allowance, changeablity,refundablity, available_seats, customer_rating, environmental_measure,terms_and_conditions)->Offer:
-    return Offer(company,origin,destination,travel_date,departure_time,arrival_time, duration, price, transfers,luggage_allowance, changeablity,refundablity, available_seats, customer_rating, environmental_measure,terms_and_conditions)
-
-
-def book_ticket(traveller,offer)-> Booking:
-    return Booking(traveller,offer)
-
+from models import Traveller, Trip_Request, Offer,Booking
+from offers import create_automated_offers
+from filter import filter_offers
+from rank import rank_offers
 # bus comany profiles
 # bus_companies = {
 #     "SolRuta": BusCompany(
@@ -174,4 +119,28 @@ def book_ticket(traveller,offer)-> Booking:
 
 
 def main():
-    print(bus_companies["SolRuta"])
+    print("=============BusBidder Spain================")
+
+
+    # creating a traveller profile
+    raol = Traveller(name="Raol",age=24,gender="M",phone="94324303",email="raol@gmail.com",traveller_type="Business",mandatory_preferences=["Company","price_eur","transfers","duration"])
+
+    # creating trip request
+    raol_trip_1 = Trip_Request(traveller=raol,destination="Cordoba",travel_start_date="2026-11-22",travel_end_date="2026-11-30",budget=100,max_duration=24,max_luggage="1 peices",max_transfers=3,prefered_departure="Morning",flexiblity=True)
+
+    # get offers
+    total_offers = create_automated_offers()
+    # print(total_offers[0].company)
+
+    filtered_offers = filter_offers(offers=total_offers,trip_request=raol_trip_1)
+    print(filtered_offers)
+    # rank the offers
+    print(rank_offers(filtered_offers,raol_trip_1))
+
+
+    print("==================END=======================")
+
+
+
+if __name__ == "__main__":
+    main()
