@@ -1,12 +1,13 @@
 
 class Traveller:
-    def __init__(self, name, age, gender,phone, email,traveller_type):
+    def __init__(self, name, age, gender,phone, email,traveller_type,mandatory_preferences):
         self.name = name
         self.age = age
         self.gender = gender
         self.phone = phone
         self.email = email
         self.traveller_type = traveller_type
+        self.mandatory_preferences = mandatory_preferences #[price, duration, departure_time, environment, stops] only 5 parameters
     def getDetails(self):
         return {
             "name": self.name,
@@ -50,28 +51,29 @@ class BusCompany:
 
 
 class Offer:
-    def __init(self,company,origin,destination,travel_date,departure_time,arrival_time, duration, price, transfers,luggage_allowance, changeablity,refundablity, available_seats, customer_rating, environmental_measure,terms_and_conditions):
-        self.company = company
-        self.origin = origin
-        self.destination = destination
-        self.travel_date = travel_date
-        self.departure_time = departure_time
-        self.arrival_time = arrival_time
-        self.duration = duration
-        self.price = price
-        self.transfers = transfers
-        self.luggage = self.luggage
-        self.luggage_allowance = luggage_allowance
-        self.changeablity = changeablity
-        self.refundablity = refundablity
-        self.available_seats = available_seats
-        self.customer_rating = customer_rating
-        self.environmental_measure = environmental_measure
-        self.terms_and_conditions = terms_and_conditions
+    def __init(self,offer_id,company,destination,travel_date,departure_time,duration_minutes,arrival_time, price_eur, transfers,luggage_allowance, changeable,refundable, available_seats, customer_rating, environmental_score,stops):
+        self.offer_id = offer_id
+        self.company = company #string
+        self.destination = destination #string
+        self.travel_date = travel_date #string
+        self.departure_time = departure_time# string
+        self.arrival_time = arrival_time#string
+        self.duration_minutes= duration_minutes #float
+        self.price_eur = price_eur #float
+        self.transfers = transfers # int
+        self.stops = stops #int
+        self.luggage_allowance = luggage_allowance # string
+
+        self.changeable = changeable #booloean
+        self.refundable = refundable  #booloean
+        self.available_seats = available_seats # int
+        self.customer_rating = customer_rating #float
+        self.environmental_score = environmental_score #int [0-100]
+
 
 
 class Trip_Request(Traveller):
-    def __init__(self,traveller,destination,travel_start_date,travel_end_date,budget,max_transfers,required_luggage,max_duration,flexiblity):
+    def __init__(self,traveller,destination,travel_start_date,travel_end_date,budget,max_transfers,required_luggage,prefered_departure,max_duration,flexiblity):
         self.traveller = traveller
         self.destination = destination
         self.travel_start_date = travel_start_date
@@ -81,4 +83,5 @@ class Trip_Request(Traveller):
         self.max_luggage = required_luggage
         self.max_transfers = max_transfers
         self.max_duration = max_duration
+        self.prefered_departure = prefered_departure # morning, afternoon, evening, night
         self.flexiblity = flexiblity
