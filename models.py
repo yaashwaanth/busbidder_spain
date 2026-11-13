@@ -20,8 +20,6 @@ class Traveller:
         }
 
 
-
-
 class Destination:
     def __init__(self,name,costal,major_city,distance_km,base_duration_min,base_price_eur):
            self.name= name 
@@ -43,9 +41,6 @@ class BusCompany:
     self.direct_route= direct_route
     self.coastal_focus=coastal_focus
     self.new_fleet=new_fleet
-  # 1-5 scale
-     # basic luggage allowance
-
     self.budget_company=budget_company
 
 
