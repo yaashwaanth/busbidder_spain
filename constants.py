@@ -1,4 +1,4 @@
-from models import BusCompany
+from models import BusCompany, Destination
 
 BUS_COMPANIES = {
     "SolRuta": BusCompany(
@@ -60,4 +60,52 @@ BUS_COMPANIES = {
         new_fleet=False,
         budget_company=False
     ),
+}
+
+DESTINATIONS_PROFILE = {
+    "Barcelona": Destination(
+        name="Barcelona", costal=True, major_city=True,
+        distance_km=620, base_duration_min=420, base_price_eur=38),
+    "Valencia": Destination(
+        name="Valencia", costal=True, major_city=True,
+        distance_km=355, base_duration_min=255, base_price_eur=22),
+    "Seville": Destination(
+        name="Seville", costal=False, major_city=True,
+        distance_km=530, base_duration_min=360, base_price_eur=32),
+    "Malaga": Destination(
+        name="Malaga", costal=True, major_city=True,
+        distance_km=530, base_duration_min=390, base_price_eur=33),
+    "Granada": Destination(
+        name="Granada", costal=False, major_city=False,
+        distance_km=430, base_duration_min=330, base_price_eur=28),
+    "Cordoba": Destination(
+        name="Cordoba", costal=False, major_city=True,
+        distance_km=400, base_duration_min=255, base_price_eur=24),
+    "Bilbao": Destination(
+        name="Bilbao", costal=True, major_city=True,
+        distance_km=400, base_duration_min=300, base_price_eur=29),
+    "San_Sebastian": Destination(
+        name="San Sebastian", costal=True, major_city=False,
+        distance_km=470, base_duration_min=330, base_price_eur=32),
+    "Zaragoza": Destination(
+        name="Zaragoza", costal=False, major_city=True,
+        distance_km=320, base_duration_min=225, base_price_eur=19),
+    "Alicante": Destination(
+        name="Alicante", costal=True, major_city=True,
+        distance_km=420, base_duration_min=330, base_price_eur=27),
+    "Murcia": Destination(
+        name="Murcia", costal=True, major_city=True,
+        distance_km=400, base_duration_min=330, base_price_eur=28),
+    "Salamanca": Destination(
+        name="Salamanca", costal=False, major_city=False,
+        distance_km=210, base_duration_min=150, base_price_eur=14),
+    "Toledo": Destination(
+        name="Toledo", costal=False, major_city=False,
+        distance_km=70, base_duration_min=60, base_price_eur=6),
+    "Santiago_de_Compostela": Destination(
+        name="Santiago de Compostela", costal=False, major_city=False,
+        distance_km=600, base_duration_min=480, base_price_eur=42),
+    "Cadiz": Destination(
+        name="Cadiz", costal=True, major_city=False,
+        distance_km=650, base_duration_min=480, base_price_eur=40),
 }

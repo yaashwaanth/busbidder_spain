@@ -108,8 +108,8 @@ def rank_offers(offers, trip_request):
 
         # 4. Dynamic Calculation using ONLY keys present in the user's array
         valid_prefs = [p for p in selected_preferences if p in scores]
-        print("ranking ->" )
-        print(valid_prefs)
+        # print("ranking ->" )
+        # print(valid_prefs)
 
 
 

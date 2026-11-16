@@ -7,76 +7,10 @@ import csv
 
 from helper_functions import calculate_env_score, load_vaild_offers
 
+from constants import DESTINATIONS_PROFILE,BUS_COMPANIES
 import re
-bus_companies = {
-    "SolRuta": BusCompany(
-        name="SolRuta", 
-        bus_code="SOL",
-        price_per_km=0.050, 
-        speed_multiplier=1.10, 
-        co2_g_per_km=32,
-        departure_window=("06:00", "14:00"),
-        direct_route=False, 
-        coastal_focus=False, 
-        new_fleet=False,
-        budget_company=True
-    ),
-    "CaminoExpress": BusCompany(
-        name="CaminoExpress", 
-        bus_code="CAE",
-        price_per_km=0.075, 
-        speed_multiplier=0.90, 
-        co2_g_per_km=26,
-        departure_window=("11:00", "20:00"),
-        direct_route=True, 
-        coastal_focus=False, 
-        new_fleet=True,
-        budget_company=False
-    ),
-    "CostaLink": BusCompany(
-        name="CostaLink", 
-        bus_code="COL",
-        price_per_km=0.062, 
-        speed_multiplier=1.05, 
-        co2_g_per_km=28,
-        departure_window=("16:00", "20:00"),
-        direct_route=False, 
-        coastal_focus=True, 
-        new_fleet=False,
-        budget_company=False
-    ),
-    "VerdeBus": BusCompany(
-        name="VerdeBus", bus_code="VDB",
-        price_per_km=0.071, 
-        speed_multiplier=1.00,
-        co2_g_per_km=18,
-        departure_window=("16:30", "23:00"),
-        direct_route=False, 
-        coastal_focus=False, 
-        new_fleet=True,
-        budget_company=False
-    ),
-    "NocheVia": BusCompany(
-        name="NocheVia", 
-        bus_code="NOV",
-        price_per_km=0.059, 
-        speed_multiplier=1.05, 
-        co2_g_per_km=29,
-        departure_window=("15:30", "23:59"),
-        direct_route=False, 
-        coastal_focus=False, 
-        new_fleet=False,
-        budget_company=False
-    ),
-}
 
-
-
-def create_automated_offers():
-
-    
-
-    bus_company=[
+bus_company_list=[
         "SolRuta",
         "CaminoExpress",
         "CostaLink",
@@ -84,86 +18,35 @@ def create_automated_offers():
         "NocheVia"
     ]
 
-    # destinations
-    # destinations={
-    #     "Barcelona", 
-    #     "Valencia", 
-    #     "Seville", 
-    #     "Malaga", 
-    #     "Granada",
-    #     "Cordoba",
-    #     "Bilbao", 
-    #     "San Sebastian", 
-    #     "Zaragoza", 
-    #     "Alicante",
-    #     "Murcia", 
-    #     "Salamanca", 
-    #     "Toledo", 
-    #     "Santiago de Compostela", 
-    #     "Cadiz"
-    # }
-
-
-    destinations = {
-    "Barcelona": Destination(
-        name="Barcelona", costal=True, major_city=True,
-        distance_km=620, base_duration_min=420, base_price_eur=38),
-    "Valencia": Destination(
-        name="Valencia", costal=True, major_city=True,
-        distance_km=355, base_duration_min=255, base_price_eur=22),
-    "Seville": Destination(
-        name="Seville", costal=False, major_city=True,
-        distance_km=530, base_duration_min=360, base_price_eur=32),
-    "Malaga": Destination(
-        name="Malaga", costal=True, major_city=True,
-        distance_km=530, base_duration_min=390, base_price_eur=33),
-    "Granada": Destination(
-        name="Granada", costal=False, major_city=False,
-        distance_km=430, base_duration_min=330, base_price_eur=28),
-    "Cordoba": Destination(
-        name="Cordoba", costal=False, major_city=True,
-        distance_km=400, base_duration_min=255, base_price_eur=24),
-    "Bilbao": Destination(
-        name="Bilbao", costal=True, major_city=True,
-        distance_km=400, base_duration_min=300, base_price_eur=29),
-    "San_Sebastian": Destination(
-        name="San Sebastian", costal=True, major_city=False,
-        distance_km=470, base_duration_min=330, base_price_eur=32),
-    "Zaragoza": Destination(
-        name="Zaragoza", costal=False, major_city=True,
-        distance_km=320, base_duration_min=225, base_price_eur=19),
-    "Alicante": Destination(
-        name="Alicante", costal=True, major_city=True,
-        distance_km=420, base_duration_min=330, base_price_eur=27),
-    "Murcia": Destination(
-        name="Murcia", costal=True, major_city=True,
-        distance_km=400, base_duration_min=330, base_price_eur=28),
-    "Salamanca": Destination(
-        name="Salamanca", costal=False, major_city=False,
-        distance_km=210, base_duration_min=150, base_price_eur=14),
-    "Toledo": Destination(
-        name="Toledo", costal=False, major_city=False,
-        distance_km=70, base_duration_min=60, base_price_eur=6),
-    "Santiago_de_Compostela": Destination(
-        name="Santiago de Compostela", costal=False, major_city=False,
-        distance_km=600, base_duration_min=480, base_price_eur=42),
-    "Cadiz": Destination(
-        name="Cadiz", costal=True, major_city=False,
-        distance_km=650, base_duration_min=480, base_price_eur=40),
-    }
-
-    current_date = datetime.now()
-    # print(current_date)
-
-    all_destinations = [
+all_destinations_list = [
         "Barcelona", "Valencia", "Seville", "Malaga", "Granada",
         "Cordoba", "Bilbao", "San_Sebastian", "Zaragoza", "Alicante",
         "Murcia", "Salamanca", "Toledo", "Santiago_de_Compostela", "Cadiz"
     ]
-    # defining the nature of destinations
-    coastal_destinations = ["Barcelona", "Valencia", "Seville", "Malaga", "Bilbao", "San_Sebastian", "Alicante", "Murcia", "Cadiz"]
-    major_cities = ["Barcelona", "Valencia", "Seville", "Malaga", "Zaragoza", "Bilbao"]
 
+fieldnames_list = [
+        "offer_id", "company", "destination", "travel_date", "departure_time",
+        "arrival_time", "duration_minutes", "price_eur", "transfers", "stops",
+        "luggage_allowance", "changeable", "refundable", "available_seats",
+        "customer_rating", "environmental_score"
+        ]
+
+
+coastal_destinations_list = ["Barcelona", "Valencia", "Seville", "Malaga", "Bilbao", "San_Sebastian", "Alicante", "Murcia", "Cadiz"]
+
+major_cities_list = ["Barcelona", "Valencia", "Seville", "Malaga", "Zaragoza", "Bilbao"]
+
+def create_automated_offers():
+
+
+   
+
+    current_date = datetime.now()
+    # print(current_date)
+
+    
+    # defining the nature of destinations
+   
     offers_data = []
     offers_data_class =[]
     offer_counter_code = 101
@@ -181,18 +64,18 @@ def create_automated_offers():
         for _ in range(10):
 
 
-            company = random.choice(bus_company)
-            company = bus_companies[company]
+            company = random.choice(bus_company_list)
+            company = BUS_COMPANIES[company]
 
             if company.name == "CostaLink":
-                dest = random.choice(coastal_destinations)
-                dest = destinations[dest]
+                dest = random.choice(coastal_destinations_list)
+                dest = DESTINATIONS_PROFILE[dest]
             elif company.name == "CaminoExpress":
-                dest = random.choice(major_cities)
-                dest = destinations[dest]
+                dest = random.choice(major_cities_list)
+                dest = DESTINATIONS_PROFILE[dest]
             else:
-                dest = random.choice(all_destinations)
-                dest = destinations[dest]
+                dest = random.choice(all_destinations_list)
+                dest = DESTINATIONS_PROFILE[dest]
 
             anomaly_chance = random.random()
             transfers =  0 if company.direct_route else random.choice([1,2,3])
@@ -246,15 +129,9 @@ def create_automated_offers():
             offer_counter_code += 1
 
 
-        fieldnames = [
-        "offer_id", "company", "destination", "travel_date", "departure_time",
-        "arrival_time", "duration_minutes", "price_eur", "transfers", "stops",
-        "luggage_allowance", "changeable", "refundable", "available_seats",
-        "customer_rating", "environmental_score"
-        ]
-
+        # writing into csv file
         with open("offers.csv",mode="w",newline="",encoding="utf-8") as f:
-            writter = csv.DictWriter(f,fieldnames=fieldnames)
+            writter = csv.DictWriter(f,fieldnames=fieldnames_list)
             writter.writeheader()
             writter.writerows(offers_data)
 

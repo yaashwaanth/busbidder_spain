@@ -82,7 +82,7 @@ class Trip_Request(Traveller):
         self.prefered_departure = prefered_departure # morning, afternoon, evening, night
         self.flexiblity = flexiblity
         self.preferred_company = preferred_company
-
+        
 
 # Multiple inheritance
 class Booking(Traveller,Offer):

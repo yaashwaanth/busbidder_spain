@@ -21,10 +21,17 @@ def filter_offers(offers,trip_request):
             continue
         if offer.changeable and not trip_request.flexiblity:
             continue
-
+        if trip_request.preferred_company != "None" and trip_request.preferred_company != offer.company:
+            continue
+        if offer.stops > trip_request.max_stops:
+            continue
         filtered.append(offer)
 
     return filtered
+
+
+
+
 
 
 
