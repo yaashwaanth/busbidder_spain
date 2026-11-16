@@ -1,3 +1,6 @@
+import re
+
+
 
 class Traveller:
     def __init__(self, name, age, gender,phone, email,traveller_type,mandatory_preferences):
@@ -5,7 +8,6 @@ class Traveller:
         self.age = age
         self.gender = gender
         self.phone = phone
-        self.email = email
         self.traveller_type = traveller_type
         self.mandatory_preferences = mandatory_preferences #[price, duration, departure_time, environment, stops] only 5 parameters
     def getDetails(self):
@@ -32,7 +34,7 @@ class Destination:
 
 
 class BusCompany:
- def __init__(self,name, bus_code,price_per_km,speed_multiplier, co2_g_per_km,direct_route, departure_window,coastal_focus,new_fleet,budget_company):
+ def __init__(self,name, bus_code,price_per_km,speed_multiplier, co2_g_per_km,direct_route, departure_window,coastal_focus,new_fleet,budget_company,bus_avg_speed):
     self.name = name
     self.bus_code = bus_code
     self.price_per_km= price_per_km        # EUR per km
@@ -43,6 +45,7 @@ class BusCompany:
     self.coastal_focus=coastal_focus
     self.new_fleet=new_fleet
     self.budget_company=budget_company
+    self.bus_avg_speed = bus_avg_speed
 
 
 
@@ -82,7 +85,7 @@ class Trip_Request(Traveller):
         self.prefered_departure = prefered_departure # morning, afternoon, evening, night
         self.flexiblity = flexiblity
         self.preferred_company = preferred_company
-        
+
 
 # Multiple inheritance
 class Booking(Traveller,Offer):

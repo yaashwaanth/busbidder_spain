@@ -89,9 +89,9 @@ def create_automated_offers():
                 
 
             if anomaly_chance<0.1:
-                duration = (dest.distance_km/60) * -1
+                duration = (dest.distance_km/company.bus_avg_speed) * -1
             else:
-                duration = dest.distance_km/60
+                duration = round(dest.distance_km/company.bus_avg_speed)
 
             dep_time = f"{random.randint(int(company.departure_window[0].split(':')[0]), int(company.departure_window[1].split(':')[0])):02d}:{random.choice([0, 30]):02d}"
             dep_hour, dep_min = map(int, dep_time.split(":"))

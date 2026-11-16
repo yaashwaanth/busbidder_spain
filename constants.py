@@ -11,7 +11,8 @@ BUS_COMPANIES = {
         direct_route=False, 
         coastal_focus=False, 
         new_fleet=False,
-        budget_company=True
+        budget_company=True,
+        bus_avg_speed=50
     ),
     "CaminoExpress": BusCompany(
         name="CaminoExpress", 
@@ -23,7 +24,8 @@ BUS_COMPANIES = {
         direct_route=True, 
         coastal_focus=False, 
         new_fleet=True,
-        budget_company=False
+        budget_company=False,
+        bus_avg_speed = 85
     ),
     "CostaLink": BusCompany(
         name="CostaLink", 
@@ -35,7 +37,8 @@ BUS_COMPANIES = {
         direct_route=False, 
         coastal_focus=True, 
         new_fleet=False,
-        budget_company=False
+        budget_company=False,
+        bus_avg_speed = 60
     ),
     "VerdeBus": BusCompany(
         name="VerdeBus", bus_code="VDB",
@@ -46,7 +49,8 @@ BUS_COMPANIES = {
         direct_route=False, 
         coastal_focus=False, 
         new_fleet=True,
-        budget_company=False
+        budget_company=False,
+        bus_avg_speed = 62
     ),
     "NocheVia": BusCompany(
         name="NocheVia", 
@@ -58,7 +62,8 @@ BUS_COMPANIES = {
         direct_route=False, 
         coastal_focus=False, 
         new_fleet=False,
-        budget_company=False
+        budget_company=False,
+        bus_avg_speed = 80
     ),
 }
 

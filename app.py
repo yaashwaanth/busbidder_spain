@@ -4,7 +4,7 @@ from offers import create_automated_offers
 from filter import filter_offers
 from rank import rank_offers
 from helper_functions import load_travellers, save_traveller
-
+import re
 from constants import BUS_COMPANIES
 
 # Page Configuration
@@ -39,7 +39,7 @@ profile_mode = st.sidebar.radio("Profile Action", ["Select Existing Traveller", 
 if profile_mode == "Select Existing Traveller":
     selected_name = st.sidebar.selectbox("Choose Traveller", traveller_names, key="select_existing_traveller_box")
     traveller = saved_travellers[selected_name]
-    st.sidebar.success(f"Loaded profile: **{traveller.name}** ({traveller.traveller_type})")
+    st.sidebar.success(f"Loaded profile: **{traveller.name}**")
 
 else:
     with st.sidebar.form("new_traveller_form"):
@@ -74,7 +74,25 @@ else:
         submitted = st.form_submit_button("Save Traveller")
 
         if submitted:
-            if name.strip():
+            # regex
+            name_pattern = r"^[A-Za-zÀ-ÿ\s]{2,40}$"                  
+            phone_pattern = r"^(\+34|0034)?[6-9]\d{8}$"           
+            email_pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"           
+
+            cleaned_name = name.strip()
+            cleaned_phone = phone.strip()
+            cleaned_email = email.strip()
+
+            # regex validation
+            if not re.match(name_pattern, cleaned_name):
+                 st.error("Invalid Name: Must contain only letters and spaces (2 to 40 characters maximum and no numbers).")
+            elif not re.match(email_pattern, cleaned_email):
+                st.error("Invalid Email: Please enter a valid email address (ex: user@gmail.com).")
+            elif not re.match(phone_pattern, cleaned_phone):
+                 st.error("Invalid Phone: Please enter a valid phone number.")
+
+
+            else:
                 new_traveller = Traveller(
                     name=name, age=age, gender=gender, phone=phone, email=email,
                     traveller_type=traveller_type,
@@ -83,8 +101,7 @@ else:
                 save_traveller(new_traveller)
                 st.success(f"Traveller {name} saved successfully! Please restart or refresh the view.")
                 st.rerun()
-            else:
-                st.error("Please provide a valid name.")
+        
     
 
     traveller = saved_travellers[traveller_names[0]]
@@ -163,7 +180,7 @@ if st.sidebar.expander("🎯 More Filters (Optional)", expanded=False):
 
 # print(more_filters_fields)
 # MAIN CONTENT AREA
-if st.button("🔍 Search & Rank Offers", type="primary"):
+if st.button("🔍 Search", type="primary"):
     trip_req_obj = Trip_Request(
         traveller=traveller,
         destination=trip_request["destination"],
@@ -216,9 +233,10 @@ if st.button("🔍 Search & Rank Offers", type="primary"):
                     scores_dict = offer["criterion_scores"] if isinstance(offer, dict) else offer.criterion_scores
                     
                     st.markdown(f"⭐ **Mandatory Requirements Score: {score} / 100**")
-                    with st.expander("View Criteria Scores"):
+                    with st.expander("View Individual Scores"):
                         for crit, sc in scores_dict.items():
                             st.text(f"{crit}: {sc:.1f}")
+                    st.button("Book", type="primary",key={idx})
                 st.divider()
     # elif more_filters_offers:
     #             st.markdown("### 🏆 Top Ranked Offers")
