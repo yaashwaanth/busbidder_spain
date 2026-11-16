@@ -4,6 +4,10 @@ import os
 import csv
 from models import Traveller
 import ast
+
+
+traveller_id_counter = 101
+
 def calculate_env_score(company,destination):
     """
     This functions helps in calculating the environment score of the bus company to a particular destination.
@@ -149,13 +153,21 @@ def load_vaild_offers(filename="offers.csv"):
     return valid_offers
 
 
+def generate_traveller_id(name):
+    """Next ID based on how many travellers are already saved (survives reruns)."""
+    count = 0
+    if os.path.exists(TRAVELER_FILE):
+        with open(TRAVELER_FILE, newline="", encoding="utf-8") as f:
+            count = sum(1 for _ in csv.DictReader(f))
+    return f"{name.strip()}-{101 + count}"
 
 TRAVELER_FILE = "travelers.csv"
+
 
 def save_traveller(traveller: Traveller):
     """Appends a new traveller profile to travelers.csv with clean preference formatting."""
     file_exists = os.path.exists(TRAVELER_FILE)
-    fieldnames = ["name", "age", "gender", "phone", "email", "type", "mandatory_preferences"]
+    fieldnames = ["id","name", "age", "gender", "phone", "email", "type", "mandatory_preferences"]
     
     data = traveller.getDetails()
     # Ensure mandatory_preferences is stored cleanly as a pipe-separated string (e.g. "company|price_eur")
@@ -176,6 +188,7 @@ def load_travellers() -> dict:
     
     if not os.path.exists(TRAVELER_FILE):
         default_traveller = Traveller(
+            id=f"Raol-{101}",
             name="Raol", age=24, gender="M", phone="94324303", 
             email="raol@gmail.com", traveller_type="Business",
             mandatory_preferences=["company", "price_eur", "transfers", "duration_minutes"]
@@ -213,6 +226,7 @@ def load_travellers() -> dict:
                         parsed_prefs = [p.strip() for p in cleaned.split(",") if p.strip()]
 
             traveller = Traveller(
+                id = row["id"],
                 name=row["name"],
                 age=int(row["age"]),
                 gender=row["gender"],

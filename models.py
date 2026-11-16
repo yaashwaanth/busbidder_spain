@@ -3,15 +3,18 @@ import re
 
 
 class Traveller:
-    def __init__(self, name, age, gender,phone, email,traveller_type,mandatory_preferences):
+    def __init__(self,id, name, age, gender,phone, email,traveller_type,mandatory_preferences):
+        self.id = id
         self.name = name
         self.age = age
+        self.email = email
         self.gender = gender
         self.phone = phone
         self.traveller_type = traveller_type
         self.mandatory_preferences = mandatory_preferences #[price, duration, departure_time, environment, stops] only 5 parameters
     def getDetails(self):
         return {
+            "id":self.id,
             "name": self.name,
             "age":self.age,
             "gender":self.gender,
@@ -89,8 +92,14 @@ class Trip_Request(Traveller):
 
 # Multiple inheritance
 class Booking(Traveller,Offer):
-    def __init__(self,traveller,offer):
+    def __init__(self,booking_id,traveller,offer):
+        self.booking_id = booking_id
         self.traveller = traveller
         self.offer = offer
-
+    def getDetails(self):
+        return {
+            "booking_id": self.booking_id,
+            "offer_id": self.offer_id,
+            "traveller": self.traveller
+        }
 

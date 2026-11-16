@@ -3,11 +3,16 @@ from models import Traveller, Trip_Request
 from offers import create_automated_offers
 from filter import filter_offers
 from rank import rank_offers
-from helper_functions import load_travellers, save_traveller
+from helper_functions import load_travellers, save_traveller,generate_traveller_id
 import re
 from constants import BUS_COMPANIES
 
-# Page Configuration
+
+from booking import book_offer,get_bookings_for
+
+traveller_id_counter =102
+
+
 st.set_page_config(
     page_title="BusBidder Spain",
     page_icon="🌊",
@@ -76,7 +81,7 @@ else:
         if submitted:
             # regex
             name_pattern = r"^[A-Za-zÀ-ÿ\s]{2,40}$"                  
-            phone_pattern = r"^(\+34|0034)?[6-9]\d{8}$"           
+            phone_pattern = r"^\d{8,10}$"           
             email_pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"           
 
             cleaned_name = name.strip()
@@ -94,13 +99,16 @@ else:
 
             else:
                 new_traveller = Traveller(
+                    id = f"{name}-{traveller_id_counter}",
+                    
                     name=name, age=age, gender=gender, phone=phone, email=email,
                     traveller_type=traveller_type,
                     mandatory_preferences=[available_prefs[pref] for pref in selected_pref_labels]
                 )
+                traveller_id_counter+=1
                 save_traveller(new_traveller)
-                st.success(f"Traveller {name} saved successfully! Please restart or refresh the view.")
-                st.rerun()
+                st.success(f"Traveller {name} saved successfully! Please select the traveller created")
+                # st.rerun()
         
     
 
@@ -157,7 +165,7 @@ st.sidebar.caption("Additional constraint filters for your search:")
 
 if st.sidebar.expander("🎯 More Filters (Optional)", expanded=False):
     if "company" not in trip_request:
-     trip_request["company"] = st.sidebar.selectbox("Company", [comp.name for _, comp in BUS_COMPANIES.items()], key="reg_company")
+     trip_request["company"] = st.sidebar.selectbox("Company", company_options, key="reg_company")
      more_filters_fields["company"] = [comp.name for _,comp in BUS_COMPANIES.items()]
     if "budget" not in trip_request:
         trip_request["budget"] = st.sidebar.slider("Max Budget (€)", min_value=10, max_value=150, value=100, step=5, key="reg_budget")
@@ -180,64 +188,78 @@ if st.sidebar.expander("🎯 More Filters (Optional)", expanded=False):
 
 # print(more_filters_fields)
 # MAIN CONTENT AREA
-if st.button("🔍 Search", type="primary"):
-    trip_req_obj = Trip_Request(
-        traveller=traveller,
-        destination=trip_request["destination"],
-        travel_start_date=trip_request["travel_start_date"].strftime("%Y-%m-%d"),
-        travel_end_date=trip_request["travel_end_date"].strftime("%Y-%m-%d"),
-        budget=float(trip_request["budget"]),
-        max_transfers=int(trip_request["max_transfers"]),
-        max_luggage=trip_request["max_luggage"],
-        prefered_departure=trip_request["prefered_departure"],
-        max_duration=float(trip_request["max_duration"]),
-        flexiblity=trip_request["flexibility"],
-        preferred_company=trip_request["company"],
-        max_stops=trip_request["max_stops"]
-    )
+# if st.button("🔍 Search", type="primary"):
+#     trip_req_obj = Trip_Request(
+#         traveller=traveller,
+#         destination=trip_request["destination"],
+#         travel_start_date=trip_request["travel_start_date"].strftime("%Y-%m-%d"),
+#         travel_end_date=trip_request["travel_end_date"].strftime("%Y-%m-%d"),
+#         budget=float(trip_request["budget"]),
+#         max_transfers=int(trip_request["max_transfers"]),
+#         max_luggage=trip_request["max_luggage"],
+#         prefered_departure=trip_request["prefered_departure"],
+#         max_duration=float(trip_request["max_duration"]),
+#         flexiblity=trip_request["flexibility"],
+#         preferred_company=trip_request["company"],
+#         max_stops=trip_request["max_stops"]
+#     )
 
-    filtered_offers = filter_offers(all_offers, trip_req_obj)
-    ranked_results = rank_offers(filtered_offers, trip_req_obj)
-
-
+#     filtered_offers = filter_offers(all_offers, trip_req_obj)
+#     ranked_results = rank_offers(filtered_offers, trip_req_obj)
 
 
 
-    st.success(f"Found **{len(ranked_results)}** matching offers for {trip_request['destination']} under traveler **{traveller.name}**!")
 
-    if ranked_results:
-        st.markdown("### 🏆 Top Ranked Offers")
-        for idx, offer in enumerate(ranked_results[:10], start=1):
-            with st.container():
-                col1, col2, col3, col4 = st.columns([1, 3, 2, 2])
-                with col1:
-                    st.metric(label="Rank", value=f"#{idx}")
-                with col2:
-                    company_name = offer["company"] if isinstance(offer, dict) else offer.company
-                    offer_id = offer["offer_id"] if isinstance(offer, dict) else offer.offer_id
-                    travel_date = offer["travel_date"] if isinstance(offer, dict) else offer.travel_date
-                    dep_time = offer["departure_time"] if isinstance(offer, dict) else offer.departure_time
-                    arr_time = offer["arrival_time"] if isinstance(offer, dict) else offer.arrival_time
+
+#     st.success(f"Found **{len(ranked_results)}** matching offers for {trip_request['destination']} under traveler **{traveller.name}**!")
+
+#     if ranked_results:
+#         st.markdown("### 🏆 Top Ranked Offers")
+#         for idx, offer in enumerate(ranked_results[:10], start=1):
+#             with st.container():
+#                 col1, col2, col3, col4 = st.columns([1, 3, 2, 2])
+#                 with col1:
+#                     st.metric(label="Rank", value=f"#{idx}")
+#                 with col2:
+#                     company_name = offer["company"] if isinstance(offer, dict) else offer.company
+#                     offer_id = offer["offer_id"] if isinstance(offer, dict) else offer.offer_id
+#                     travel_date = offer["travel_date"] if isinstance(offer, dict) else offer.travel_date
+#                     dep_time = offer["departure_time"] if isinstance(offer, dict) else offer.departure_time
+#                     arr_time = offer["arrival_time"] if isinstance(offer, dict) else offer.arrival_time
+#                     # dd
+#                     st.markdown(f"**{company_name}** (`{offer_id}`)")
+#                     st.caption(f"📅 {travel_date} | ⏰ Dep: {dep_time} - Arr: {arr_time}")
+#                 with col3:
+#                     price = offer["price_eur"] if isinstance(offer, dict) else offer.price_eur
+#                     duration = offer["duration_minutes"] if isinstance(offer, dict) else offer.duration_minutes
+#                     stops = offer["stops"] if isinstance(offer, dict) else offer.stops
                     
-                    st.markdown(f"**{company_name}** (`{offer_id}`)")
-                    st.caption(f"📅 {travel_date} | ⏰ Dep: {dep_time} - Arr: {arr_time}")
-                with col3:
-                    price = offer["price_eur"] if isinstance(offer, dict) else offer.price_eur
-                    duration = offer["duration_minutes"] if isinstance(offer, dict) else offer.duration_minutes
-                    stops = offer["stops"] if isinstance(offer, dict) else offer.stops
+#                     st.markdown(f"💰 **{price:.2f} €**")
+#                     st.markdown(f"⏱️ `{duration/60:.1f} hrs` | 🚏 Stops: {stops}")
+#                 with col4:
+#                     score = offer["total_score"] if isinstance(offer, dict) else offer.total_score
+#                     scores_dict = offer["criterion_scores"] if isinstance(offer, dict) else offer.criterion_scores
                     
-                    st.markdown(f"💰 **{price:.2f} €**")
-                    st.markdown(f"⏱️ `{duration/60:.1f} hrs` | 🚏 Stops: {stops}")
-                with col4:
-                    score = offer["total_score"] if isinstance(offer, dict) else offer.total_score
-                    scores_dict = offer["criterion_scores"] if isinstance(offer, dict) else offer.criterion_scores
-                    
-                    st.markdown(f"⭐ **Mandatory Requirements Score: {score} / 100**")
-                    with st.expander("View Individual Scores"):
-                        for crit, sc in scores_dict.items():
-                            st.text(f"{crit}: {sc:.1f}")
-                    st.button("Book", type="primary",key={idx})
-                st.divider()
+#                     st.markdown(f"⭐ **Mandatory Requirements Score: {score} / 100**")
+#                     with st.expander("View Individual Scores"):
+#                         for crit, sc in scores_dict.items():
+#                             st.text(f"{crit}: {sc:.1f}")
+
+#                     offer_id_val = offer["offer_id"] if isinstance(offer, dict) else offer.offer_id
+#                     booking_key = f"booked_{offer_id_val}"
+#                     if st.session_state.get(booking_key, False):
+#                         st.success("✅ Booked Successfully!")
+#                     else:
+#                         if st.button("Book", type="primary", key=f"book_btn_{idx}"):
+#                             try:
+#                                 book_offer(offer, traveller)
+#                                 # Mark as booked in session state so it persists past the refresh
+#                                 st.session_state[booking_key] = True
+#                                 st.rerun()
+#                             except Exception as e:
+#                                 st.error(f"Booking failed: {e}")
+                            
+#                 st.divider()
     # elif more_filters_offers:
     #             st.markdown("### 🏆 Top Ranked Offers")
     #             for idx, offer in enumerate(ranked_results[:10], start=1):
@@ -270,7 +292,89 @@ if st.button("🔍 Search", type="primary"):
     #                             for crit, sc in scores_dict.items():
     #                                 st.text(f"{crit}: {sc:.1f}")
     #                     st.divider()
-        
+
+    # MAIN CONTENT AREA
+    tab_search, tab_bookings = st.tabs(["🔍 Search Offers", "🎫 My Bookings"])
+
+    with tab_search:
+        if st.button("🔍 Search", type="primary"):
+            trip_req_obj = Trip_Request(
+                traveller=traveller,
+                destination=trip_request["destination"],
+                travel_start_date=trip_request["travel_start_date"].strftime("%Y-%m-%d"),
+                travel_end_date=trip_request["travel_end_date"].strftime("%Y-%m-%d"),
+                budget=float(trip_request["budget"]),
+                max_transfers=int(trip_request["max_transfers"]),
+                max_luggage=trip_request["max_luggage"],
+                prefered_departure=trip_request["prefered_departure"],
+                max_duration=float(trip_request["max_duration"]),
+                flexiblity=trip_request["flexibility"],
+                preferred_company=trip_request["company"],
+                max_stops=trip_request["max_stops"]
+            )
+            filtered_offers = filter_offers(all_offers, trip_req_obj)
+            st.session_state["ranked_results"] = rank_offers(filtered_offers, trip_req_obj)
+            st.session_state["search_destination_used"] = trip_request["destination"]
+            st.session_state["search_traveller"] = traveller
+
+        if "ranked_results" in st.session_state:
+            ranked_results = st.session_state["ranked_results"]
+            search_traveller = st.session_state["search_traveller"]
+
+            st.success(f"Found **{len(ranked_results)}** matching offers for "
+                    f"{st.session_state['search_destination_used']} under traveler **{search_traveller.name}**!")
+
+            if ranked_results:
+                st.markdown("### 🏆 Top Ranked Offers")
+                for idx, offer in enumerate(ranked_results[:10], start=1):
+                    get = (lambda k: offer[k]) if isinstance(offer, dict) else (lambda k: getattr(offer, k))
+                    offer_id = get("offer_id")
+
+                    with st.container():
+                        col1, col2, col3, col4 = st.columns([1, 3, 2, 2])
+                        with col1:
+                            st.metric(label="Rank", value=f"#{idx}")
+                        with col2:
+                            st.markdown(f"**{get('company')}** (`{offer_id}`)")
+                            st.caption(f"📅 {get('travel_date')} | ⏰ Dep: {get('departure_time')} - Arr: {get('arrival_time')}")
+                        with col3:
+                            st.markdown(f"💰 **{get('price_eur'):.2f} €**")
+                            st.markdown(f"⏱️ `{get('duration_minutes')/60:.1f} hrs` | 🚏 Stops: {get('stops')}")
+                        with col4:
+                            st.markdown(f"⭐ **Mandatory Requirements Score: {get('total_score')} / 100**")
+                            with st.expander("View Individual Scores"):
+                                for crit, sc in get("criterion_scores").items():
+                                    st.text(f"{crit}: {sc:.1f}")
+
+                            # key includes the traveller so one person's booking doesn't mark it booked for another
+                            booking_key = f"booked_{search_traveller.name}_{offer_id}"
+                            if st.session_state.get(booking_key, False):
+                                st.success("✅ Booked Successfully!")
+                            else:
+                                if st.button("Book", type="primary", key=f"book_btn_{search_traveller.name}_{offer_id}"):
+                                    try:
+                                        book_offer(offer,traveller)
+                                        st.session_state[booking_key] = True
+                                        st.rerun()
+                                    except Exception as e:
+                                        import traceback
+                                        st.code(traceback.format_exc())
+                        st.divider()
+            else:
+                st.warning("No offers matched your exact filter criteria.")
+
+    # ---------- TAB 2: MY BOOKINGS ----------
+    with tab_bookings:
+        st.subheader(f"🎫 Bookings for {traveller.name}")
+        my_bookings = get_bookings_for(traveller.id)
+
+        if my_bookings:
+            st.caption(f"{len(my_bookings)} booking(s)")
+            st.dataframe(my_bookings, use_container_width=True, hide_index=True)
+        else:
+            st.info("This traveller has no bookings yet.")
     
-    else:
-        st.warning("No offers matched your exact filter criteria.")
+
+
+
+
