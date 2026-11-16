@@ -1,6 +1,9 @@
 import csv
 from models import Offer
-
+import os
+import csv
+from models import Traveller
+import ast
 def calculate_env_score(company,destination):
     """
     This functions helps in calculating the environment score of the bus company to a particular destination.
@@ -16,7 +19,7 @@ def calculate_env_score(company,destination):
     min_expected_co2_per_km = 20.0
 
 
-    # 
+    
     clamped_co2 = max(min_expected_co2_per_km, min(company.co2_g_per_km, max_expected_co2_per_km))
 
     # lower co2 = higher score(0 to 100)
@@ -144,3 +147,81 @@ def load_vaild_offers(filename="offers.csv"):
     print(f"Invalid offers: {len(invalid_offers)}")
 
     return valid_offers
+
+
+
+TRAVELER_FILE = "travelers.csv"
+
+def save_traveller(traveller: Traveller):
+    """Appends a new traveller profile to travelers.csv with clean preference formatting."""
+    file_exists = os.path.exists(TRAVELER_FILE)
+    fieldnames = ["name", "age", "gender", "phone", "email", "type", "mandatory_preferences"]
+    
+    data = traveller.getDetails()
+    # Ensure mandatory_preferences is stored cleanly as a pipe-separated string (e.g. "company|price_eur")
+    if isinstance(data["mandatory_preferences"], list):
+        data["mandatory_preferences"] = "|".join(data["mandatory_preferences"])
+
+    with open(TRAVELER_FILE, mode="a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        if not file_exists:
+            writer.writeheader()
+        writer.writerow(data)
+
+
+
+def load_travellers() -> dict:
+    """Loads all saved travellers from travelers.csv and safely parses mandatory preferences."""
+    travellers_dict = {}
+    
+    if not os.path.exists(TRAVELER_FILE):
+        default_traveller = Traveller(
+            name="Raol", age=24, gender="M", phone="94324303", 
+            email="raol@gmail.com", traveller_type="Business",
+            mandatory_preferences=["company", "price_eur", "transfers", "duration_minutes"]
+        )
+        save_traveller(default_traveller)
+
+    with open(TRAVELER_FILE, mode="r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            raw_prefs = row.get("mandatory_preferences", "")
+            
+            # Safe Parsing of the preferences string
+            parsed_prefs = []
+            if raw_prefs:
+                try:
+                    # 1. Try safe evaluation if it looks like a Python list representation (e.g. "['company']")
+                    evaluated = ast.literal_eval(raw_prefs)
+                    if isinstance(evaluated, list):
+                        # Flatten or clean up nested items if necessary
+                        for item in evaluated:
+                            if isinstance(item, str) and item.startswith("[") and item.endswith("]"):
+                                nested = ast.literal_eval(item)
+                                parsed_prefs.extend(nested if isinstance(nested, list) else [str(nested)])
+                            else:
+                                parsed_prefs.append(str(item))
+                    elif isinstance(evaluated, str):
+                        parsed_prefs = [evaluated]
+                except (ValueError, SyntaxError):
+                    # 2. Fallback: Split by pipe '|' or commas if stored as a delimited string
+                    if "|" in raw_prefs:
+                        parsed_prefs = [p.strip() for p in raw_prefs.split("|") if p.strip()]
+                    else:
+                        # Clean up brackets/quotes manually
+                        cleaned = raw_prefs.replace("[", "").replace("]", "").replace("'", "").replace('"', "")
+                        parsed_prefs = [p.strip() for p in cleaned.split(",") if p.strip()]
+
+            traveller = Traveller(
+                name=row["name"],
+                age=int(row["age"]),
+                gender=row["gender"],
+                phone=row["phone"],
+                email=row["email"],
+                traveller_type=row["type"],
+                mandatory_preferences=parsed_prefs
+            )
+            travellers_dict[traveller.name] = traveller
+
+    return travellers_dict
+

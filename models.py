@@ -15,7 +15,8 @@ class Traveller:
             "gender":self.gender,
             "phone":self.phone,
             "email":self.email,
-            "type": self.traveller_type
+            "type": self.traveller_type,
+            "mandatory_preferences": self.mandatory_preferences
 
         }
 
@@ -68,7 +69,7 @@ class Offer:
 
 
 class Trip_Request(Traveller):
-    def __init__(self,traveller,destination,travel_start_date,travel_end_date,budget,max_transfers,max_luggage,prefered_departure,max_duration,flexiblity):
+    def __init__(self,traveller,destination,max_stops,travel_start_date,travel_end_date,budget,max_transfers,max_luggage,prefered_departure,max_duration,flexiblity,preferred_company):
         self.traveller = traveller
         self.destination = destination
         self.travel_start_date = travel_start_date
@@ -76,10 +77,11 @@ class Trip_Request(Traveller):
         self.budget=budget
         self.max_transfers = max_transfers
         self.max_luggage = max_luggage
-        self.max_transfers = max_transfers
+        self.max_stops = max_stops
         self.max_duration = max_duration
         self.prefered_departure = prefered_departure # morning, afternoon, evening, night
         self.flexiblity = flexiblity
+        self.preferred_company = preferred_company
 
 
 # Multiple inheritance

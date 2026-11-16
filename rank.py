@@ -108,6 +108,10 @@ def rank_offers(offers, trip_request):
 
         # 4. Dynamic Calculation using ONLY keys present in the user's array
         valid_prefs = [p for p in selected_preferences if p in scores]
+        print("ranking ->" )
+        print(valid_prefs)
+
+
 
         if valid_prefs:
             weight_per_pref = 1.0 / len(valid_prefs)
@@ -115,6 +119,10 @@ def rank_offers(offers, trip_request):
             total_score = sum(scores[pref] * weight_per_pref for pref in valid_prefs)
         else:
             total_score = 50.0
+
+        # some = 
+        # weight_per_pref_all = 1.0 / len()
+        # total_score_all = 
 
         # Attach computed metadata
         if isinstance(o, dict):
