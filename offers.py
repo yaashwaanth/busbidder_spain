@@ -66,6 +66,8 @@ def create_automated_offers():
 
             company = random.choice(bus_company_list)
             company = BUS_COMPANIES[company]
+            print("Lk ->")
+            print(vars(company))
 
             if company.name == "CostaLink":
                 dest = random.choice(coastal_destinations_list)

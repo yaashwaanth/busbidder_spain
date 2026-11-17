@@ -1,0 +1,6 @@
+name,bus_code,price_per_km,co2_g_per_km,departure_start,departure_end,direct_route,coastal_focus,new_fleet,budget_company,bus_avg_speed
+SolRuta,SOL,0.050,32,06:00,14:00,False,False,False,True,50
+CaminoExpress,CAE,0.075,26,11:00,20:00,True,False,True,False,85
+CostaLink,COL,0.062,28,16:00,20:00,False,True,False,False,60
+VerdeBus,VDB,0.071,18,16:30,23:00,False,False,True,False,62
+NocheVia,NOV,0.059,29,15:30,23:59,False,False,False,False,80

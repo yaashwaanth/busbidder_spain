@@ -22,6 +22,17 @@ def book_offer(offer, traveller):
     offer_id = offer["offer_id"] if isinstance(offer, dict) else offer.offer_id
     booking_id = f"{str(offer_id).upper()}-{traveller.id}-{_next_booking_number()}"
 
+
+    # print("offerrrrrrrr ->" )
+    # print(type(offer))
+
+
+    # print(offer.available_seats)
+
+    # dcreasing the number of seats available in a offer
+    offer.available_seats -=1
+    print(offer.available_seats)
+    
     new_booking = Booking(booking_id, offer, traveller)
     # data = new_booking.getDetails()  
     data = {

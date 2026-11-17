@@ -37,11 +37,10 @@ class Destination:
 
 
 class BusCompany:
- def __init__(self,name, bus_code,price_per_km,speed_multiplier, co2_g_per_km,direct_route, departure_window,coastal_focus,new_fleet,budget_company,bus_avg_speed):
+ def __init__(self,name, bus_code,price_per_km, co2_g_per_km,direct_route, departure_window,coastal_focus,new_fleet,budget_company,bus_avg_speed):
     self.name = name
     self.bus_code = bus_code
     self.price_per_km= price_per_km        # EUR per km
-    self.speed_multiplier=   speed_multiplier   # >1 = slower than average, <1 = faster
     self.co2_g_per_km=co2_g_per_km      # grams CO2 per passenger-km
     self.departure_window=departure_window    # ("HH:MM", "HH:MM"); may cross midnight
     self.direct_route= direct_route
