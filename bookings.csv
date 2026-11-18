@@ -1,8 +1,9 @@
-booking_id,offer_id,traveller_id
-NO-240-Raol-101-101,NO-240,Raol-101
-SO-101-Rocky-102-102,SO-101,Rocky-102
-NO-240-Rambo-102-103,NO-240,Rambo-102
-NO-127-Vicky-102-104,NO-127,Vicky-102
-NO-140-Pica-106-105,NO-140,Pica-106
-NO-140-Raol-101-106,NO-140,Raol-101
-NO-140-Shaun-102-107,NO-140,Shaun-102
+booking_id,offer_id,traveller_id,booked_at,company,travel_date,departure_time,price_paid_eur,luggage_allowance,changeable,refundable,refund_advance_pct,refund_same_day_pct,status,cancelled_at,refund_eur
+NO-140-Pica-106-101,NO-140,Pica-106,2026-11-17T12:58:04,NocheVia,2026-11-20,22:00,24.78,5 bags,True,True,100.0,20.0,ACTIVE,,
+NO-140-Rambo-102-102,NO-140,Rambo-102,2026-11-17T13:02:45,NocheVia,2026-11-20,22:00,24.78,5 bags,True,True,100.0,20.0,ACTIVE,,
+NO-140-Raol-101-103,NO-140,Raol-101,2026-11-17T13:16:58,NocheVia,2026-11-20,22:00,24.78,5 bags,True,True,100.0,20.0,CANCELLED,2026-11-17T14:56:15,24.78
+VE-142-Raol-101-104,VE-142,Raol-101,2026-11-17T13:17:37,VerdeBus,2026-11-21,22:00,29.82,5 bags,False,False,0.0,0.0,ACTIVE,,
+NO-240-Raol-101-105,NO-240,Raol-101,2026-11-17T13:44:34,NocheVia,2026-11-30,21:00,24.78,4 bags,True,False,0.0,0.0,ACTIVE,,
+NO-140-Raol-101-106,NO-140,Raol-101,2026-11-17T13:45:10,NocheVia,2026-11-20,22:00,24.78,5 bags,True,True,100.0,20.0,CANCELLED,2026-11-17T13:45:27,24.78
+CA-182-Raol-101-107,CA-182,Raol-101,2026-11-17T14:55:45,CaminoExpress,2026-11-25,13:30,39.75,2 bags,False,True,100.0,70.0,ACTIVE,,
+CA-147-Environment-110-108,CA-147,Environment-110,2026-11-17T14:58:04,CaminoExpress,2026-11-21,16:30,46.50,5 bags,True,True,100.0,70.0,CANCELLED,2026-11-17T14:58:32,46.50

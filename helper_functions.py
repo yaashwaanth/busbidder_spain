@@ -98,6 +98,8 @@ def load_vaild_offers(filename="offers.csv"):
                 available_seats = int(row["available_seats"])
                 customer_rating = float(row["customer_rating"])
                 environmental_score = int(row["environmental_score"])
+                refund_advance_pct = float(row["refund_advance_pct"])
+                refund_same_day_pct = float(row["refund_same_day_pct"])
 
                 changeable = row["changeable"].strip().lower() == "true"
                 refundable = row["refundable"].strip().lower() == "true"
@@ -120,6 +122,15 @@ def load_vaild_offers(filename="offers.csv"):
                 if not 0 <= environmental_score <= 100:
                     raise ValueError("Invalid environmental score")
 
+                if not (0 <= refund_advance_pct <= 100 and 0 <= refund_same_day_pct <= 100):
+                    raise ValueError("Refund percentage outside 0-100")
+
+                if refund_same_day_pct > refund_advance_pct:
+                    raise ValueError("Same-day refund higher than advance refund")
+
+                if not refundable and (refund_advance_pct or refund_same_day_pct):
+                    raise ValueError("Non-refundable fare with a refund percentage")
+
                 # 5. Create Offer object
                 offer = Offer(
                     offer_id=offer_id,
@@ -137,7 +148,9 @@ def load_vaild_offers(filename="offers.csv"):
                     available_seats=available_seats,
                     customer_rating=customer_rating,
                     environmental_score=environmental_score,
-                    stops=stops
+                    stops=stops,
+                    refund_advance_pct=refund_advance_pct,
+                    refund_same_day_pct=refund_same_day_pct,
                 )
 
                 valid_offers.append(offer)
@@ -239,3 +252,35 @@ def load_travellers() -> dict:
 
     return travellers_dict
 
+
+
+def _policy(row, field, errors):
+    """Reads '(90,20)' into (90.0, 20.0): (refund % before travel date, refund % on travel date)."""
+    raw = (row.get(field) or "").strip()
+    try:
+        advance, same_day = [float(p) for p in raw.strip("()[] ").replace("|", ",").split(",")]
+    except ValueError:
+        errors.append(f"'{field}' must look like (90,20), got {raw!r}")
+        return None
+    return (advance, same_day)
+    """Parses '(90,20)' into (90.0, 20.0) and validates it."""
+    raw = (row.get(field) or "").strip()
+    if not raw:
+        errors.append(f"'{field}' is missing")
+        return None
+    parts = [p.strip() for p in raw.strip("()[] ").replace("|", ",").replace(";", ",").split(",")]
+    if len(parts) != 2:
+        errors.append(f"'{field}' must look like (90,20), got {raw!r}")
+        return None
+    try:
+        advance, same_day = float(parts[0]), float(parts[1])
+    except ValueError:
+        errors.append(f"'{field}' must contain two numbers, got {raw!r}")
+        return None
+    if not (0 <= advance <= 100 and 0 <= same_day <= 100):
+        errors.append(f"'{field}' percentages must be between 0 and 100, got {raw!r}")
+        return None
+    if same_day > advance:
+        errors.append(f"'{field}': same-day refund ({same_day:g}%) cannot exceed advance refund ({advance:g}%)")
+        return None
+    return (advance, same_day)

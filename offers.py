@@ -28,7 +28,7 @@ fieldnames_list = [
         "offer_id", "company", "destination", "travel_date", "departure_time",
         "arrival_time", "duration_minutes", "price_eur", "transfers", "stops",
         "luggage_allowance", "changeable", "refundable", "available_seats",
-        "customer_rating", "environmental_score"
+        "customer_rating", "environmental_score","refund_advance_pct", "refund_same_day_pct"
         ]
 
 
@@ -120,13 +120,17 @@ def create_automated_offers():
                 "customer_rating": round(random.uniform(3.5, 5.0), 1),
                 "environmental_score": calculate_env_score(company=company,destination=dest)
             }
+            policy = company.cancellation_policy if curr_offer["refundable"] else (0, 0)
+            curr_offer["refund_advance_pct"], curr_offer["refund_same_day_pct"] = policy
+            
             offers_data.append(curr_offer)
-
+            
             offers_data_class.append(Offer(offer_id=curr_offer["offer_id"],company=curr_offer["company"],
                                            destination = curr_offer["destination"], travel_date = curr_offer["travel_date"],departure_time = curr_offer["departure_time"],
                                            arrival_time = curr_offer["arrival_time"], duration_minutes = curr_offer["duration_minutes"],price_eur=curr_offer["price_eur"],transfers=curr_offer["transfers"],stops=curr_offer["stops"],luggage_allowance=curr_offer["luggage_allowance"],
                                            changeable = curr_offer["changeable"], refundable = curr_offer["refundable"], available_seats= curr_offer["available_seats"],customer_rating=curr_offer["customer_rating"],
-                                           environmental_score = curr_offer["environmental_score"]
+                                           environmental_score = curr_offer["environmental_score"],refund_advance_pct = curr_offer["refund_advance_pct"],
+                                           refund_same_day_pct = curr_offer["refund_same_day_pct"]
                                            ))
             offer_counter_code += 1
 

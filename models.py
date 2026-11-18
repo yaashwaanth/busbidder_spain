@@ -37,7 +37,7 @@ class Destination:
 
 
 class BusCompany:
- def __init__(self,name, bus_code,price_per_km, co2_g_per_km,direct_route, departure_window,coastal_focus,new_fleet,budget_company,bus_avg_speed):
+ def __init__(self,name, bus_code,price_per_km, co2_g_per_km,direct_route, departure_window,coastal_focus,new_fleet,budget_company,bus_avg_speed,cancellation_policy):
     self.name = name
     self.bus_code = bus_code
     self.price_per_km= price_per_km        # EUR per km
@@ -48,11 +48,12 @@ class BusCompany:
     self.new_fleet=new_fleet
     self.budget_company=budget_company
     self.bus_avg_speed = bus_avg_speed
+    self.cancellation_policy = cancellation_policy
 
 
 
 class Offer:
-    def __init__(self,offer_id,company,destination,travel_date,departure_time,duration_minutes,arrival_time, price_eur, transfers,luggage_allowance, changeable,refundable, available_seats, customer_rating, environmental_score,stops):
+    def __init__(self,offer_id,company,destination,travel_date,departure_time,duration_minutes,arrival_time, price_eur, transfers,luggage_allowance, changeable,refundable, available_seats, customer_rating, environmental_score,stops,refund_advance_pct,refund_same_day_pct):
         self.offer_id = offer_id
         self.company = company #string
         self.destination = destination #string
@@ -70,6 +71,8 @@ class Offer:
         self.available_seats = available_seats # int
         self.customer_rating = customer_rating #float
         self.environmental_score = environmental_score #int [0-100]
+        self.refund_advance_pct = refund_advance_pct      
+        self.refund_same_day_pct = refund_same_day_pct 
 
 
 
@@ -91,14 +94,20 @@ class Trip_Request(Traveller):
 
 # Multiple inheritance
 class Booking(Traveller,Offer):
-    def __init__(self,booking_id,traveller,offer):
+    def __init__(self,booking_id,traveller,offer,fare_conditions):
         self.booking_id = booking_id
         self.traveller = traveller
         self.offer = offer
+        self.fare_conditions = fare_conditions or {}
+        self.cancellation_policy = (
+            self.fare_conditions.get("refund_advance_pct", 0),
+            self.fare_conditions.get("refund_same_day_pct", 0),
+        )
     def getDetails(self):
         return {
             "booking_id": self.booking_id,
             "offer_id": self.offer_id,
-            "traveller": self.traveller
+            "traveller": self.traveller,
+            **self.fare_conditions,
         }
 

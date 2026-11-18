@@ -2,6 +2,8 @@ import csv
 import os
 from models import BusCompany, Destination
 
+from helper_functions import _policy
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BUS_COMPANIES_FILE =  os.path.join(BASE_DIR,"bus_companies.csv")
 
@@ -16,6 +18,12 @@ def load_bus_companies(filename=BUS_COMPANIES_FILE) -> dict:
     with open(filename,newline="",encoding="utf-8")as f:
         for num, row in enumerate(csv.DictReader(f),start=2):
             try:
+                errors =[]
+                policy = _policy(row,"cancellation_policy",errors)
+
+                if errors:
+                    raise ValueError(";".join(errors))
+                
                 name = row["name"].strip()
                 companies[name] = BusCompany(
                     name=name,
@@ -31,6 +39,7 @@ def load_bus_companies(filename=BUS_COMPANIES_FILE) -> dict:
                     new_fleet=to_bool(row["new_fleet"]),
                     budget_company=to_bool(row["budget_company"]),
                     bus_avg_speed=float(row["bus_avg_speed"]),
+                    cancellation_policy =policy
 
                 )
 
@@ -39,6 +48,12 @@ def load_bus_companies(filename=BUS_COMPANIES_FILE) -> dict:
             except (KeyError,ValueError) as error:
                 print(f"Skipping bus company row {num}:{error}")
     print(companies)
+
+    if not companies:
+        raise ValueError(
+            "No valid bus companies loaded from bus_companies.csv. "
+            "Check the 'Skipping bus company row' messages above."
+        )
     return  companies
 
 
