@@ -7,6 +7,15 @@ mandatory constraints, then ranks the rest with a transparent weighted scoring m
 
 ---
 
+
+## Github link
+
+```bash
+https://github.com/yaashwaanth/busbidder_spain.git
+```
+
+---
+
 ## Features
 
 - Traveller profiles (saved in `travelers.csv`) with their own ranking preferences
