@@ -10,6 +10,9 @@ from helper_functions import calculate_env_score, load_vaild_offers
 from constants import DESTINATIONS_PROFILE,BUS_COMPANIES
 import re
 
+
+
+
 bus_company_list=[
         "SolRuta",
         "CaminoExpress",
@@ -37,10 +40,7 @@ coastal_destinations_list = ["Barcelona", "Valencia", "Seville", "Malaga", "Bilb
 major_cities_list = ["Barcelona", "Valencia", "Seville", "Malaga", "Zaragoza", "Bilbao"]
 
 def create_automated_offers():
-
-
-   
-
+    "Creates automated offres for each and every comapany for next 3 months"
     current_date = datetime.now()
     # print(current_date)
 
@@ -60,14 +60,14 @@ def create_automated_offers():
         current_day = start_date + timedelta(days=days)
         travel_date_str = current_day.strftime("%Y-%m-%d")
 
-        # creates 15 offers per day of individual bus companies
+        # creates 10 offers per day of individual bus companies
         for _ in range(10):
 
 
             company = random.choice(bus_company_list)
             company = BUS_COMPANIES[company]
-            print("Lk ->")
-            print(vars(company))
+            # print("Lk ->")
+            # print(vars(company))
 
             if company.name == "CostaLink":
                 dest = random.choice(coastal_destinations_list)
@@ -142,7 +142,10 @@ def create_automated_offers():
             writter.writerows(offers_data)
 
 
-    return load_vaild_offers()
+    return load_vaild_offers(
+        known_companies=set(BUS_COMPANIES),
+        known_destinations={d.name for d in DESTINATIONS_PROFILE.values()},
+    )
 
 
             

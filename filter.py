@@ -1,5 +1,7 @@
 from models import Offer
 
+
+
 def filter_offers(offers,trip_request):
     """Filters the offers before ranking them based on the mandatory requirements of the traveller"""
     filtered = []
@@ -15,11 +17,11 @@ def filter_offers(offers,trip_request):
             continue
         if offer.available_seats < 1:
             continue
-        if offer.luggage_allowance.split()[0] < trip_request.max_luggage.split()[0]:
+        if int(offer.luggage_allowance.split()[0]) < int(trip_request.max_luggage.split()[0]):
             continue
         if offer.duration_minutes/60 > trip_request.max_duration:
             continue
-        if offer.changeable and not trip_request.flexiblity:
+        if trip_request.flexiblity and not offer.changeable:
             continue
         if trip_request.preferred_company != "None" and trip_request.preferred_company != offer.company:
             continue

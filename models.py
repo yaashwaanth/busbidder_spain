@@ -1,5 +1,3 @@
-import re
-
 
 
 class Traveller:
@@ -37,7 +35,7 @@ class Destination:
 
 
 class BusCompany:
- def __init__(self,name, bus_code,price_per_km, co2_g_per_km,direct_route, departure_window,coastal_focus,new_fleet,budget_company,bus_avg_speed,cancellation_policy):
+ def __init__(self,name, bus_code,price_per_km, co2_g_per_km,direct_route,new_fleet, departure_window,coastal_focus,budget_company,bus_avg_speed,cancellation_policy):
     self.name = name
     self.bus_code = bus_code
     self.price_per_km= price_per_km        # EUR per km
@@ -76,9 +74,9 @@ class Offer:
 
 
 
-class Trip_Request(Traveller):
+class Trip_Request:
     def __init__(self,traveller,destination,max_stops,travel_start_date,travel_end_date,budget,max_transfers,max_luggage,prefered_departure,max_duration,flexiblity,preferred_company):
-        self.traveller = traveller
+        self.traveller = traveller # composition
         self.destination = destination
         self.travel_start_date = travel_start_date
         self.travel_end_date = travel_end_date
@@ -92,8 +90,8 @@ class Trip_Request(Traveller):
         self.preferred_company = preferred_company
 
 
-# Multiple inheritance
-class Booking(Traveller,Offer):
+
+class Booking:
     def __init__(self,booking_id,traveller,offer,fare_conditions):
         self.booking_id = booking_id
         self.traveller = traveller

@@ -5,6 +5,15 @@ from datetime import datetime, date
 from models import Booking
 from helper_functions import get_field
 from collections import Counter
+
+
+from exceptions import BookingError, InvalidReferenceError, CancellationError
+from cust_logging import get_logger
+from regex_patters import OFFER_ID_RE, BOOKING_REF_RE
+
+log = get_logger()
+
+
 BOOKINGS_FILE = "bookings.csv"
 
 fieldnames = [
@@ -59,7 +68,14 @@ def build_fare_conditions(offer):
 
 def book_offer(offer, traveller):
     offer_id = get_field(offer, "offer_id")
+
+    if not OFFER_ID_RE.match(str(offer_id)):
+        raise BookingError(f"Invalid offer id: {offer_id}")
     booking_id = f"{str(offer_id).upper()}-{traveller.id}-{_next_booking_number()}"
+
+    if not BOOKING_REF_RE.match(booking_id):
+        raise InvalidReferenceError(f"Booking reference has invlaid format: {booking_id}")
+    
 
     fare = build_fare_conditions(offer)
     new_booking = Booking(booking_id, traveller, offer, fare_conditions=fare)
@@ -81,6 +97,8 @@ def book_offer(offer, traveller):
     rows = _read_all()
     rows.append(data)
     _write_all(rows)   # upgrades an old bookings.csv to the new columns
+
+    log.info("Booking created: %s | traveller=%s | paid=%s EUR", booking_id, traveller.id, fare["price_paid_eur"])
     return booking_id
 
 
@@ -118,11 +136,15 @@ def can_cancel(row):
 
 def cancel_booking(booking_id, traveller_id):
     """Marks the booking as cancelled and returns the refund in EUR."""
+
+    if not BOOKING_REF_RE.match(str(booking_id)):
+        raise InvalidReferenceError(f"Invalid booking reference: {booking_id!r}")
+    
     rows = _read_all()
     for r in rows:
         if r["booking_id"] == booking_id and r["traveller_id"] == traveller_id:
             if r["status"] == "CANCELLED":
-                raise ValueError("This booking is already cancelled.")
+                raise CancellationError("This booking is already cancelled.")
             if not can_cancel(r):
                 raise ValueError("The travel date has passed, so this booking can no longer be cancelled.")
             refund = refund_if_cancelled_today(r)
@@ -130,8 +152,10 @@ def cancel_booking(booking_id, traveller_id):
             r["cancelled_at"] = datetime.now().isoformat(timespec="seconds")
             r["refund_eur"] = f"{refund:.2f}"
             _write_all(rows)
+            log.info("Booking cancelled: %s | refund=%.2f EUR", booking_id, refund)
             return refund
-    raise ValueError("Booking not found.")
+        
+    raise CancellationError("Booking not found.")
 
 
 

@@ -10,12 +10,21 @@ from helper_functions import load_travellers, save_traveller, generate_traveller
 from constants import BUS_COMPANIES
 from booking import book_offer, get_bookings_for,refund_if_cancelled_today, refund_amounts, can_cancel, cancel_booking,seats_booked
 from explaination_of_offer import explain_offer, LABELS,ranking_criteria,explain_top_offer
+from exceptions import BusBidderError, DataFileError, SoldOutError
+from cust_logging import get_logger
+from payment import validate_card, log_payment
 
+
+from exceptions import DataFileError
+
+
+log = get_logger()
 
 st.set_page_config(page_title="BusBidder Spain", page_icon="🌊", layout="wide")
 
 st.title("🌊 BusBidder Spain")
 st.markdown("### Welcome ###")
+
 
 
 @st.cache_resource
@@ -30,9 +39,15 @@ def load_offers():
 
 # with st.spinner("Generating and loading bus offers..."):
 #     all_offers = load_offers()
+try:
 
-with st.spinner("Generating and loading bus offers..."):
-    all_offers = load_offers()
+    with st.spinner("Generating and loading bus offers..."):
+        all_offers = load_offers()
+
+except DataFileError as e:
+    log.error("[%s] %s", e.category, e)
+    st.error(f"Data problem: {e}")
+    st.stop()
 
 offers_by_id = {o.offer_id: o for o in all_offers}
 
@@ -178,6 +193,7 @@ for req in mand_prefs:
         )
     elif req_lower in ["stops", "max_stops"]:
         trip_request["max_stops"] = st.sidebar.slider("Max Stops (Mandatory)", 0, 20, 20, key="mand_stops")
+   
 
 st.sidebar.markdown("---")
 
@@ -223,24 +239,29 @@ def render_payment_form(offer, traveller, offer_id, amount, booking_key):
         pay = st.form_submit_button("Pay now", type="primary")
 
     if pay:
-        digits = number.replace(" ", "")
-        if not (digits.isdigit() and len(digits) == 16):
-            st.error("Card number must be 16 digits.")
-        elif not re.match(r"^(0[1-9]|1[0-2])/\d{2}$", expiry.strip()):
-            st.error("Expiry must be in MM/YY format.")
-        elif not (cvv.isdigit() and len(cvv) in (3, 4)):
-            st.error("CVV must be 3 or 4 digits.")
-        else:
-            # --- this is the part that changed ---
+        try:
+            digits = validate_card(number, expiry, cvv)
             live_offer = offers_by_id.get(offer_id, offer)
             if live_offer.available_seats < 1:
-                st.error("Sorry, this offer is sold out.")
-            else:
-                booking_id = book_offer(live_offer, traveller)
-                live_offer.available_seats -= 1          # reduce seats
-                st.session_state[booking_key] = booking_id
-                st.session_state.pop(PAYING_KEY, None)
-                st.rerun()
+                raise SoldOutError("Sorry, this offer is sold out.")
+            booking_id = book_offer(live_offer, traveller)
+            live_offer.available_seats -= 1
+            log_payment(traveller.id, offer_id, amount, digits)
+
+
+
+        except BusBidderError as e:
+            log.warning("[%s] %s", e.category, e)
+            st.error(str(e))
+
+
+        except Exception:
+            log.exception("Unexpected error while booking %s", offer_id)
+            st.error("Something went wrong. Please try again.")
+        else:
+            st.session_state[booking_key] = booking_id
+            st.session_state.pop(PAYING_KEY, None)
+            st.rerun()
 
 
 
@@ -430,7 +451,8 @@ with tab_bookings:
                         f"Booking {chosen_id} cancelled. Refund: {refunded:.2f} €."
                     )
                     st.rerun()
-                except ValueError as e:
+                except BusBidderError as e:
+                    log.warning("[%s] %s", e.category, e)
                     st.error(str(e))
     else:
         st.info("This traveller has no bookings yet.")

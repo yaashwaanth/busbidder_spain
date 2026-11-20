@@ -4,7 +4,16 @@ import os
 import csv
 from models import Traveller
 import ast
+# from logging import get_logger
+from cust_logging import get_logger
+from regex_patters import OFFER_ID_RE, TIME_RE, LUGGAGE_RE
 
+from datetime import datetime
+from exceptions import DataFileError, InvalidRecordError
+import re
+
+log = get_logger()
+REJECTED_FILE = "rejected_offers.csv"
 
 traveller_id_counter = 101
 
@@ -60,36 +69,160 @@ def normalize(value, min_val, max_val, lower_better=True):
 
     return max(0.0, min(100.0, score))
 
-def load_vaild_offers(filename="offers.csv"):
+# def load_vaild_offers(filename="offers.csv"):
 
-    valid_offers = []
-    invalid_offers = []
+#     valid_offers = []
+#     invalid_offers = []
 
-    with open(filename,mode="r",newline="",encoding="utf-8") as file:
+#     with open(filename,mode="r",newline="",encoding="utf-8") as file:
 
+#         reader = csv.DictReader(file)
+
+#         for num, row in enumerate(reader,start=2):
+
+#             try:
+#                 offer_id = row["offer_id"].strip()
+#                 company = row["company"].strip()
+#                 destination = row["destination"].strip()
+#                 travel_date = row["travel_date"].strip()
+#                 departure_time = row["departure_time"].strip()
+#                 arrival_time = row["arrival_time"].strip()
+#                 luggage_allowance = row["luggage_allowance"].strip()
+
+#                 if not all([
+#                     offer_id,
+#                     company,
+#                     destination,
+#                     travel_date,
+#                     departure_time,
+#                     arrival_time,
+#                     luggage_allowance
+#                 ]):
+#                     raise ValueError("Empty mandatory field")
+
+#                 duration_minutes = float(row["duration_minutes"])
+#                 price_eur = float(row["price_eur"])
+#                 transfers = int(row["transfers"])
+#                 stops = int(row["stops"])
+#                 available_seats = int(row["available_seats"])
+#                 customer_rating = float(row["customer_rating"])
+#                 environmental_score = int(row["environmental_score"])
+#                 refund_advance_pct = float(row["refund_advance_pct"])
+#                 refund_same_day_pct = float(row["refund_same_day_pct"])
+
+#                 changeable = row["changeable"].strip().lower() == "true"
+#                 refundable = row["refundable"].strip().lower() == "true"
+
+#                 if price_eur <= 0:
+#                     raise ValueError("Invalid price")
+
+#                 if duration_minutes <= 0:
+#                     raise ValueError("Invalid duration")
+
+#                 if transfers < 0 or stops < 0:
+#                     raise ValueError("Negative transfers or stops")
+
+#                 if available_seats < 0:
+#                     raise ValueError("Invalid available seats")
+
+#                 if not 0 <= customer_rating <= 5:
+#                     raise ValueError("Invalid customer rating")
+
+#                 if not 0 <= environmental_score <= 100:
+#                     raise ValueError("Invalid environmental score")
+
+#                 if not (0 <= refund_advance_pct <= 100 and 0 <= refund_same_day_pct <= 100):
+#                     raise ValueError("Refund percentage outside 0-100")
+
+#                 if refund_same_day_pct > refund_advance_pct:
+#                     raise ValueError("Same-day refund higher than advance refund")
+
+#                 if not refundable and (refund_advance_pct or refund_same_day_pct):
+#                     raise ValueError("Non-refundable fare with a refund percentage")
+
+#                 # 5. Create Offer object
+#                 offer = Offer(
+#                     offer_id=offer_id,
+#                     company=company,
+#                     destination=destination,
+#                     travel_date=travel_date,
+#                     departure_time=departure_time,
+#                     duration_minutes=duration_minutes,
+#                     arrival_time=arrival_time,
+#                     price_eur=price_eur,
+#                     transfers=transfers,
+#                     luggage_allowance=luggage_allowance,
+#                     changeable=changeable,
+#                     refundable=refundable,
+#                     available_seats=available_seats,
+#                     customer_rating=customer_rating,
+#                     environmental_score=environmental_score,
+#                     stops=stops,
+#                     refund_advance_pct=refund_advance_pct,
+#                     refund_same_day_pct=refund_same_day_pct,
+#                 )
+
+#                 valid_offers.append(offer)
+
+#             except (ValueError, TypeError, KeyError) as error:
+#                 invalid_offers.append(row)
+#                 print(f"Skipping row {num}: {error}")
+
+#     print(f"\nData loading completed!")
+#     print(f"Valid offers: {len(valid_offers)}")
+#     print(f"Invalid offers: {len(invalid_offers)}")
+
+#     return valid_offers
+
+def _parse_bool(value, field):
+    v = (value or "").strip().lower()
+    if v in ("true", "1", "yes"):
+        return True
+    if v in ("false", "0", "no"):
+        return False
+    raise InvalidRecordError(f"'{field}' must be True/False, got {value!r}")
+
+
+def load_vaild_offers(filename="offers.csv", known_companies=None, known_destinations=None):
+    if not os.path.exists(filename):
+        raise DataFileError(f"Offers file not found: {filename}")
+
+    valid, rejected, corrected, sold_out = [], [], 0, 0
+
+    with open(filename, newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file)
+        columns = reader.fieldnames or []
 
-        for num, row in enumerate(reader,start=2):
-
+        for num, row in enumerate(reader, start=2):
             try:
-                offer_id = row["offer_id"].strip()
+                # ---- CORRECTED: formatting problems that need no guessing ----
+                offer_id = row["offer_id"].strip().upper()
                 company = row["company"].strip()
                 destination = row["destination"].strip()
                 travel_date = row["travel_date"].strip()
                 departure_time = row["departure_time"].strip()
                 arrival_time = row["arrival_time"].strip()
-                luggage_allowance = row["luggage_allowance"].strip()
+                raw_luggage = row["luggage_allowance"].strip()
+                luggage_allowance = re.sub(r"\s+", " ", raw_luggage).lower()   # "2 Bags" -> "2 bags"
+                if luggage_allowance != raw_luggage:
+                    corrected += 1
+                    log.info("Offers row %s corrected: luggage %r -> %r", num, raw_luggage, luggage_allowance)
 
-                if not all([
-                    offer_id,
-                    company,
-                    destination,
-                    travel_date,
-                    departure_time,
-                    arrival_time,
-                    luggage_allowance
-                ]):
-                    raise ValueError("Empty mandatory field")
+                # ---- REJECTED: missing or impossible values ----
+                if not all([offer_id, company, destination, travel_date,
+                            departure_time, arrival_time, luggage_allowance]):
+                    raise InvalidRecordError("empty mandatory field")
+                if not OFFER_ID_RE.match(offer_id):
+                    raise InvalidRecordError(f"invalid offer_id {offer_id!r}")
+                if not (TIME_RE.match(departure_time) and TIME_RE.match(arrival_time)):
+                    raise InvalidRecordError("departure/arrival time is not HH:MM")
+                if not LUGGAGE_RE.match(luggage_allowance):
+                    raise InvalidRecordError(f"invalid luggage {luggage_allowance!r}")
+                datetime.strptime(travel_date, "%Y-%m-%d")          # ValueError = impossible date
+                if known_companies is not None and company not in known_companies:
+                    raise InvalidRecordError(f"unknown company {company!r}")
+                if known_destinations is not None and destination not in known_destinations:
+                    raise InvalidRecordError(f"unknown destination {destination!r}")
 
                 duration_minutes = float(row["duration_minutes"])
                 price_eur = float(row["price_eur"])
@@ -100,70 +233,61 @@ def load_vaild_offers(filename="offers.csv"):
                 environmental_score = int(row["environmental_score"])
                 refund_advance_pct = float(row["refund_advance_pct"])
                 refund_same_day_pct = float(row["refund_same_day_pct"])
-
-                changeable = row["changeable"].strip().lower() == "true"
-                refundable = row["refundable"].strip().lower() == "true"
+                changeable = _parse_bool(row["changeable"], "changeable")
+                refundable = _parse_bool(row["refundable"], "refundable")
 
                 if price_eur <= 0:
-                    raise ValueError("Invalid price")
-
+                    raise InvalidRecordError(f"negative or zero price ({price_eur})")
                 if duration_minutes <= 0:
-                    raise ValueError("Invalid duration")
-
+                    raise InvalidRecordError(f"negative or zero duration ({duration_minutes})")
                 if transfers < 0 or stops < 0:
-                    raise ValueError("Negative transfers or stops")
-
+                    raise InvalidRecordError("negative transfers or stops")
                 if available_seats < 0:
-                    raise ValueError("Invalid available seats")
-
+                    raise InvalidRecordError("negative available seats")
                 if not 0 <= customer_rating <= 5:
-                    raise ValueError("Invalid customer rating")
-
+                    raise InvalidRecordError(f"rating {customer_rating} outside 0-5")
                 if not 0 <= environmental_score <= 100:
-                    raise ValueError("Invalid environmental score")
+                    raise InvalidRecordError("environmental score outside 0-100")
 
-                if not (0 <= refund_advance_pct <= 100 and 0 <= refund_same_day_pct <= 100):
-                    raise ValueError("Refund percentage outside 0-100")
+                # arrival must equal departure + duration (modulo 24 h, so overnight trips are fine)
+                dep = int(departure_time[:2]) * 60 + int(departure_time[3:])
+                arr = int(arrival_time[:2]) * 60 + int(arrival_time[3:])
+                if (dep + round(duration_minutes)) % 1440 != arr:
+                    raise InvalidRecordError("arrival time does not match departure + duration")
 
-                if refund_same_day_pct > refund_advance_pct:
-                    raise ValueError("Same-day refund higher than advance refund")
+                if available_seats == 0:
+                    sold_out += 1      # kept: valid data, but the filter hides it (no seats)
 
-                if not refundable and (refund_advance_pct or refund_same_day_pct):
-                    raise ValueError("Non-refundable fare with a refund percentage")
-
-                # 5. Create Offer object
-                offer = Offer(
-                    offer_id=offer_id,
-                    company=company,
-                    destination=destination,
-                    travel_date=travel_date,
-                    departure_time=departure_time,
-                    duration_minutes=duration_minutes,
-                    arrival_time=arrival_time,
-                    price_eur=price_eur,
-                    transfers=transfers,
-                    luggage_allowance=luggage_allowance,
-                    changeable=changeable,
-                    refundable=refundable,
-                    available_seats=available_seats,
-                    customer_rating=customer_rating,
-                    environmental_score=environmental_score,
-                    stops=stops,
-                    refund_advance_pct=refund_advance_pct,
+                valid.append(Offer(
+                    offer_id=offer_id, company=company, destination=destination,
+                    travel_date=travel_date, departure_time=departure_time,
+                    duration_minutes=duration_minutes, arrival_time=arrival_time,
+                    price_eur=price_eur, transfers=transfers,
+                    luggage_allowance=luggage_allowance, changeable=changeable,
+                    refundable=refundable, available_seats=available_seats,
+                    customer_rating=customer_rating, environmental_score=environmental_score,
+                    stops=stops, refund_advance_pct=refund_advance_pct,
                     refund_same_day_pct=refund_same_day_pct,
-                )
+                ))
 
-                valid_offers.append(offer)
+            except (InvalidRecordError, ValueError, TypeError, KeyError) as error:
+                # ---- SET ASIDE for review, with the reason ----
+                rejected.append({"source_row": num, "reason": f"{type(error).__name__}: {error}", **row})
+                log.warning("Offers row %s rejected: %s", num, error)
 
-            except (ValueError, TypeError, KeyError) as error:
-                invalid_offers.append(row)
-                print(f"Skipping row {num}: {error}")
+    if rejected:
+        with open(REJECTED_FILE, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["source_row", "reason"] + columns,
+                                    extrasaction="ignore", restval="")
+            writer.writeheader()
+            writer.writerows(rejected)
 
-    print(f"\nData loading completed!")
-    print(f"Valid offers: {len(valid_offers)}")
-    print(f"Invalid offers: {len(invalid_offers)}")
+    log.info("Offers loaded: %d valid (%d corrected, %d with no seats), %d rejected -> %s",
+             len(valid), corrected, sold_out, len(rejected), REJECTED_FILE)
 
-    return valid_offers
+    if not valid:
+        raise DataFileError(f"No valid offers could be loaded from {filename}")
+    return valid
 
 
 def generate_traveller_id(name):

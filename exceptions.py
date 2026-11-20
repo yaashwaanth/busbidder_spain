@@ -21,3 +21,6 @@ class InvalidReferenceError(BookingError):
 
 class CancellationError(BusBidderError):
     category = "CANCELLATION"
+
+class ScoringError(BusBidderError):
+    category = "SCORING"
