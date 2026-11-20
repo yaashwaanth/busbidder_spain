@@ -28,11 +28,19 @@ mandatory constraints, then ranks the rest with a transparent weighted scoring m
 pip install -r requirements.txt
 ```
 
+## Alternative Method For Installation
+
+```bash
+pip3 install -r requirements.txt
+```
+
+
 ## Running the application
 
 ```bash
 streamlit run app.py
 ```
+
 
 1. Choose or register a traveller in the sidebar and pick their ranking preferences (in order of importance).
 2. Select destination, preferred departure time and the mandatory filters.

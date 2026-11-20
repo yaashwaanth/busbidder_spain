@@ -39,6 +39,8 @@ coastal_destinations_list = ["Barcelona", "Valencia", "Seville", "Malaga", "Bilb
 
 major_cities_list = ["Barcelona", "Valencia", "Seville", "Malaga", "Zaragoza", "Bilbao"]
 
+
+
 def create_automated_offers():
     "Creates automated offres for each and every comapany for next 3 months"
     current_date = datetime.now()
@@ -51,6 +53,7 @@ def create_automated_offers():
     offers_data_class =[]
     offer_counter_code = 101
 
+
     random.seed(42) # for reproduciblity
     start_date = current_date
 
@@ -61,11 +64,8 @@ def create_automated_offers():
         travel_date_str = current_day.strftime("%Y-%m-%d")
 
         # creates 10 offers per day of individual bus companies
-        for _ in range(10):
-
-
-            company = random.choice(bus_company_list)
-            company = BUS_COMPANIES[company]
+        for company_name in bus_company_list * 10:
+            company = BUS_COMPANIES[company_name]
             # print("Lk ->")
             # print(vars(company))
 

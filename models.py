@@ -28,7 +28,7 @@ class Destination:
     def __init__(self,name,costal,major_city,distance_km,base_duration_min,base_price_eur):
            self.name= name 
            self.costal =costal 
-           self.majmajor_city= major_city
+           self.major_city= major_city
            self.distance_km=distance_km # distance from madrid
            self.base_duration_min = base_duration_min
            self.base_price_eur = base_price_eur

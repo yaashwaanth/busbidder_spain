@@ -5,7 +5,6 @@ rejected_offers.csv
 travelers.csv
 busbidder.log
 bookings.csv
-bus_companies.csv
 bookings.csv
 destinations.csv
 .pytest_cache
