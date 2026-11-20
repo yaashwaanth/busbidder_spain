@@ -44,7 +44,9 @@ def calculate_env_score(company,destination):
     #final score
     final_score = base_score + modern_fleet_bonus
     if(company.name == "VerdeBus"):
-     print(final_score)
+    #  print(final_score)
+
+        print()
     return int(max(0.0,min(100.0,final_score)))
 
 
