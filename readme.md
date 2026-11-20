@@ -55,11 +55,6 @@ offers.py  ->  filter.py  ->  rank.py  ->  explaination_of_offer.py  ->  app.py 
  validate)      constraints)   sort)                    booking.py / payment.py
 ```
 
-### Scoring model
-
-```
-Score(offer) = sum( weight_k x score_k(offer) )        score_k in [0, 100], weights total 1.0
-```
 
 ## Project structure
 
