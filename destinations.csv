@@ -1,0 +1,16 @@
+key,name,costal,major_city,distance_km,base_duration_min,base_price_eur
+Barcelona,Barcelona,True,True,620,420,38
+Valencia,Valencia,True,True,355,255,22
+Seville,Seville,False,True,530,360,32
+Malaga,Malaga,True,True,530,390,33
+Granada,Granada,False,False,430,330,28
+Cordoba,Cordoba,False,True,400,255,24
+Bilbao,Bilbao,True,True,400,300,29
+San_Sebastian,San Sebastian,True,False,470,330,32
+Zaragoza,Zaragoza,False,True,320,225,19
+Alicante,Alicante,True,True,420,330,27
+Murcia,Murcia,True,True,400,330,28
+Salamanca,Salamanca,False,False,210,150,14
+Toledo,Toledo,False,False,70,60,6
+Santiago_de_Compostela,Santiago de Compostela,False,False,600,480,42
+Cadiz,Cadiz,True,False,650,480,40
